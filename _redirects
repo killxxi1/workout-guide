@@ -1,0 +1,4 @@
+# 회차 URL을 해시(#l17)에서 경로(/climbing/l17)로 바꾸기 위한 폴백.
+# 대상을 /climbing/index.html 로 쓰면 Cloudflare가 /index 를 자동으로 떼면서
+# 같은 규칙에 다시 걸려 무한 루프로 판정한다. 디렉터리 인덱스를 대상으로 준다.
+/climbing/:lesson   /climbing/   200

@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>숄더 교정 가이드: 말린 어깨를 펴는 A–Z</title>
+<meta name="description" content="말린 어깨(라운딩 숄더)의 원인·자가진단·교정 루틴. 사무직과 클라이머를 위한 종합 가이드.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f4ee">
+<meta property="og:title" content="숄더 교정 가이드: 말린 어깨를 펴는 A–Z">
+<meta property="og:description" content="운동 목록보다 “왜 말리는가”가 먼저다.">
+<meta property="og:type" content="article">
+<!-- 테마는 스타일시트보다 먼저 정한다. 문서 하단에서 적용하면 크림색 지면이
+     한 프레임 번쩍인다. 키는 클라이밍 가이드와 공유해 두 문서가 이어진다. -->
+<script>(function(){var t=null;try{t=localStorage.getItem('cg-theme');}catch(e){}
+document.documentElement.setAttribute('data-theme',
+  t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));})();</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+<!-- 렌더를 막는 쪽은 googleapis다 — gstatic만 preconnect 하면 연결 비용이 그대로 남는다 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+  /* 토큰은 클라이밍 가이드와 공유한다 — 두 문서가 한 사이트로 읽혀야 한다 */
+:root{
+    /* ── 지면·잉크: 웜 에디토리얼 — 크림 페이퍼 + 웜 블랙 + 차분한 클레이 ── */
+    --bg:#fcf3e8; --card:#fffdf6; --ink:#29211a; --soft:#635346; --muted:#776657;
+    --accent:#b0553a; --accent-d:#8f4226; --line:#ede0cf;
+    --tip-bg:#e7f3eb; --tip-bd:#1f6b41;
+    --warn-bg:#fbeae4; --warn-bd:#b23124;
+    --note-bg:#eaf0f6; --note-bd:#1f5fa0;
+    /* 파생 토큰 — 다크 테마에서 함께 뒤집힌다 */
+    --soft-bg:#f8edde; --chip-bg:#f5e7d5; --code-bg:#f3e4d2;
+    --plate:#fffef8;              /* SVG 도식이 놓이는 판. 다크에서도 밝게 유지 */
+    --ok:#1f6b41; --no:#b23124;
+    --navbg:rgba(252,243,232,.92);
+    --chip-done-bg:#e7f3eb; --chip-done-fg:#1f6b41;
+    --chip-abs-bg:#fbeae4;  --chip-abs-fg:#b23124;
+    --stg-a:#8f4226; --stg-b:#1f5fa0;
+    --mark-bg:#ffe6a0; --mark-fg:#4a3a12;
+    /* 그림자는 빛의 부재 — 브랜드색이 아니라 중립이어야 한다 */
+    --shadow-sm:0 1px 2px rgba(38,28,18,.05);
+    --shadow-md:0 1px 2px rgba(38,28,18,.05), 0 6px 18px rgba(38,28,18,.07);
+    --ring:0 0 0 3px rgba(176,85,58,.30);
+    /* 4px 그리드 간격 스케일 */
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px; --s16:64px;
+  }
+  /* 다크 테마 — 페이지 크롬만 어둡게. SVG 도식은 밝은 판 위에 그대로 둔다.
+     (도식 12종이 모두 하드코딩 색상이라 판을 유지하는 편이 안전하고 인쇄물처럼 읽힌다) */
+  [data-theme="dark"]{
+    --bg:#1b1610; --card:#241e18; --ink:#f2e7de; --soft:#b4a599; --muted:#928376;
+    --accent:#ef9468; --accent-d:#f6b18f; --line:#3a3229;
+    --tip-bg:#15251b; --tip-bd:#7acb95;
+    --warn-bg:#2a1815; --warn-bd:#ee8c79;
+    --note-bg:#132230; --note-bd:#79b0e4;
+    --soft-bg:#2d261f; --chip-bg:#312a21; --code-bg:#312a21;
+    --plate:#f0e8e0;              /* 순백은 버그처럼 보인다 — 한 단계 낮춘 종이색 */
+    --ok:#7acb95; --no:#ee8c79;
+    --navbg:rgba(27,22,16,.92);
+    --chip-done-bg:#1a2b20; --chip-done-fg:#7acb95;
+    --chip-abs-bg:#2c1a17;  --chip-abs-fg:#ee8c79;
+    --stg-a:#b8492a; --stg-b:#33689f;   /* 흰 글자 대비 4.38→5.22 / 4.53→5.80 */
+    --mark-bg:#6b5416; --mark-fg:#ffeec2;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.5);
+    --shadow-md:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.5);
+    --ring:0 0 0 3px rgba(232,138,94,.4);
+  }
+  /* 키보드 네비를 건너뛸 수 있게 한다(WCAG 2.4.1) */
+  .skip{position:absolute; left:-9999px; top:0; z-index:100;
+    background:var(--accent); color:#fff; padding:10px 16px; border-radius:0 0 8px 0;
+    font-size:14px; font-weight:600; text-decoration:none;}
+  .skip:focus{left:0;}
+  *{box-sizing:border-box;}
+  b,strong{font-weight:600;}           /* 700+는 한글에서 뭉갠다 */
+  table,.lmeta,time{font-variant-numeric:tabular-nums;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;} *{transition:none!important; animation:none!important;}
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+    line-height:1.75; font-size:18px; letter-spacing:-.011em; -webkit-font-smoothing:antialiased;
+    word-break:keep-all; overflow-wrap:break-word;
+  }
+  .wrap{max-width:952px; margin:0 auto; padding:0 22px;}
+  /* 2폭 시스템 — 프레임(카드·도판·표)은 넓게, 산문은 좁게.
+     760px는 44자가 아니라 55자다(실측). em으로 잡으면 크기가 변해도 44자를 지킨다. */
+  :root{--reading:44rem;  /* 18px × 45자 ≈ 704px */
+  .card>p, .card>ul, .card>ol, .lead{max-width:var(--reading);}
+
+  header.hero{
+    position:relative; color:#fff; display:flex; align-items:flex-end;
+    min-height:320px; padding:0;
+    background:linear-gradient(180deg, rgba(16,14,12,.20) 0%, rgba(16,14,12,.80) 100%),
+      url('/img/Pull-ups_exercise_from_back.jpg') center 30%/cover;
+  }
+  header.hero .wrap{padding:0 22px 34px; width:100%;}
+  header.hero h1{font-family:'Noto Serif KR',serif; margin:0 0 10px;
+    font-size:clamp(28px,3.4vw,40px); font-weight:700; letter-spacing:-.025em; line-height:1.24;}
+  header.hero p{margin:3px 0; color:rgba(255,255,255,.88); font-size:15px;}
+  header.hero .pill{
+    display:inline-block; margin-top:16px; padding:6px 13px; font-size:13px;
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.45); border-radius:7px;
+  }
+  /* 상단 브랜드 바 — 두 가이드 모두 랜딩으로 돌아갈 길이 없었다 */
+  .brandbar{border-bottom:1px solid var(--line); background:var(--bg);}
+  .brandbar .wrap{display:flex; align-items:center; gap:14px; height:52px;}
+  .brandbar a.home{display:flex; align-items:baseline; gap:8px; text-decoration:none; color:inherit; margin-right:auto;}
+  .brandbar .bk{font-weight:700; font-size:15px; letter-spacing:-.01em;}
+  .brandbar .bs{font-size:11.5px; color:var(--muted); letter-spacing:.06em;}
+  .brandbar .tgl{width:32px; height:32px; border:1px solid var(--line); background:transparent;
+    color:var(--soft); border-radius:8px; cursor:pointer; display:grid; place-items:center;}
+  .brandbar .tgl:hover{color:var(--ink); border-color:var(--muted);}
+  #progress{position:fixed; top:0; left:0; height:2px; background:var(--accent); width:0; z-index:60;}
+
+  nav{
+    position:sticky; top:0; z-index:20; background:var(--navbg);
+    border-bottom:1px solid var(--line); backdrop-filter:blur(6px);
+  }
+  nav .wrap{display:flex; flex-wrap:wrap; gap:4px; padding:8px 20px;}
+  nav a{
+    color:var(--soft); text-decoration:none; font-size:13.5px; font-weight:600;
+    padding:5px 10px; border-radius:7px; white-space:nowrap;
+  }
+  nav a .nn{font-size:11px; font-weight:700; color:var(--muted); margin-right:6px;
+             font-variant-numeric:tabular-nums; letter-spacing:.02em;}
+  nav a.here .nn, nav a:hover .nn{color:var(--accent-d);}
+  nav a:hover{background:var(--chip-bg); color:var(--accent-d);}
+  nav a.here{background:var(--chip-bg); color:var(--accent-d);}
+
+  section{scroll-margin-top:76px; padding:40px 0 8px;}
+  h2{font-family:'Noto Serif KR',serif; font-size:clamp(25px,2.6vw,31px); font-weight:700;
+     margin:0 0 8px; letter-spacing:-.025em; text-wrap:balance;}
+  h2 .n{font-family:'Pretendard',sans-serif; font-size:.52em; font-weight:700; color:var(--accent-d);
+        letter-spacing:.02em; vertical-align:.36em; margin-right:9px;}
+  h3{font-size:20px; margin:44px 0 12px; color:var(--ink); font-weight:600; letter-spacing:-.02em; text-wrap:balance;}
+  /* 계층은 h2(절) > h3(소절) > h4(항목) 셋까지만 쓴다.
+     h3 하나가 길어져 항목 구분이 필요해졌다. */
+  h4{font-size:16.5px; line-height:1.5; margin:26px 0 8px; color:var(--ink);
+     font-weight:700; letter-spacing:-.012em; text-wrap:balance;}
+  h4::before{content:""; display:inline-block; width:14px; height:1.5px;
+     background:var(--accent); vertical-align:.32em; margin-right:8px;}
+  p{margin:12px 0; text-wrap:pretty;}
+  li{margin:4px 0; text-wrap:pretty;}
+  a{color:var(--accent-d);}
+  .lead{color:var(--soft); font-size:15.5px; margin-top:4px;}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:22px 26px 28px; margin-top:16px; box-shadow:0 1px 4px rgba(60,40,20,.06);
+  }
+  .bigpic{background:var(--soft-bg); border-radius:10px; padding:15px 18px; margin:16px 0 6px; font-size:15.5px;}
+  .bigpic b{color:var(--accent-d);}
+
+  .box{border-radius:10px; padding:15px 18px; margin:20px 0; font-size:15.5px; line-height:1.68;}
+  .box .t{display:block; font-weight:700; font-size:12.5px; letter-spacing:.04em; margin:0 0 5px;}
+  .tip{background:var(--tip-bg); border-left:4px solid var(--tip-bd);}
+  .warn{background:var(--warn-bg); border-left:4px solid var(--warn-bd);}
+  .note{background:var(--note-bg); border-left:4px solid var(--note-bd);}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.7px;
+    background:#fff; border:1px solid var(--line); border-radius:8px; overflow:hidden;}
+  th,td{padding:11px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.55;}
+  th{background:var(--soft-bg); font-size:12.5px;}
+  tr:last-child td{border-bottom:none;}
+  code{background:var(--code-bg); padding:1px 6px; border-radius:5px; font-size:.9em; font-variant-numeric:tabular-nums;
+    font-family:'SF Mono',Menlo,Consolas,monospace;}
+  .ok{color:var(--ok); font-weight:600;}
+  .no{color:var(--no); font-weight:600;}
+
+  figure{margin:20px 0; text-align:center;}
+  figure svg,figure img{display:block; margin:0 auto; max-width:100%; height:auto; border-radius:11px;}
+  figure img{
+    border:1px solid var(--line); width:100%; max-width:540px;
+    box-shadow:0 3px 12px rgba(60,40,20,.13);
+  }
+  figcaption{font-size:12.5px; color:var(--soft); margin:8px auto 0; line-height:1.6; max-width:560px; padding:0 8px; text-wrap:pretty;}
+  figcaption b{color:var(--accent-d);}
+  .credit{display:block; margin-top:5px; font-size:12px; color:var(--muted);}
+  .svgwrap{border:1px solid var(--line); border-radius:11px; overflow:hidden; max-width:480px; margin:0 auto; background:var(--plate);}
+  .svgwrap.wide{max-width:640px;}
+  .svgwrap svg{display:block; width:100%; height:auto; border-radius:0;}
+  .diagram text{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;}
+
+  .photo-anno{position:relative; display:inline-block; max-width:520px; width:100%;
+    margin:0 auto; line-height:0; border-radius:11px;}
+  .photo-anno img{display:block; width:100%; height:auto; border:1px solid var(--line);
+    border-radius:11px; box-shadow:0 3px 12px rgba(60,40,20,.13); margin:0;}
+  .photo-anno svg{position:absolute; inset:0; width:100%; height:100%;
+    overflow:visible; pointer-events:none;}
+  .photo-anno .lab{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;}
+
+  .dual{display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin:6px 0 2px; align-items:flex-start;}
+  .dual .ph{flex:1 1 230px; max-width:300px;}
+  .dual .ph img{display:block; width:100%; height:auto; border:1px solid var(--line);
+    border-radius:11px; box-shadow:0 3px 12px rgba(60,40,20,.13);}
+  .dual .ph .cap{font-size:12.5px; color:var(--soft); margin-top:7px; line-height:1.55; text-align:center; text-wrap:pretty;}
+  .dual .ph .cap b{color:var(--accent-d);}
+
+  .recap{background:var(--soft-bg); border-radius:10px; padding:14px 17px; margin-top:20px;}
+  .recap .rt{font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent-d); margin-bottom:5px;}
+  .recap ul{margin:6px 0 0; padding-left:20px; font-size:13.7px;}
+  .recap li{margin:3px 0;}
+  ul.clean{font-size:14.5px;} ul.clean li{margin:5px 0;}
+
+  footer{margin-top:48px; padding:26px 20px 44px; border-top:1px solid var(--line);
+    color:var(--soft); font-size:12.5px; text-align:center;}
+  footer a{color:var(--soft);}
+
+  .tablewrap{overflow-x:auto;}
+  @media (max-width:560px){
+    body{font-size:15px;} header.hero h1{font-size:24px;}
+    .card{padding:18px 16px 22px;} h2{font-size:20px;}
+    section{padding:32px 0 6px;}
+    table{display:block; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+    th,td{min-width:72px;}
+    nav .wrap{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none; padding-bottom:10px;}
+    nav .wrap::-webkit-scrollbar{display:none;}
+    .bigpic{padding:12px 14px;}
+    .dual{gap:12px;}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<!-- ===== 공용 그라데이션·마커 정의 ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8a7768"/><stop offset="1" stop-color="#56463b"/>
+  </linearGradient>
+  <linearGradient id="bodyR" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c0744f"/><stop offset="1" stop-color="#9a4a2c"/>
+  </linearGradient>
+  <linearGradient id="boneG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f2ead9"/><stop offset="1" stop-color="#ddd0b6"/>
+  </linearGradient>
+  <marker id="arA" markerWidth="13" markerHeight="13" refX="9" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M2,2 L11,6.5 L2,11 L4.5,6.5 Z" fill="#c0512e"/></marker>
+  <marker id="arG" markerWidth="13" markerHeight="13" refX="9" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M2,2 L11,6.5 L2,11 L4.5,6.5 Z" fill="#2f7d44"/></marker>
+  <marker id="arB" markerWidth="13" markerHeight="13" refX="9" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+    <path d="M2,2 L11,6.5 L2,11 L4.5,6.5 Z" fill="#3a6ea5"/></marker>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#3a2a1a" flood-opacity="0.25"/></filter>
+</defs></svg>
+
+<div id="progress"></div>
+
+<div class="brandbar"><div class="wrap">
+  <a class="home" href="/"><span class="bk">운동 기록</span><span class="bs">CLIMBING &amp; MOBILITY</span></a>
+  <a href="/climbing/" style="text-decoration:none;color:var(--soft);font-size:14px;font-weight:500;">클라이밍 가이드</a>
+  <button class="tgl" id="theme" aria-label="다크 모드 전환" aria-pressed="false">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <h1>숄더 교정 가이드</h1>
+  <p>말린 어깨(라운딩 숄더)를 펴는 A–Z</p>
+  <p>사무직 + 클라이머를 위한 원인·진단·교정 종합편 · 2026년 6월</p>
+  <span class="pill">운동 목록보다 “왜 말리는가”가 먼저다</span>
+</div></header>
+
+<nav><div class="wrap">
+  <a href="#problem"><span class="nn">01</span>문제</a>
+  <a href="#anatomy"><span class="nn">02</span>해부학</a>
+  <a href="#impact"><span class="nn">03</span>영향</a>
+  <a href="#cause"><span class="nn">04</span>원인</a>
+  <a href="#diagnosis"><span class="nn">05</span>진단</a>
+  <a href="#principle"><span class="nn">06</span>원리</a>
+  <a href="#exercises"><span class="nn">07</span>운동</a>
+  <a href="#climber"><span class="nn">08</span>클라이머</a>
+  <a href="#daily"><span class="nn">09</span>생활</a>
+  <a href="#tracking"><span class="nn">10</span>추적</a>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ===================== ① 문제 제기 ===================== -->
+<main id="main">
+<section id="problem">
+  <h2><span class="n">01</span>당기고, 앉아 있고, 또 당긴다</h2>
+  <p class="lead">사무직이면서 클라이머라면 어깨가 말릴 수밖에 없는 조합이다.</p>
+  <div class="card">
+    <div class="bigpic">하루 <b>8시간</b>을 모니터 앞에서 어깨를 만 채 보내고, 일과 뒤에는 <b>당기기 일변도의 운동</b>(클라이밍)을 한다. 앞쪽 근육은 하루 종일 짧아지고, 당기기 근육은 점점 강해지며 어깨를 안으로 감는다. 이 가이드는 그 결과인 <b>라운딩 숄더(Rounded Shoulder Posture)</b>를 원인부터 교정까지 다룬다.</div>
+
+    <p>라운딩 숄더는 어깨가 제자리보다 앞으로 나간 채 굳은 자세다. 옆에서 보면 귀가 어깨보다 앞에 있고, 등 상부가 둥글게 말리며, 가슴이 움츠러들어 있다. 팔을 편하게 늘어뜨렸을 때 손등이 앞을 향한다면 이미 그 상태에 가깝다. 해부학적으로는 어깨뼈가 세 방향으로 동시에 틀어진 것인데, 그 세 방향의 이름은 ②에서 하나씩 정의한다. 여기서는 눈에 보이는 모양만 잡아 두면 된다.</p>
+
+    <p>이 자세가 만들어지는 조건은 특별하지 않다. 필요한 것은 둘뿐이다. 몸 앞쪽을 오래 짧게 두는 <b>시간</b>, 그리고 몸을 앞으로 감는 방향으로 반복되는 <b>부하</b>. 사무직 클라이머는 이 둘을 매일 순서대로 채운다. 낮에는 키보드 앞에서 팔을 몸 앞으로 모은 채 여덟 시간을 보내고, 저녁에는 벽에서 당기기 위주의 운동을 한 시간 반 한다. 쉬는 시간에 회복해야 할 조직을 오히려 더 쓰는 구조다. 취미가 나쁜 것이 아니라, 하루의 두 덩어리가 같은 방향을 가리키는 것이 문제다.</p>
+
+    <p>그래서 이 글은 운동 목록에서 시작하지 않는다. “라운딩 숄더 교정 운동”을 검색하면 동작 열 개짜리 목록이 나오고, 그 목록 자체는 대체로 맞다. 문제는 목록만으로 답이 나오지 않는 질문이 남는다는 점이다. 등 운동을 반년 했는데 왜 자세는 그대로인가. 가슴 스트레칭은 몇 주를 해야 하고, 무엇이 바뀌면 성공인가. 등반일에는 언제 넣어야 등반 자체를 방해하지 않는가. 이 질문들의 답은 동작이 아니라 기전에 있다. 기전을 알면 목록의 항목은 사정에 맞게 갈아 끼울 수 있고, 모르면 목록을 다 해내고도 무엇을 빼야 할지 판단하지 못한다.</p>
+
+    <p>순서는 원인에서 결과로 간다. ②에서 어깨뼈가 어떻게 움직이며 무엇이 그것을 앞뒤에서 당기는지 정의하고, ③에서 그 정렬이 무너졌을 때 관절에서 실제로 무엇이 측정되는지 본다. 진단(⑤)과 처방(⑥ 이후)은 전부 그 두 절에서 세운 용어 위에 놓인다.</p>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 2160 1330" role="img" aria-label="정렬된 자세와 말린 자세의 측면 비교. 정렬은 귀·어깨·골반이 한 수직선 위에 놓이고, 말림은 골반은 제자리인 채 귀가 그 선 앞으로 나오며 등 상부가 굽는다">
+        <rect width="2160" height="1330" fill="var(--plate)"/>
+
+        <!-- ── 정렬 ── -->
+        <g transform="translate(0,-113.3) scale(1.1422)"><g transform="translate(0,1152) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+<path d="M3900 6495 l0 -5025 -32 0 c-18 0 -896 0 -1950 0 -1915 0 -1918 0
+-1918 -20 l0 -20 3958 0 c2236 0 3963 4 3971 9 46 30 -12 31 -1314 31 l-1314
+0 24 36 c32 47 33 127 4 257 -52 235 -41 548 31 877 117 528 117 599 9 903
+-127 355 -144 435 -120 572 7 38 39 162 71 275 91 315 111 431 140 820 l12
+155 45 60 c104 138 147 261 147 420 0 166 -34 265 -163 483 -70 117 -101 200
+-101 272 0 20 9 85 20 145 11 60 20 140 20 177 0 72 28 203 85 398 35 123 59
+217 101 400 33 144 30 251 -11 380 -35 108 -101 241 -154 308 -23 29 -55 76
+-72 105 -53 90 -101 146 -195 227 -68 58 -97 91 -116 131 -66 136 -71 199 -32
+359 38 155 42 250 14 341 -26 89 -65 152 -129 212 -60 56 -90 72 -169 87 -205
+41 -517 -72 -635 -228 l-42 -55 0 -171 c0 -143 3 -177 18 -205 21 -43 21 -43
+-5 -151 -24 -102 -21 -111 41 -127 28 -7 36 -16 46 -48 7 -22 22 -59 34 -82
+12 -23 21 -49 21 -58 0 -24 19 -57 44 -77 28 -23 74 -22 136 2 28 11 58 20 68
+20 21 -1 92 -164 92 -210 0 -47 -25 -96 -78 -153 -161 -172 -272 -451 -260
+-655 4 -64 10 -89 36 -137 28 -51 32 -68 32 -134 0 -105 32 -249 74 -338 32
+-67 36 -84 36 -155 0 -45 5 -109 11 -143 10 -50 9 -77 -4 -146 -12 -62 -16
+-143 -15 -314 l1 -230 -52 -156 c-68 -206 -67 -263 5 -370 l35 -52 -12 -125
+c-16 -166 -6 -460 20 -627 42 -266 80 -398 155 -540 43 -82 46 -92 46 -165 0
+-97 43 -274 93 -380 39 -83 42 -99 127 -810 51 -435 62 -584 51 -697 -12 -111
+-33 -164 -81 -206 -42 -36 -194 -114 -365 -187 -147 -63 -198 -79 -272 -83
+-69 -4 -93 -18 -93 -52 0 -13 -7 -36 -15 -51 -19 -38 -19 -46 5 -77 25 -32 13
+-37 -66 -30 l-59 5 3 5024 4 5024 -21 0 -21 0 0 -5025z m924 3315 c58 -28 141
+-117 172 -184 51 -112 53 -181 8 -378 -13 -59 -24 -125 -24 -147 0 -30 -4 -41
+-15 -41 -21 0 -108 45 -124 64 -18 21 -51 135 -51 176 0 44 -17 77 -52 103
+-23 17 -31 18 -57 8 -43 -19 -62 -44 -76 -103 -6 -28 -16 -53 -22 -55 -5 -2
+-18 18 -28 44 -21 58 -37 77 -75 93 -24 10 -30 20 -35 54 -8 50 -13 59 -42 75
+-34 18 -76 13 -176 -19 -52 -16 -100 -30 -107 -30 -15 0 -5 81 15 120 42 80
+207 183 352 219 43 11 87 22 98 25 47 12 196 -3 239 -24z m-420 -316 c9 -9 16
+-32 16 -54 0 -42 7 -52 59 -78 26 -13 39 -30 57 -76 13 -33 26 -61 28 -63 2
+-2 15 -1 30 3 21 5 27 14 32 46 8 49 43 102 71 106 64 9 71 -168 9 -237 -20
+-22 -20 -31 -2 -31 16 0 57 51 71 85 7 17 9 15 17 -15 19 -68 73 -114 170
+-144 9 -3 23 -28 33 -61 29 -101 64 -161 128 -222 144 -136 205 -201 232 -248
+15 -27 45 -72 66 -100 139 -186 220 -458 179 -606 -11 -40 -49 -100 -66 -106
+-14 -5 -39 160 -39 260 0 42 -2 77 -5 77 -3 0 -14 -21 -24 -47 -18 -42 -18
+-53 -7 -117 30 -172 24 -375 -14 -491 -18 -53 -35 -206 -44 -390 -7 -135 -10
+-156 -35 -209 -39 -82 -57 -136 -46 -136 5 0 17 14 25 31 32 60 27 18 -14
+-123 -47 -161 -116 -309 -261 -563 -157 -275 -143 -235 -151 -435 -5 -131 -12
+-197 -29 -265 -39 -156 -53 -198 -77 -224 -21 -22 -23 -23 -19 -6 11 40 26
+128 26 152 0 45 -18 14 -39 -69 -38 -142 -77 -225 -98 -204 -4 3 3 59 15 124
+25 132 28 172 11 155 -12 -12 -32 -95 -49 -205 -13 -82 -29 -116 -48 -104 -8
+5 -12 58 -12 172 0 90 -4 164 -9 164 -10 0 -21 -108 -21 -213 0 -96 -17 -100
+-42 -11 -19 68 -24 264 -8 357 9 60 0 118 -14 82 -3 -10 -12 -60 -18 -111 -8
+-65 -16 -95 -27 -99 -26 -10 -30 9 -11 70 10 33 28 97 40 142 20 72 30 90 92
+165 86 102 101 135 171 373 67 233 63 211 82 380 24 209 51 321 109 460 13 33
+41 98 60 145 20 47 36 90 36 97 0 22 -26 3 -42 -30 l-15 -32 -43 87 c-32 66
+-46 113 -60 195 -17 98 -43 463 -34 472 2 2 18 -7 36 -21 80 -60 76 -44 -9 44
+-50 53 -106 121 -123 152 -35 61 -57 83 -45 45 4 -13 14 -36 21 -51 22 -43 17
+-45 -21 -8 -24 24 -35 29 -35 18 0 -18 37 -59 94 -103 47 -37 46 -51 -12 -141
+-74 -114 -199 -191 -324 -202 -61 -5 -75 -17 -32 -28 94 -24 233 34 336 138
+37 37 69 68 71 68 2 0 7 -55 11 -122 4 -68 9 -150 13 -182 l6 -59 -52 5 c-28
+3 -51 1 -51 -3 0 -12 45 -22 79 -17 28 4 30 2 36 -39 8 -58 35 -134 74 -210
+17 -34 31 -69 31 -78 0 -8 -18 -58 -41 -111 -23 -53 -53 -143 -67 -200 l-25
+-103 -63 -31 c-74 -36 -130 -97 -147 -157 -11 -43 -15 -46 -149 -111 -13 -6
+-9 292 4 368 12 70 12 70 44 70 35 0 64 8 64 19 0 3 -21 6 -47 6 -47 0 -48 0
+-55 40 -4 22 -9 86 -11 142 l-4 102 34 -1 c18 -1 36 2 40 5 6 7 -33 12 -68 9
+-21 -2 -77 120 -89 192 -5 28 -12 67 -16 86 l-7 35 33 -28 c43 -36 54 -52 125
+-167 32 -52 61 -97 66 -100 16 -11 42 -138 42 -205 0 -38 -12 -122 -26 -185
+-24 -106 -57 -282 -57 -304 0 -27 18 15 28 64 6 30 26 118 44 195 52 225 42
+340 -43 480 -20 33 -48 83 -62 110 -29 58 -100 133 -134 141 -22 6 -23 11 -23
+85 0 67 -4 87 -27 132 -26 48 -28 61 -27 157 1 169 62 338 192 537 l67 103 75
+29 c41 16 100 37 130 47 43 15 50 19 30 22 -14 1 -58 -9 -99 -23 -41 -14 -76
+-24 -77 -22 -2 1 6 23 18 47 19 43 148 422 148 437 0 19 -21 -18 -40 -72 -32
+-89 -76 -224 -89 -272 -7 -24 -15 -43 -19 -43 -4 0 -13 17 -19 38 -20 68 -65
+167 -81 180 -18 14 -52 10 -118 -15 -48 -17 -104 -14 -115 7 -4 8 -14 35 -22
+60 -32 96 -69 185 -80 192 -7 4 -24 8 -39 8 -33 0 -33 -3 -7 106 l21 87 -21
+55 c-15 39 -21 77 -21 140 l0 87 63 20 c121 38 142 43 174 44 17 1 39 -6 47
+-15z m1132 -1984 c-36 -140 -74 -256 -75 -230 -1 8 13 62 29 119 22 76 30 125
+30 183 0 72 2 79 23 87 33 13 32 -7 -7 -159z m-726 -1027 c0 -73 -6 -79 -91
+-107 -43 -14 -81 -26 -84 -26 -11 0 7 43 29 73 19 26 120 97 138 97 4 0 8 -17
+8 -37z m570 2 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10
+-7 10 -15z m28 -76 c9 -16 45 -78 79 -137 91 -155 124 -252 131 -381 8 -160
+-29 -282 -128 -425 -60 -87 -63 -103 -85 -390 -8 -109 -20 -230 -27 -267 l-11
+-68 -66 -8 c-171 -21 -816 -2 -843 25 -13 13 -27 140 -34 300 l-7 152 31 0
+c29 0 31 -2 26 -29 -15 -72 35 -254 73 -268 10 -3 26 -14 36 -25 21 -22 46
+-23 73 -3 10 8 26 15 36 15 18 0 63 49 73 80 3 11 14 20 24 20 18 0 46 27 74
+72 10 16 36 101 58 190 40 157 41 168 36 283 -3 90 -1 131 10 163 8 24 60 121
+115 215 110 189 200 358 240 455 31 73 57 83 86 31z m-614 -106 c-8 -83 -102
+-419 -147 -525 -9 -21 -46 -74 -82 -120 -75 -92 -88 -114 -105 -178 -7 -25
+-15 -39 -17 -32 -5 12 31 327 43 382 4 16 2 22 -4 15 -11 -11 -48 -155 -58
+-227 -3 -27 -10 -48 -14 -48 -14 0 -60 110 -60 145 0 19 18 90 40 156 43 131
+60 213 60 300 l0 55 53 24 c105 48 262 109 280 110 15 0 16 -7 11 -57z m71
+-1618 c138 -5 270 -3 354 4 74 6 135 10 137 8 1 -2 -32 -126 -122 -457 -35
+-127 -42 -263 -20 -363 9 -41 46 -154 81 -251 67 -186 100 -304 111 -397 8
+-72 -7 -181 -61 -444 -81 -391 -89 -453 -88 -695 0 -161 3 -201 26 -312 44
+-211 37 -251 -53 -281 -50 -17 -63 -18 -140 -6 -114 17 -208 15 -310 -6 -74
+-15 -117 -17 -340 -11 -316 9 -373 21 -355 76 5 16 15 20 51 20 60 0 188 44
+380 131 183 83 211 99 279 152 99 77 124 146 132 362 6 154 -1 224 -88 920
+-50 407 -62 470 -105 558 -41 85 -82 262 -86 368 -4 92 -6 99 -45 165 -23 38
+-55 112 -72 165 -27 88 -71 278 -71 311 0 11 15 12 93 2 50 -7 191 -16 312
+-19z m-285 -2911 c0 -3 -24 -16 -52 -28 -29 -13 -87 -39 -128 -58 -150 -70
+-295 -103 -295 -68 0 11 17 17 70 22 74 6 151 32 300 97 92 41 105 45 105 35z"/>
+<path d="M4687 9083 c-10 -10 -8 -153 2 -153 14 0 21 28 21 83 0 52 -10 83
+-23 70z"/>
+<path d="M4635 8878 c-38 -21 -136 -100 -131 -105 6 -6 115 68 140 96 21 24
+20 25 -9 9z"/>
+<path d="M4945 8560 c-30 -13 -81 -57 -74 -64 7 -7 108 55 108 67 1 9 -8 8
+-34 -3z"/>
+<path d="M4763 8378 c-37 -38 -73 -112 -72 -148 0 -18 8 -8 29 38 16 35 43 81
+61 103 37 47 25 52 -18 7z"/>
+<path d="M5281 8341 c11 -30 22 -58 25 -62 2 -4 9 -42 15 -84 19 -136 -13
+-257 -101 -386 -46 -68 -26 -69 24 0 46 63 72 116 90 188 34 132 9 293 -58
+378 -12 15 -11 7 5 -34z"/>
+<path d="M4380 7625 c-31 -37 21 -71 70 -45 24 13 25 23 4 44 -19 20 -58 21
+-74 1z m65 -20 c0 -5 -15 -11 -32 -13 -31 -3 -42 6 -26 22 10 10 58 3 58 -9z"/>
+<path d="M5322 7583 c-31 -15 -78 -66 -99 -108 -26 -51 -35 -123 -24 -196 18
+-110 29 -113 23 -7 -6 121 12 181 74 245 39 42 46 45 79 40 43 -7 50 18 9 33
+-30 12 -22 13 -62 -7z"/>
+<path d="M4760 7444 c-15 -9 -42 -13 -67 -11 -49 5 -58 -8 -13 -18 39 -8 78 1
+110 25 30 23 8 26 -30 4z"/>
+<path d="M4635 7333 c-10 -21 -30 -50 -44 -65 -13 -15 -22 -30 -19 -34 10 -9
+88 95 88 117 0 26 -3 24 -25 -18z"/>
+<path d="M4730 7202 c0 -4 -19 -27 -42 -50 -47 -48 -44 -71 3 -26 35 33 65 84
+49 84 -5 0 -10 -4 -10 -8z"/>
+<path d="M4785 7040 c-4 -7 -31 -23 -59 -36 -47 -22 -49 -24 -21 -24 32 0 106
+52 94 65 -4 3 -10 1 -14 -5z"/>
+<path d="M5235 6977 c7 -96 -3 -129 -65 -222 -55 -81 -81 -132 -121 -230 -46
+-111 -34 -100 36 34 35 68 90 158 122 199 l58 76 -2 70 c-1 39 -9 89 -18 111
+l-15 40 5 -78z"/>
+<path d="M5240 5500 c43 -31 184 -109 188 -105 8 7 -38 41 -98 73 -57 31 -119
+52 -90 32z"/>
+<path d="M5251 5396 c9 -9 140 -46 159 -45 28 1 -64 37 -115 44 -27 4 -47 4
+-44 1z"/>
+<path d="M5086 4553 c-14 -121 -33 -218 -60 -305 -17 -54 -14 -62 8 -19 27 52
+54 175 61 279 8 110 2 139 -9 45z"/>
+<path d="M4631 4259 c52 -97 178 -194 211 -161 7 7 1 12 -19 16 -41 9 -110 68
+-166 141 -26 36 -50 65 -53 65 -3 0 9 -27 27 -61z"/>
+<path d="M5117 4110 c-6 -18 -27 -186 -27 -221 0 -14 7 -34 16 -45 15 -18 15
+-18 9 9 -3 15 0 77 6 137 11 102 9 156 -4 120z"/>
+<path d="M4846 3813 c-7 -47 -8 -118 -1 -111 9 9 22 148 14 148 -3 0 -9 -17
+-13 -37z"/>
+<path d="M5126 3425 c17 -317 43 -567 68 -665 11 -44 14 -49 15 -24 1 17 -3
+55 -9 85 -5 30 -17 140 -25 244 -17 203 -30 319 -45 400 -8 42 -9 35 -4 -40z"/>
+<path d="M5177 1940 c-4 -30 -7 -77 -7 -104 0 -32 -7 -60 -21 -83 -25 -41 -18
+-56 11 -22 35 42 44 90 34 181 l-9 83 -8 -55z"/>
+<path d="M5484 6674 c-21 -49 -21 -92 1 -133 22 -44 29 -34 14 23 -9 36 -9 56
+1 91 16 58 5 70 -16 19z"/>
+</g></g>
+        <g stroke="#1f6b41" stroke-width="4.5" fill="var(--plate)">
+          <circle cx="466" cy="131" r="14"/><circle cx="508" cy="257" r="14"/><circle cx="501" cy="584" r="14"/>
+        </g>
+        <g font-size="28" font-weight="700" fill="#1f6b41" text-anchor="end">
+          <text x="432" y="140">귀</text><text x="474" y="266">어깨</text><text x="467" y="593">골반</text>
+        </g>
+        <text x="240" y="1150" font-size="36" font-weight="700" fill="#1f6b41">정렬</text>
+        <text x="240" y="1196" font-size="26" fill="#5c554b">귀·어깨·골반이 한 수직선 위에 놓인다</text>
+
+        <!-- ── 말림 ── -->
+        <g transform="translate(1060,0.0) scale(1.0000)"><g transform="translate(0,1152) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+<path d="M4735 10769 c-164 -25 -324 -168 -395 -354 -20 -51 -23 -79 -23 -180
+0 -66 5 -149 12 -185 7 -36 13 -99 13 -140 0 -86 -17 -128 -103 -257 -53 -79
+-74 -98 -258 -235 -71 -53 -146 -119 -175 -154 -81 -97 -201 -264 -248 -344
+-131 -224 -195 -470 -155 -596 8 -27 20 -92 27 -144 16 -131 34 -227 69 -367
+28 -111 31 -134 33 -329 2 -115 -1 -237 -6 -271 -7 -50 -5 -78 12 -150 12 -48
+25 -135 30 -193 l9 -105 -48 -100 c-27 -55 -68 -136 -93 -180 -25 -43 -58
+-118 -73 -165 -26 -79 -28 -97 -28 -245 0 -213 28 -312 127 -458 l42 -61 -12
+-271 c-13 -292 -7 -445 28 -740 42 -359 45 -415 27 -522 -9 -54 -37 -163 -62
+-243 -63 -199 -109 -391 -130 -538 -30 -210 -12 -388 69 -672 92 -321 119
+-717 68 -975 -41 -204 -37 -283 14 -345 58 -68 142 -86 327 -70 121 11 142 10
+257 -10 229 -39 262 -42 375 -35 61 4 122 7 138 6 15 -1 39 -2 55 -2 15 -1 45
+3 67 9 22 5 61 13 87 16 31 5 62 19 92 42 39 29 46 40 46 69 0 38 -28 65 -70
+65 -24 1 -24 1 -5 12 37 20 65 51 65 73 0 35 -28 64 -68 70 -20 4 -64 15 -97
+25 -33 11 -89 28 -125 39 -91 27 -451 199 -508 241 -68 51 -108 136 -128 270
+-19 126 -14 448 11 625 8 61 28 234 45 385 48 430 62 503 118 615 63 127 99
+250 108 375 6 78 10 92 54 170 27 47 67 132 89 190 38 96 51 143 102 370 46
+208 79 474 79 649 l0 93 44 67 c93 139 105 240 55 436 -27 105 -31 145 -38
+320 -5 146 -4 227 6 300 16 124 16 210 2 289 -10 51 -9 74 5 133 9 40 16 105
+16 146 0 64 5 85 34 148 23 49 39 101 46 153 5 43 20 99 32 125 17 36 22 65
+22 131 1 77 4 88 28 121 15 19 38 57 50 85 32 69 32 235 0 388 -44 203 -162
+530 -212 581 -54 56 -33 138 62 242 29 32 60 72 67 90 7 18 21 35 31 38 10 3
+54 -10 98 -30 44 -19 94 -35 111 -35 66 0 105 37 117 110 5 28 15 46 30 57 13
+8 24 21 24 28 0 7 11 24 25 39 15 16 25 39 25 57 0 28 2 29 43 29 83 0 88 13
+67 185 l-11 95 29 42 c26 37 33 64 52 190 19 126 21 156 11 205 -33 168 -174
+315 -390 407 -126 54 -251 73 -366 55z m239 -54 c33 -9 108 -39 166 -67 133
+-66 233 -159 281 -261 30 -64 49 -147 35 -147 -4 0 -27 14 -52 31 -63 43 -150
+81 -176 77 -21 -3 -24 -10 -30 -77 -4 -40 -12 -79 -18 -86 -6 -7 -32 -15 -58
+-19 -68 -9 -104 -35 -138 -100 -18 -36 -34 -54 -42 -51 -8 3 -17 5 -22 5 -4 0
+-11 25 -15 56 -5 45 -14 64 -43 96 -51 56 -92 73 -135 54 -45 -18 -72 -54 -96
+-131 -35 -108 -68 -172 -97 -192 -15 -10 -56 -25 -92 -34 l-64 -16 5 41 c2 23
+-2 88 -10 146 -17 131 -18 251 -2 316 37 153 171 310 302 355 66 23 216 25
+301 4z m337 -415 c81 -40 149 -90 149 -109 0 -9 -9 -65 -20 -126 -15 -80 -27
+-119 -47 -148 l-27 -38 13 -121 c11 -101 11 -122 0 -129 -8 -5 -22 -6 -32 -3
+-40 13 -64 -4 -76 -52 -10 -41 -14 -45 -34 -40 -62 18 -80 19 -75 5 2 -7 19
+-18 36 -23 39 -11 40 -20 3 -61 -16 -18 -31 -50 -35 -73 -6 -41 -43 -82 -74
+-82 -8 0 -51 15 -96 34 -45 19 -89 36 -99 40 -31 10 -64 -12 -97 -66 -17 -29
+-47 -69 -65 -88 -18 -19 -42 -53 -53 -75 l-21 -40 -2 30 c-1 17 -5 100 -9 185
+-7 144 -8 139 -6 -82 2 -131 1 -238 -1 -238 -2 0 -18 7 -36 16 -17 9 -70 30
+-116 45 -121 41 -81 11 54 -42 142 -55 161 -75 226 -252 92 -247 133 -427 133
+-592 1 -129 -7 -160 -62 -239 -24 -35 -27 -49 -28 -125 -1 -66 -6 -98 -23
+-136 -13 -27 -29 -87 -36 -132 -8 -44 -28 -114 -44 -153 -25 -58 -31 -87 -31
+-144 0 -39 -6 -91 -12 -116 -6 -26 -12 -142 -13 -270 -1 -124 -5 -247 -10
+-273 l-8 -49 -35 7 c-19 3 -62 15 -96 25 -60 19 -63 21 -79 67 -27 75 -53 110
+-99 135 -95 50 -103 46 -20 -11 45 -30 64 -51 86 -96 15 -31 26 -59 23 -61 -5
+-5 -177 38 -193 48 -6 4 -14 52 -17 106 -8 121 -27 223 -67 362 -16 58 -30
+115 -30 127 0 11 14 52 31 90 51 113 77 194 90 281 7 45 15 81 18 79 3 -2 22
+-10 42 -19 28 -13 38 -26 48 -58 12 -42 87 -130 111 -130 7 0 -7 21 -32 48
+-24 26 -53 68 -64 94 -16 41 -26 53 -36 46 -2 0 -18 6 -35 16 -39 20 -39 13
+-9 218 23 154 41 208 70 208 7 0 19 -14 27 -32 19 -46 116 -141 174 -170 73
+-37 205 -62 205 -39 0 4 -19 11 -43 13 -68 8 -175 65 -234 124 -59 59 -87 114
+-98 192 l-7 51 71 68 c39 38 71 75 71 83 0 10 -8 5 -24 -12 -36 -43 -38 -34
+-6 35 35 77 44 107 32 107 -6 0 -13 -12 -16 -26 -18 -70 -133 -207 -248 -296
+-43 -34 -78 -63 -78 -66 0 -2 25 10 56 28 56 31 57 31 51 8 -8 -28 -47 -269
+-77 -468 -22 -148 -51 -254 -96 -355 -23 -54 -26 -56 -39 -39 -13 18 -14 17
+-15 -11 0 -17 20 -105 44 -195 57 -213 64 -259 76 -546 14 -331 28 -417 118
+-746 46 -166 53 -183 115 -281 37 -57 76 -133 87 -167 23 -74 20 -90 -5 -28
+-25 61 -29 32 -9 -58 21 -96 16 -310 -9 -347 -33 -50 -107 -117 -122 -111 -12
+5 -10 13 15 44 25 31 31 51 40 126 12 109 12 114 1 114 -14 0 -22 -28 -31
+-114 -9 -79 -10 -79 -62 -127 -29 -26 -58 -48 -65 -49 -24 0 -24 22 0 65 28
+50 48 187 28 199 -12 8 -17 -12 -26 -96 -4 -32 -12 -61 -19 -65 -7 -5 -19 -18
+-25 -31 -7 -13 -20 -22 -29 -20 -15 3 -17 18 -17 117 0 77 -4 115 -11 118 -8
+3 -14 -18 -19 -56 -8 -66 -25 -91 -50 -71 -10 8 -15 30 -15 64 0 28 -13 112
+-30 186 -32 148 -36 204 -19 326 14 97 -2 181 -55 296 -212 459 -287 653 -325
+844 -22 111 -36 234 -27 234 3 0 13 -16 21 -37 21 -50 29 -35 10 18 -72 197
+-76 213 -70 274 3 33 8 162 11 288 4 183 2 242 -10 303 -30 142 -20 327 30
+594 19 103 22 256 6 272 -9 9 -12 3 -12 -28 0 -40 -57 -364 -66 -373 -12 -13
+-66 59 -80 106 -36 125 40 372 185 600 147 229 220 311 396 443 72 53 151 120
+177 148 57 60 130 172 154 233 10 24 22 47 28 51 5 3 39 12 74 19 78 14 131
+56 152 119 16 48 26 51 35 8 20 -95 69 -158 110 -142 23 9 18 21 -11 28 -35 9
+-66 81 -72 168 -6 83 2 113 35 144 49 45 103 24 136 -56 l15 -35 10 25 c10 23
+11 22 12 -15 1 -60 9 -81 36 -94 42 -19 52 -13 85 50 38 71 56 85 122 94 74
+11 88 28 95 113 6 84 7 85 93 42z m-1795 -2129 c-3 -24 -6 -66 -6 -94 0 -28
+-3 -47 -7 -44 -8 9 -32 134 -33 174 0 30 1 31 26 20 23 -11 25 -16 20 -56z
+m84 -1510 c0 -11 3 -26 6 -35 5 -12 0 -16 -21 -16 -22 0 -26 3 -20 18 4 9 10
+25 12 35 7 23 23 22 23 -2z m11 -79 c3 -4 20 -52 38 -106 30 -95 93 -245 230
+-545 34 -73 70 -165 81 -202 19 -63 20 -77 9 -156 -15 -112 -6 -231 26 -357
+14 -54 25 -126 25 -159 0 -71 24 -107 72 -107 25 0 28 -3 23 -20 -9 -28 21
+-80 46 -80 12 0 30 -11 41 -25 21 -27 56 -32 87 -13 15 9 26 9 44 1 29 -13 70
+3 100 40 59 71 77 102 77 132 0 30 23 75 34 65 9 -10 -52 -293 -65 -301 -43
+-26 -363 -23 -589 6 -117 15 -337 59 -348 69 -6 7 -8 286 -2 542 l4 222 89 26
+c49 15 87 29 84 32 -4 4 -91 -16 -172 -41 -16 -4 -27 5 -56 52 -120 190 -148
+445 -74 663 13 40 50 119 81 177 53 99 57 104 82 98 15 -3 30 -9 33 -13z m818
+-32 c95 -28 182 -50 192 -50 25 0 27 -7 20 -70 -7 -64 0 -63 -131 -26 -106 30
+-221 61 -262 70 -27 6 -28 9 -28 66 0 51 3 60 18 60 9 0 95 -23 191 -50z m-28
+-134 c85 -24 172 -48 194 -53 l40 -9 7 -89 c3 -50 18 -137 33 -195 40 -156 44
+-195 30 -265 -13 -62 -53 -145 -86 -180 -19 -19 -19 -19 -19 20 0 51 -11 115
+-19 115 -3 0 -5 -80 -3 -177 1 -98 -1 -214 -5 -258 l-8 -80 -24 90 c-29 107
+-44 139 -116 244 -29 44 -59 97 -64 118 -80 302 -126 526 -137 673 -6 76 -5
+90 8 90 8 0 84 -20 169 -44z m139 -1322 c0 -8 -4 -14 -10 -14 -5 0 -10 9 -10
+21 0 11 5 17 10 14 6 -3 10 -13 10 -21z m-770 -368 c204 -35 509 -50 642 -32
+l56 7 -9 -41 c-23 -102 -75 -240 -135 -357 -61 -120 -66 -134 -75 -223 -11
+-112 -45 -229 -104 -360 -69 -152 -83 -218 -135 -650 -5 -47 -21 -175 -35
+-285 -38 -310 -48 -463 -42 -650 10 -266 54 -413 147 -481 49 -35 504 -265
+560 -283 96 -29 208 -61 237 -66 38 -7 46 -16 37 -40 -5 -11 -15 -15 -30 -12
+-20 3 -24 0 -24 -19 0 -29 -34 -33 -49 -7 -9 16 -10 16 -11 -4 0 -27 -16 -29
+-42 -6 -17 15 -18 15 -18 -5 0 -34 -19 -35 -49 -3 -37 39 -46 39 -25 0 19 -37
+6 -61 -22 -38 -13 10 -58 14 -198 14 -154 0 -198 4 -296 25 -104 23 -134 25
+-312 22 -217 -3 -261 6 -297 57 -33 45 -34 87 -6 216 45 215 45 536 -1 805 -8
+47 -39 184 -69 305 -29 121 -59 255 -66 298 -25 165 11 419 111 771 100 353
+107 438 65 811 -14 121 -25 234 -25 251 l0 31 68 -18 c37 -11 105 -26 152 -33z
+m268 -2863 c38 -74 87 -111 267 -198 94 -46 194 -93 224 -105 61 -24 259 -79
+344 -95 31 -6 34 -21 11 -53 -12 -18 -25 -22 -67 -22 -107 0 -190 27 -380 122
+-304 152 -355 187 -398 270 -25 48 -50 148 -42 161 4 7 10 1 13 -13 4 -14 17
+-44 28 -67z"/>
+<path d="M4712 10157 c-12 -13 -22 -34 -22 -47 0 -21 2 -20 23 11 25 37 50 47
+72 29 24 -20 18 -35 -18 -48 -19 -7 -39 -23 -45 -38 -18 -39 -14 -42 12 -9 22
+27 27 29 45 17 19 -11 22 -10 31 13 14 36 13 47 -6 73 -20 29 -64 29 -92 -1z"/>
+<path d="M4770 10020 c-12 -10 -19 -24 -15 -29 9 -16 -1 -13 -19 5 -9 8 -16
+11 -16 7 0 -5 16 -25 36 -44 l37 -34 -7 34 c-4 24 -2 39 10 52 22 24 1 32 -26
+9z"/>
+<path d="M4724 9785 c-9 -36 2 -149 17 -177 16 -30 200 -218 213 -218 6 0 -35
+46 -92 103 -114 114 -124 134 -121 240 2 72 -6 97 -17 52z"/>
+<path d="M4210 9177 c0 -8 101 -79 106 -74 3 3 -7 14 -23 23 -15 10 -30 21
+-33 25 -6 8 -50 31 -50 26z"/>
+<path d="M4404 9020 c26 -28 61 -79 77 -113 23 -46 29 -54 25 -30 -8 50 -46
+122 -84 159 -56 54 -71 40 -18 -16z"/>
+<path d="M3837 8958 c-49 -76 -69 -250 -43 -378 19 -91 66 -224 91 -256 14
+-16 13 -13 0 21 -54 133 -76 235 -76 349 0 90 21 218 42 258 15 28 3 34 -14 6z"/>
+<path d="M4713 8053 c-7 -2 -13 -15 -13 -28 0 -48 92 -63 98 -17 6 42 -37 65
+-85 45z m75 -18 c2 -2 2 -11 -1 -20 -8 -18 -63 -21 -70 -2 -9 26 5 39 36 33
+17 -3 33 -8 35 -11z"/>
+<path d="M3616 8043 c-11 -11 -6 -33 7 -33 24 0 86 -74 116 -141 17 -36 37
+-96 45 -135 l14 -69 1 62 c1 76 -31 170 -82 239 -35 49 -88 89 -101 77z"/>
+<path d="M4320 7834 c18 -20 87 -37 107 -25 14 7 10 10 -22 15 -22 4 -53 11
+-68 16 -24 7 -27 7 -17 -6z"/>
+<path d="M4410 7780 c0 -24 40 -93 69 -117 39 -34 49 -28 14 10 -16 17 -42 52
+-57 77 -14 25 -26 38 -26 30z"/>
+<path d="M4720 7662 c-39 -19 -120 -95 -120 -113 0 -7 22 9 48 34 27 24 63 52
+80 61 18 9 32 21 32 26 0 12 2 13 -40 -8z"/>
+<path d="M4230 7521 c0 -23 50 -110 72 -125 12 -9 31 -16 42 -16 14 0 11 5
+-15 23 -19 12 -45 44 -59 69 -29 53 -40 67 -40 49z"/>
+<path d="M4531 7451 c-8 -17 -11 -34 -8 -38 8 -7 29 46 24 60 -2 6 -9 -4 -16
+-22z"/>
+<path d="M4593 7333 c15 -2 37 -2 50 0 12 2 0 4 -28 4 -27 0 -38 -2 -22 -4z"/>
+<path d="M3742 7283 c-28 -95 -27 -115 16 -205 36 -79 92 -172 92 -155 0 4
+-21 53 -47 109 -47 101 -48 105 -46 196 1 50 0 92 -1 92 -2 0 -8 -17 -14 -37z"/>
+<path d="M4454 7060 c2 -14 12 -54 21 -90 10 -36 21 -96 26 -135 4 -38 12 -92
+17 -120 9 -47 9 -45 11 41 1 98 -22 210 -59 286 -13 27 -19 34 -16 18z"/>
+<path d="M4560 7039 c0 -5 11 -9 25 -9 14 0 25 2 25 4 0 2 -11 6 -25 8 -14 3
+-25 1 -25 -3z"/>
+<path d="M3608 5587 c-45 -10 -66 -27 -34 -27 17 0 139 30 145 36 8 7 -63 1
+-111 -9z"/>
+<path d="M4199 4268 c-44 -57 -73 -82 -136 -120 -52 -32 -73 -61 -73 -101 1
+-18 4 -16 18 13 9 19 33 44 52 57 90 57 112 76 146 128 45 67 40 83 -7 23z"/>
+<path d="M3714 4200 c3 -41 8 -142 12 -224 7 -169 22 -247 23 -126 2 119 -20
+404 -31 415 -7 7 -8 -14 -4 -65z"/>
+<path d="M3975 3730 c7 -34 41 -110 50 -110 2 0 -6 28 -17 63 -24 72 -44 101
+-33 47z"/>
+<path d="M3720 3333 c-1 -37 -35 -286 -55 -397 -14 -77 -25 -149 -24 -160 2
+-31 47 154 63 259 17 105 31 305 22 305 -3 0 -6 -3 -6 -7z"/>
+<path d="M3655 1747 c-13 -163 -12 -169 20 -209 16 -21 31 -36 32 -34 2 2 -5
+22 -15 45 -16 35 -18 59 -14 165 6 154 -12 180 -23 33z"/>
+<path d="M4535 1262 c6 -5 31 -12 57 -14 61 -4 45 13 -19 19 -33 4 -45 2 -38
+-5z"/>
+</g></g>
+        <line x1="1560" y1="1038" x2="2010" y2="1038" stroke="currentColor" stroke-width="3" opacity=".45"/>
+        <!-- 골반 뒤를 지나는 기준선(실측 x=342) -->
+        <line x1="1402" y1="90" x2="1402" y2="1050" stroke="#b23124" stroke-width="4" stroke-dasharray="15 11"/>
+        <circle cx="1402" cy="584" r="14" fill="var(--plate)" stroke="#b23124" stroke-width="4.5"/>
+        <text x="1368" y="593" font-size="28" font-weight="700" fill="#b23124" text-anchor="end">골반</text>
+
+        <!-- 귀 뒤 실측 x=431 → 골반선보다 89 앞 -->
+        <line x1="1402" y1="131" x2="1470" y2="131" stroke="#b23124" stroke-width="4.5" marker-end="url(#arA)"/>
+        <circle cx="1491" cy="131" r="14" fill="var(--plate)" stroke="#b23124" stroke-width="4.5"/>
+        <rect x="1524" y="103" width="300" height="44" rx="9" fill="var(--plate)"/>
+        <text x="1538" y="134" font-size="28" font-weight="700" fill="#b23124">귀가 선 앞으로</text>
+
+        <!-- 등 상부 굽음: 실측 등 뒤 x≈352 @ y≈300 -->
+        <path d="M1140,296 C1250,282 1330,290 1392,306" fill="none" stroke="#b23124" stroke-width="4.5" marker-end="url(#arA)"/>
+        <rect x="820" y="268" width="322" height="44" rx="9" fill="var(--plate)"/>
+        <text x="1128" y="299" font-size="28" font-weight="700" fill="#b23124" text-anchor="end">등 상부가 굽는다</text>
+
+        <text x="1560" y="1150" font-size="36" font-weight="700" fill="#b23124">말림</text>
+        <text x="1560" y="1196" font-size="26" fill="#5c554b">골반은 제자리인데 상체만 앞으로 나간다</text>
+      </svg>
+      </div>
+      <figcaption><b>측면에서 본 두 자세.</b> 정렬된 자세는 귀·어깨·골반이 한 수직선에 놓인다. 말린 자세는 <b>골반이 제자리인 채로</b> 등 상부가 굽으면서 어깨와 귀가 선 앞으로 밀려 나간다. 허리를 숙이는 자세와는 다르다.
+      <span class="credit">도해: 직접 제작 · 인체는 라인아트 작화 후 벡터화, 좌표는 픽셀 실측으로 배치</span></figcaption>
+    </figure>
+
+    <div class="box note"><span class="t">미용 문제가 아니다</span>견봉(acromion, 어깨 지붕뼈)이 중력선 앞으로 나오면 어깨 관절의 역학 자체가 바뀐다. 회전근개가 지나는 통로가 좁아지고, 흉곽이 움츠러들어 호흡 용량까지 줄어든다. 라운딩 숄더는 <b>통증·부상·수행력 저하로 이어지는 구조 변형의 시작점</b>이다(<a href="overview.md">overview.md §1</a>).</div>
+  </div>
+</section>
+
+<!-- ===================== ② 해부학 ===================== -->
+<section id="anatomy">
+  <h2><span class="n">02</span>줄다리기 모델로 본 해부학</h2>
+  <p class="lead">어깨를 사이에 두고 앞과 뒤가 줄다리기를 한다. 한쪽이 이기고 있을 뿐이다.</p>
+  <div class="card">
+    <div class="bigpic">라운딩 숄더의 핵심 메커니즘은 <b>줄다리기</b>다. 앞쪽 근육(대흉근·소흉근·광배근)이 짧아져 어깨를 앞으로 끌어당기고, 뒤쪽 근육(중·하부 승모근·능형근·전거근·외회전근)은 약해져 버텨내지 못한다. 이 패턴이 목까지 확장된 것이 <b>상교차증후군(Upper Crossed Syndrome, UCS)</b>이다.</div>
+
+    <h3>먼저, 견갑골이 무엇인지부터</h3>
+    <p>어깨 정렬 이야기는 사실상 전부 견갑골(scapula, 어깨뼈) 이야기다. 그런데 이 뼈는 몸의 다른 뼈들과 붙어 있는 방식이 다르다. 그 차이를 알고 나면 왜 어깨만 유독 자세의 영향을 크게 받는지가 설명된다.</p>
+
+    <h4>골격에 걸린 곳은 한 군데뿐이다</h4>
+    <p>견갑골은 등 위쪽 갈비뼈 위에 그냥 얹혀 있는 삼각형 뼈다. 골반이 천장관절로 척추에 물려 있고 대퇴골 머리가 절구 안에 깊이 박혀 있는 것과 달리, 견갑골이 나머지 골격과 관절로 이어지는 지점은 <b>견쇄관절(acromioclavicular joint)</b> 하나다. 쇄골 바깥 끝과 만나는 그 한 점을 빼면, 이 뼈를 흉곽에 붙들고 있는 것은 근육뿐이다. 견갑골과 갈비뼈 사이를 <b>견갑흉곽관절(scapulothoracic joint)</b>이라 부르기는 하지만, 여기에는 관절 연골도 관절낭도 없다. 뼈가 근육층 위를 미끄러지는 면일 뿐이다.</p>
+    <p>이 구조는 이득과 대가가 한 세트다. 이득은 자유다. 사람의 팔이 머리 위로도, 등 뒤로도 갈 수 있는 것은 어깨뼈 자체가 흉곽 위를 크게 이동해 주기 때문이다. 대가는 <b>어깨뼈의 위치가 전적으로 근육 장력의 합으로 결정된다</b>는 점이다. 인대가 잡아주는 안전장치가 거의 없으니 앞뒤 근육의 힘이 기울면 뼈는 기운 쪽으로 따라간다. 라운딩 숄더가 “뼈의 변형”이 아니라 <b>근육 문제</b>인 이유가 여기 있다. 동시에 그것이 되돌릴 수 있다는 근거이기도 하다.</p>
+
+    <h4>움직임은 세 쌍, 여섯 방향이다</h4>
+    <p>이 문서 전체에서 반복될 용어들이다. 어깨뼈가 흉곽 위에서 하는 일은 결국 아래 여섯 가지의 조합이다.</p>
+    <table>
+      <tr><th>움직임</th><th>쉬운 말</th><th>이 방향이 만들어지는 상황</th></tr>
+      <tr><td><b>전인</b>(protraction)</td><td>척추에서 멀어져 옆·앞으로 미끄러진다</td><td>키보드로 팔을 뻗을 때, 푸쉬업 맨 위에서 끝까지 밀어낼 때</td></tr>
+      <tr><td><b>후인</b>(retraction)</td><td>척추 쪽으로 모인다</td><td>견갑골 조이기, 로우의 마지막 구간</td></tr>
+      <tr><td><b>상승</b>(elevation)</td><td>통째로 위로 올라간다</td><td>어깨를 으쓱할 때, 무거운 가방을 한쪽으로 멜 때</td></tr>
+      <tr><td><b>하강</b>(depression)</td><td>아래로 내려간다</td><td>딥스에서 몸을 밀어 올릴 때, 매달린 채 어깨를 끌어내릴 때</td></tr>
+      <tr><td><b>상방 회전</b>(upward rotation)</td><td>아래각이 바깥으로 돌며 관절와가 위를 향한다</td><td>팔을 머리 위로 들 때, 높은 홀드로 리칭할 때</td></tr>
+      <tr><td><b>하방 회전</b>(downward rotation)</td><td>그 반대로 돌아 관절와가 아래를 향한다</td><td>팔을 내릴 때, 짧아진 소흉근이 어깨뼈를 앞·아래로 당길 때</td></tr>
+    </table>
+    <p>여기에 두 개의 기울기가 더 붙는다. 어깨뼈의 위쪽 모서리가 앞으로 숙이는 <b>전방 경사(anterior tilt)</b>, 그리고 안쪽 모서리가 갈비뼈에서 들리는 <b>내회전(internal rotation)</b>이다. ①에서 말한 “전인 + 내회전 + 전방 경사”는 이 목록에서 세 항목을 고른 조합이다. 어깨뼈가 척추에서 멀어지고, 위 모서리가 앞으로 숙이고, 안쪽 모서리가 갈비뼈에서 뜬 상태. 라운딩 숄더의 해부학적 정의는 이 세 문장이 전부다. 그리고 이 셋을 만드는 것은 아래에서 볼 앞쪽 팀이다.</p>
+
+    <h3>뒤쪽은 왜 “약해지는가”</h3>
+    <p>줄다리기 모델에서 가장 자주 오해받는 대목이 뒤쪽이다. 등이 약해서 진다면 등을 강하게 만들면 된다. 그런데 로우와 풀업을 몇 년 한 클라이머의 등은 대체로 약하지 않다. 그런데도 어깨는 말려 있다. 여기서 “약하다”는 말이 근육량이나 최대 근력을 뜻하는 것이 아님이 드러난다.</p>
+
+    <h4>같은 근육도 길이에 따라 힘이 다르다</h4>
+    <p>근육이 낼 수 있는 장력은 그 순간의 길이에 좌우된다. 근절(sarcomere) 안에서 액틴과 미오신이 겹치는 구간이 적절할 때 장력이 최대가 되고, 너무 짧아지거나 너무 늘어나면 겹침이 줄어 힘이 떨어진다. 이것을 길이-장력 관계(length-tension relationship)라 하고, 요점은 하나다. <b>근육은 자기 길이의 중간 구간에서 가장 강하다.</b></p>
+    <p>이제 말린 어깨의 등을 보자. 어깨뼈가 하루 종일 척추에서 멀어져 있으면, 척추와 어깨뼈를 잇는 근육들(중·하부 승모근, 능형근)은 깨어 있는 내내 <b>늘어난 위치에서 버티게</b> 된다. 그 상태가 몇 달, 몇 년 이어지면 늘어난 길이가 그 근육의 기본값이 되고, 정작 힘을 내야 할 자리에서는 원래 낼 수 있는 힘의 일부만 나온다. 이 현상을 <b>신장성 약화(stretch weakness)</b>라 부른다. 근육이 상한 것이 아니라, <b>일하는 자리가 곡선의 나쁜 쪽으로 옮겨간 것</b>이다.</p>
+
+    <h4>그래서 등 운동만으로는 바뀌지 않는다</h4>
+    <p>여기서 실무적으로 중요한 결론이 나온다. <b>등 운동을 아무리 해도 자세가 바뀌지 않는 일이 실제로 생긴다.</b> 로우로 만든 근력은 로우를 하는 그 구간, 그 길이에서의 근력이다. 하루 여덟 시간 필요한 것은 어깨뼈를 제자리에 붙들어 두는 저강도 지구력이고, 그 힘은 하필 늘어난 길이에서 나와야 한다. 두 요구는 같지 않다. ⑥의 처방이 무게보다 <b>어깨뼈가 제자리에 놓인 상태에서의 반복</b>을 강조하는 이유다.</p>
+    <p>같은 논리가 순서도 정한다. 앞쪽을 풀지 않은 채 뒤만 강화하면 근육은 계속 나쁜 길이에서 훈련된다. 앞줄을 놓아야 뒤가 좋은 길이로 돌아오고, 좋은 길이로 돌아와야 강화가 자세로 옮겨진다.</p>
+
+    <h3>X자는 왜 하필 X자인가: 짝힘</h3>
+    <p>상교차증후군의 그림은 근육 이름 넷을 대각선으로 이어놓은 것처럼 보인다. 왜 하필 대각선인가. 근육의 위치가 아니라 <b>작용 방향</b>으로 묶었기 때문이다.</p>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 1560 700" role="img" aria-label="상교차증후군 X 다이어그램. 단축된 짝(상부 승모근·후두하근과 대흉근·소흉근)과 약해진 짝(심부 목 굴곡근과 중·하부 승모근·능형근)이 측면에서 X자로 교차한다">
+        <defs><clipPath id="ucsClip"><rect x="778" y="0" width="268" height="572"/></clipPath></defs>
+        <rect width="1560" height="700" fill="var(--plate)"/>
+        <g clip-path="url(#ucsClip)"><g transform="translate(470,-40)">
+          <g transform="translate(0,1152) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+<path d="M4735 10769 c-164 -25 -324 -168 -395 -354 -20 -51 -23 -79 -23 -180
+0 -66 5 -149 12 -185 7 -36 13 -99 13 -140 0 -86 -17 -128 -103 -257 -53 -79
+-74 -98 -258 -235 -71 -53 -146 -119 -175 -154 -81 -97 -201 -264 -248 -344
+-131 -224 -195 -470 -155 -596 8 -27 20 -92 27 -144 16 -131 34 -227 69 -367
+28 -111 31 -134 33 -329 2 -115 -1 -237 -6 -271 -7 -50 -5 -78 12 -150 12 -48
+25 -135 30 -193 l9 -105 -48 -100 c-27 -55 -68 -136 -93 -180 -25 -43 -58
+-118 -73 -165 -26 -79 -28 -97 -28 -245 0 -213 28 -312 127 -458 l42 -61 -12
+-271 c-13 -292 -7 -445 28 -740 42 -359 45 -415 27 -522 -9 -54 -37 -163 -62
+-243 -63 -199 -109 -391 -130 -538 -30 -210 -12 -388 69 -672 92 -321 119
+-717 68 -975 -41 -204 -37 -283 14 -345 58 -68 142 -86 327 -70 121 11 142 10
+257 -10 229 -39 262 -42 375 -35 61 4 122 7 138 6 15 -1 39 -2 55 -2 15 -1 45
+3 67 9 22 5 61 13 87 16 31 5 62 19 92 42 39 29 46 40 46 69 0 38 -28 65 -70
+65 -24 1 -24 1 -5 12 37 20 65 51 65 73 0 35 -28 64 -68 70 -20 4 -64 15 -97
+25 -33 11 -89 28 -125 39 -91 27 -451 199 -508 241 -68 51 -108 136 -128 270
+-19 126 -14 448 11 625 8 61 28 234 45 385 48 430 62 503 118 615 63 127 99
+250 108 375 6 78 10 92 54 170 27 47 67 132 89 190 38 96 51 143 102 370 46
+208 79 474 79 649 l0 93 44 67 c93 139 105 240 55 436 -27 105 -31 145 -38
+320 -5 146 -4 227 6 300 16 124 16 210 2 289 -10 51 -9 74 5 133 9 40 16 105
+16 146 0 64 5 85 34 148 23 49 39 101 46 153 5 43 20 99 32 125 17 36 22 65
+22 131 1 77 4 88 28 121 15 19 38 57 50 85 32 69 32 235 0 388 -44 203 -162
+530 -212 581 -54 56 -33 138 62 242 29 32 60 72 67 90 7 18 21 35 31 38 10 3
+54 -10 98 -30 44 -19 94 -35 111 -35 66 0 105 37 117 110 5 28 15 46 30 57 13
+8 24 21 24 28 0 7 11 24 25 39 15 16 25 39 25 57 0 28 2 29 43 29 83 0 88 13
+67 185 l-11 95 29 42 c26 37 33 64 52 190 19 126 21 156 11 205 -33 168 -174
+315 -390 407 -126 54 -251 73 -366 55z m239 -54 c33 -9 108 -39 166 -67 133
+-66 233 -159 281 -261 30 -64 49 -147 35 -147 -4 0 -27 14 -52 31 -63 43 -150
+81 -176 77 -21 -3 -24 -10 -30 -77 -4 -40 -12 -79 -18 -86 -6 -7 -32 -15 -58
+-19 -68 -9 -104 -35 -138 -100 -18 -36 -34 -54 -42 -51 -8 3 -17 5 -22 5 -4 0
+-11 25 -15 56 -5 45 -14 64 -43 96 -51 56 -92 73 -135 54 -45 -18 -72 -54 -96
+-131 -35 -108 -68 -172 -97 -192 -15 -10 -56 -25 -92 -34 l-64 -16 5 41 c2 23
+-2 88 -10 146 -17 131 -18 251 -2 316 37 153 171 310 302 355 66 23 216 25
+301 4z m337 -415 c81 -40 149 -90 149 -109 0 -9 -9 -65 -20 -126 -15 -80 -27
+-119 -47 -148 l-27 -38 13 -121 c11 -101 11 -122 0 -129 -8 -5 -22 -6 -32 -3
+-40 13 -64 -4 -76 -52 -10 -41 -14 -45 -34 -40 -62 18 -80 19 -75 5 2 -7 19
+-18 36 -23 39 -11 40 -20 3 -61 -16 -18 -31 -50 -35 -73 -6 -41 -43 -82 -74
+-82 -8 0 -51 15 -96 34 -45 19 -89 36 -99 40 -31 10 -64 -12 -97 -66 -17 -29
+-47 -69 -65 -88 -18 -19 -42 -53 -53 -75 l-21 -40 -2 30 c-1 17 -5 100 -9 185
+-7 144 -8 139 -6 -82 2 -131 1 -238 -1 -238 -2 0 -18 7 -36 16 -17 9 -70 30
+-116 45 -121 41 -81 11 54 -42 142 -55 161 -75 226 -252 92 -247 133 -427 133
+-592 1 -129 -7 -160 -62 -239 -24 -35 -27 -49 -28 -125 -1 -66 -6 -98 -23
+-136 -13 -27 -29 -87 -36 -132 -8 -44 -28 -114 -44 -153 -25 -58 -31 -87 -31
+-144 0 -39 -6 -91 -12 -116 -6 -26 -12 -142 -13 -270 -1 -124 -5 -247 -10
+-273 l-8 -49 -35 7 c-19 3 -62 15 -96 25 -60 19 -63 21 -79 67 -27 75 -53 110
+-99 135 -95 50 -103 46 -20 -11 45 -30 64 -51 86 -96 15 -31 26 -59 23 -61 -5
+-5 -177 38 -193 48 -6 4 -14 52 -17 106 -8 121 -27 223 -67 362 -16 58 -30
+115 -30 127 0 11 14 52 31 90 51 113 77 194 90 281 7 45 15 81 18 79 3 -2 22
+-10 42 -19 28 -13 38 -26 48 -58 12 -42 87 -130 111 -130 7 0 -7 21 -32 48
+-24 26 -53 68 -64 94 -16 41 -26 53 -36 46 -2 0 -18 6 -35 16 -39 20 -39 13
+-9 218 23 154 41 208 70 208 7 0 19 -14 27 -32 19 -46 116 -141 174 -170 73
+-37 205 -62 205 -39 0 4 -19 11 -43 13 -68 8 -175 65 -234 124 -59 59 -87 114
+-98 192 l-7 51 71 68 c39 38 71 75 71 83 0 10 -8 5 -24 -12 -36 -43 -38 -34
+-6 35 35 77 44 107 32 107 -6 0 -13 -12 -16 -26 -18 -70 -133 -207 -248 -296
+-43 -34 -78 -63 -78 -66 0 -2 25 10 56 28 56 31 57 31 51 8 -8 -28 -47 -269
+-77 -468 -22 -148 -51 -254 -96 -355 -23 -54 -26 -56 -39 -39 -13 18 -14 17
+-15 -11 0 -17 20 -105 44 -195 57 -213 64 -259 76 -546 14 -331 28 -417 118
+-746 46 -166 53 -183 115 -281 37 -57 76 -133 87 -167 23 -74 20 -90 -5 -28
+-25 61 -29 32 -9 -58 21 -96 16 -310 -9 -347 -33 -50 -107 -117 -122 -111 -12
+5 -10 13 15 44 25 31 31 51 40 126 12 109 12 114 1 114 -14 0 -22 -28 -31
+-114 -9 -79 -10 -79 -62 -127 -29 -26 -58 -48 -65 -49 -24 0 -24 22 0 65 28
+50 48 187 28 199 -12 8 -17 -12 -26 -96 -4 -32 -12 -61 -19 -65 -7 -5 -19 -18
+-25 -31 -7 -13 -20 -22 -29 -20 -15 3 -17 18 -17 117 0 77 -4 115 -11 118 -8
+3 -14 -18 -19 -56 -8 -66 -25 -91 -50 -71 -10 8 -15 30 -15 64 0 28 -13 112
+-30 186 -32 148 -36 204 -19 326 14 97 -2 181 -55 296 -212 459 -287 653 -325
+844 -22 111 -36 234 -27 234 3 0 13 -16 21 -37 21 -50 29 -35 10 18 -72 197
+-76 213 -70 274 3 33 8 162 11 288 4 183 2 242 -10 303 -30 142 -20 327 30
+594 19 103 22 256 6 272 -9 9 -12 3 -12 -28 0 -40 -57 -364 -66 -373 -12 -13
+-66 59 -80 106 -36 125 40 372 185 600 147 229 220 311 396 443 72 53 151 120
+177 148 57 60 130 172 154 233 10 24 22 47 28 51 5 3 39 12 74 19 78 14 131
+56 152 119 16 48 26 51 35 8 20 -95 69 -158 110 -142 23 9 18 21 -11 28 -35 9
+-66 81 -72 168 -6 83 2 113 35 144 49 45 103 24 136 -56 l15 -35 10 25 c10 23
+11 22 12 -15 1 -60 9 -81 36 -94 42 -19 52 -13 85 50 38 71 56 85 122 94 74
+11 88 28 95 113 6 84 7 85 93 42z m-1795 -2129 c-3 -24 -6 -66 -6 -94 0 -28
+-3 -47 -7 -44 -8 9 -32 134 -33 174 0 30 1 31 26 20 23 -11 25 -16 20 -56z
+m84 -1510 c0 -11 3 -26 6 -35 5 -12 0 -16 -21 -16 -22 0 -26 3 -20 18 4 9 10
+25 12 35 7 23 23 22 23 -2z m11 -79 c3 -4 20 -52 38 -106 30 -95 93 -245 230
+-545 34 -73 70 -165 81 -202 19 -63 20 -77 9 -156 -15 -112 -6 -231 26 -357
+14 -54 25 -126 25 -159 0 -71 24 -107 72 -107 25 0 28 -3 23 -20 -9 -28 21
+-80 46 -80 12 0 30 -11 41 -25 21 -27 56 -32 87 -13 15 9 26 9 44 1 29 -13 70
+3 100 40 59 71 77 102 77 132 0 30 23 75 34 65 9 -10 -52 -293 -65 -301 -43
+-26 -363 -23 -589 6 -117 15 -337 59 -348 69 -6 7 -8 286 -2 542 l4 222 89 26
+c49 15 87 29 84 32 -4 4 -91 -16 -172 -41 -16 -4 -27 5 -56 52 -120 190 -148
+445 -74 663 13 40 50 119 81 177 53 99 57 104 82 98 15 -3 30 -9 33 -13z m818
+-32 c95 -28 182 -50 192 -50 25 0 27 -7 20 -70 -7 -64 0 -63 -131 -26 -106 30
+-221 61 -262 70 -27 6 -28 9 -28 66 0 51 3 60 18 60 9 0 95 -23 191 -50z m-28
+-134 c85 -24 172 -48 194 -53 l40 -9 7 -89 c3 -50 18 -137 33 -195 40 -156 44
+-195 30 -265 -13 -62 -53 -145 -86 -180 -19 -19 -19 -19 -19 20 0 51 -11 115
+-19 115 -3 0 -5 -80 -3 -177 1 -98 -1 -214 -5 -258 l-8 -80 -24 90 c-29 107
+-44 139 -116 244 -29 44 -59 97 -64 118 -80 302 -126 526 -137 673 -6 76 -5
+90 8 90 8 0 84 -20 169 -44z m139 -1322 c0 -8 -4 -14 -10 -14 -5 0 -10 9 -10
+21 0 11 5 17 10 14 6 -3 10 -13 10 -21z m-770 -368 c204 -35 509 -50 642 -32
+l56 7 -9 -41 c-23 -102 -75 -240 -135 -357 -61 -120 -66 -134 -75 -223 -11
+-112 -45 -229 -104 -360 -69 -152 -83 -218 -135 -650 -5 -47 -21 -175 -35
+-285 -38 -310 -48 -463 -42 -650 10 -266 54 -413 147 -481 49 -35 504 -265
+560 -283 96 -29 208 -61 237 -66 38 -7 46 -16 37 -40 -5 -11 -15 -15 -30 -12
+-20 3 -24 0 -24 -19 0 -29 -34 -33 -49 -7 -9 16 -10 16 -11 -4 0 -27 -16 -29
+-42 -6 -17 15 -18 15 -18 -5 0 -34 -19 -35 -49 -3 -37 39 -46 39 -25 0 19 -37
+6 -61 -22 -38 -13 10 -58 14 -198 14 -154 0 -198 4 -296 25 -104 23 -134 25
+-312 22 -217 -3 -261 6 -297 57 -33 45 -34 87 -6 216 45 215 45 536 -1 805 -8
+47 -39 184 -69 305 -29 121 -59 255 -66 298 -25 165 11 419 111 771 100 353
+107 438 65 811 -14 121 -25 234 -25 251 l0 31 68 -18 c37 -11 105 -26 152 -33z
+m268 -2863 c38 -74 87 -111 267 -198 94 -46 194 -93 224 -105 61 -24 259 -79
+344 -95 31 -6 34 -21 11 -53 -12 -18 -25 -22 -67 -22 -107 0 -190 27 -380 122
+-304 152 -355 187 -398 270 -25 48 -50 148 -42 161 4 7 10 1 13 -13 4 -14 17
+-44 28 -67z"/>
+<path d="M4712 10157 c-12 -13 -22 -34 -22 -47 0 -21 2 -20 23 11 25 37 50 47
+72 29 24 -20 18 -35 -18 -48 -19 -7 -39 -23 -45 -38 -18 -39 -14 -42 12 -9 22
+27 27 29 45 17 19 -11 22 -10 31 13 14 36 13 47 -6 73 -20 29 -64 29 -92 -1z"/>
+<path d="M4770 10020 c-12 -10 -19 -24 -15 -29 9 -16 -1 -13 -19 5 -9 8 -16
+11 -16 7 0 -5 16 -25 36 -44 l37 -34 -7 34 c-4 24 -2 39 10 52 22 24 1 32 -26
+9z"/>
+<path d="M4724 9785 c-9 -36 2 -149 17 -177 16 -30 200 -218 213 -218 6 0 -35
+46 -92 103 -114 114 -124 134 -121 240 2 72 -6 97 -17 52z"/>
+<path d="M4210 9177 c0 -8 101 -79 106 -74 3 3 -7 14 -23 23 -15 10 -30 21
+-33 25 -6 8 -50 31 -50 26z"/>
+<path d="M4404 9020 c26 -28 61 -79 77 -113 23 -46 29 -54 25 -30 -8 50 -46
+122 -84 159 -56 54 -71 40 -18 -16z"/>
+<path d="M3837 8958 c-49 -76 -69 -250 -43 -378 19 -91 66 -224 91 -256 14
+-16 13 -13 0 21 -54 133 -76 235 -76 349 0 90 21 218 42 258 15 28 3 34 -14 6z"/>
+<path d="M4713 8053 c-7 -2 -13 -15 -13 -28 0 -48 92 -63 98 -17 6 42 -37 65
+-85 45z m75 -18 c2 -2 2 -11 -1 -20 -8 -18 -63 -21 -70 -2 -9 26 5 39 36 33
+17 -3 33 -8 35 -11z"/>
+<path d="M3616 8043 c-11 -11 -6 -33 7 -33 24 0 86 -74 116 -141 17 -36 37
+-96 45 -135 l14 -69 1 62 c1 76 -31 170 -82 239 -35 49 -88 89 -101 77z"/>
+<path d="M4320 7834 c18 -20 87 -37 107 -25 14 7 10 10 -22 15 -22 4 -53 11
+-68 16 -24 7 -27 7 -17 -6z"/>
+<path d="M4410 7780 c0 -24 40 -93 69 -117 39 -34 49 -28 14 10 -16 17 -42 52
+-57 77 -14 25 -26 38 -26 30z"/>
+<path d="M4720 7662 c-39 -19 -120 -95 -120 -113 0 -7 22 9 48 34 27 24 63 52
+80 61 18 9 32 21 32 26 0 12 2 13 -40 -8z"/>
+<path d="M4230 7521 c0 -23 50 -110 72 -125 12 -9 31 -16 42 -16 14 0 11 5
+-15 23 -19 12 -45 44 -59 69 -29 53 -40 67 -40 49z"/>
+<path d="M4531 7451 c-8 -17 -11 -34 -8 -38 8 -7 29 46 24 60 -2 6 -9 -4 -16
+-22z"/>
+<path d="M4593 7333 c15 -2 37 -2 50 0 12 2 0 4 -28 4 -27 0 -38 -2 -22 -4z"/>
+<path d="M3742 7283 c-28 -95 -27 -115 16 -205 36 -79 92 -172 92 -155 0 4
+-21 53 -47 109 -47 101 -48 105 -46 196 1 50 0 92 -1 92 -2 0 -8 -17 -14 -37z"/>
+<path d="M4454 7060 c2 -14 12 -54 21 -90 10 -36 21 -96 26 -135 4 -38 12 -92
+17 -120 9 -47 9 -45 11 41 1 98 -22 210 -59 286 -13 27 -19 34 -16 18z"/>
+<path d="M4560 7039 c0 -5 11 -9 25 -9 14 0 25 2 25 4 0 2 -11 6 -25 8 -14 3
+-25 1 -25 -3z"/>
+<path d="M3608 5587 c-45 -10 -66 -27 -34 -27 17 0 139 30 145 36 8 7 -63 1
+-111 -9z"/>
+<path d="M4199 4268 c-44 -57 -73 -82 -136 -120 -52 -32 -73 -61 -73 -101 1
+-18 4 -16 18 13 9 19 33 44 52 57 90 57 112 76 146 128 45 67 40 83 -7 23z"/>
+<path d="M3714 4200 c3 -41 8 -142 12 -224 7 -169 22 -247 23 -126 2 119 -20
+404 -31 415 -7 7 -8 -14 -4 -65z"/>
+<path d="M3975 3730 c7 -34 41 -110 50 -110 2 0 -6 28 -17 63 -24 72 -44 101
+-33 47z"/>
+<path d="M3720 3333 c-1 -37 -35 -286 -55 -397 -14 -77 -25 -149 -24 -160 2
+-31 47 154 63 259 17 105 31 305 22 305 -3 0 -6 -3 -6 -7z"/>
+<path d="M3655 1747 c-13 -163 -12 -169 20 -209 16 -21 31 -36 32 -34 2 2 -5
+22 -15 45 -16 35 -18 59 -14 165 6 154 -12 180 -23 33z"/>
+<path d="M4535 1262 c6 -5 31 -12 57 -14 61 -4 45 13 -19 19 -33 4 -45 2 -38
+-5z"/>
+</g>
+        </g></g>
+
+        <line x1="868" y1="156" x2="942" y2="332" stroke="#b23124" stroke-width="6"/>
+        <line x1="975" y1="156" x2="832" y2="364" stroke="#1f5fa0" stroke-width="6" stroke-dasharray="15 11"/>
+        <g stroke-width="4" fill="var(--plate)">
+          <circle cx="868" cy="156" r="13" stroke="#b23124"/><circle cx="942" cy="332" r="13" stroke="#b23124"/>
+          <circle cx="975" cy="156" r="13" stroke="#1f5fa0"/><circle cx="832" cy="364" r="13" stroke="#1f5fa0"/>
+        </g>
+
+        <g stroke-width="2.5" fill="none" opacity=".5">
+          <line x1="855" y1="156" x2="490" y2="94" stroke="#b23124"/>
+          <line x1="988" y1="156" x2="1090"        y2="94" stroke="#1f5fa0"/>
+          <line x1="955" y1="332" x2="1090"        y2="394" stroke="#b23124"/>
+          <line x1="819" y1="364" x2="490"  y2="426" stroke="#1f5fa0"/>
+        </g>
+        <rect x="90" y="56" width="400" height="76" rx="11" fill="#fbeae4" stroke="#b23124" stroke-width="2.5"/><text x="106" y="88" font-size="23" font-weight="700" fill="#b23124">단축 · 과긴장</text><text x="106" y="116" font-size="20" fill="#5c554b">상부 승모근 · 후두하근</text>
+        <rect x="1090" y="56" width="400" height="76" rx="11" fill="#eaf0f6" stroke="#1f5fa0" stroke-width="2.5"/><text x="1106" y="88" font-size="23" font-weight="700" fill="#1f5fa0">늘어나 약화</text><text x="1106" y="116" font-size="20" fill="#5c554b">심부 목 굴곡근</text>
+        <rect x="1090" y="356" width="400" height="76" rx="11" fill="#fbeae4" stroke="#b23124" stroke-width="2.5"/><text x="1106" y="388" font-size="23" font-weight="700" fill="#b23124">단축 · 과긴장</text><text x="1106" y="416" font-size="20" fill="#5c554b">대흉근 · 소흉근</text>
+        <rect x="90" y="388" width="400" height="76" rx="11" fill="#eaf0f6" stroke="#1f5fa0" stroke-width="2.5"/><text x="106" y="420" font-size="23" font-weight="700" fill="#1f5fa0">늘어나 약화</text><text x="106" y="448" font-size="20" fill="#5c554b">중·하부 승모근 · 능형근</text>
+
+        <g font-size="21">
+          <line x1="90" y1="648" x2="150" y2="648" stroke="#b23124" stroke-width="6"/>
+          <text x="162" y="655" fill="#5c554b">단축된 짝: 풀어야(스트레칭) 한다</text>
+          <line x1="90" y1="682" x2="150" y2="682" stroke="#1f5fa0" stroke-width="6" stroke-dasharray="15 11"/>
+          <text x="162" y="689" fill="#5c554b">약해진 짝: 강화해야 한다</text>
+          <text x="1470" y="689" text-anchor="end" fill="#7d766a">측면 · 왼쪽이 등, 오른쪽이 가슴</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption><b>상교차증후군(UCS).</b> 단축된 짝(목 뒤 ↔ 가슴)과 약해진 짝(목 앞 ↔ 등 중부)이 측면에서 X자로 교차한다. 교정은 빨간 짝을 풀고 파란 짝을 강화하는 일이다.</figcaption>
+    </figure>
+
+    <h4>축은 하나, 팀은 둘이다</h4>
+    <p>몸통 위쪽을 옆에서 보면, 머리와 어깨는 흉추 상부를 축으로 앞뒤로 기우는 하나의 덩어리다. 이 덩어리를 앞으로 굴리려는 힘과 뒤로 세우려는 힘이 축을 사이에 두고 맞선다. 서로 떨어진 두 힘이 반대편에서 같은 회전을 만드는 배치를 역학에서 <b>짝힘(force couple)</b>이라 한다.</p>
+    <p>앞으로 굴리는 팀은 <b>대흉근·소흉근</b>과 <b>상부 승모근·견갑거근</b>이다. 하나는 가슴 앞에 있고 하나는 목 뒤에 있다. 몸의 반대편에 붙어 있지만 결과는 같다. 가슴 쪽은 어깨를 앞으로 끌어당기고, 목 뒤쪽은 뒤통수를 아래로 당겨 턱을 들리게 한다. 둘 다 상체를 <b>앞으로 굴리는 회전</b>을 만든다.</p>
+    <p>뒤로 세우는 팀도 같은 방식으로 짝을 이룬다. <b>심부 경부 굴곡근</b>(목 앞 깊은 층)이 턱을 당겨 머리를 몸통 위로 되돌리고, <b>중·하부 승모근·능형근·전거근</b>이 어깨뼈를 뒤·아래로 끌어 흉곽을 편다. 역시 반대편에 있고, 역시 같은 회전을 만든다.</p>
+    <p>그래서 그림의 대각선은 근육의 위치를 이은 선이 아니라 <b>같은 팀을 이은 선</b>이다. 빨간 대각선이 앞으로 굴리는 팀, 파란 대각선이 뒤로 세우는 팀이고, 두 선이 흉추 상부에서 교차하기 때문에 X자가 된다. 상교차(upper crossed)라는 이름은 근육 배치가 아니라 이 작용 방향의 그림에서 나왔다.</p>
+
+    <h4>그래서 반쪽 교정은 실패한다</h4>
+    <p>이 구조에는 곧바로 실무적 함의가 따라온다. <b>턱 당기기(chin tuck)와 견갑골 조이기는 별개 운동이 아니라 같은 팀의 앞 절반과 뒤 절반이다.</b> 어깨만 뒤로 모으고 머리는 앞으로 나간 채 두면 X의 절반만 고친 것이고, 남은 절반이 상체를 계속 같은 방향으로 굴린다. 반대도 같다. 턱만 당기고 등 중부를 버려두면 목이 잠깐 편해질 뿐 어깨는 제자리로 오지 않는다. ⑦의 운동들이 목과 등을 한 세트로 묶어 놓은 이유가 여기 있다.</p>
+
+    <h3>줄다리기의 양쪽 선수들</h3>
+    <p>이름이 나올 때마다 찾아볼 수 있게, 주요 근육의 위치를 실제 해부도로 확인해 둔다.</p>
+
+    <div class="dual">
+      <div class="ph">
+        <img src="/img/Pectoralis_minor_muscle_animation_small.gif"
+             alt="소흉근 위치 3D 애니메이션" loading="lazy" onerror="this.closest('.ph').style.display='none'" width="320" height="320">
+        <div class="cap"><b>소흉근(앞·단축 팀)</b>은 갈비뼈에서 견갑골 부리돌기로 붙는 작은 근육이다. 짧아지면 견갑골을 앞·아래로 끌어당기는 <b>주범</b>이다.</div>
+      </div>
+      <div class="ph">
+        <img src="/img/Trapezius_Gray409.PNG"
+             alt="승모근 해부도, 상·중·하부" loading="lazy" onerror="this.closest('.ph').style.display='none'" width="960" height="1514">
+        <div class="cap"><b>승모근(뒤 팀)</b>은 위쪽 섬유만 과긴장하고 <b>중·하부 섬유는 약화</b>되는 게 전형적 패턴이다. 교정 운동의 주 타깃은 중·하부다.</div>
+      </div>
+      <div class="ph">
+        <img src="/img/Rhomboid_muscles_back.png"
+             alt="능형근 해부도" loading="lazy" onerror="this.closest('.ph').style.display='none'" width="960" height="960">
+        <div class="cap"><b>능형근(뒤·약화 팀)</b>은 척추와 견갑골 안쪽 모서리를 잇는다. 견갑골을 척추 쪽으로 모으는(후인) 근육이라, 약해지면 어깨가 앞으로 흐른다.</div>
+      </div>
+    </div>
+    <figcaption style="text-align:center"><span class="credit">해부 이미지: Anatomography (BodyParts3D), CC BY-SA 2.1 JP · 승모근: Gray's Anatomy (Mikael Häggström 편집), Public Domain</span></figcaption>
+
+    <div class="box tip"><span class="t">줄다리기의 함의</span>이 모델이 교정 전략을 결정한다. <b>한쪽만 건드리면 진다.</b> 등 강화만 하고 가슴을 안 풀면 앞줄이 그대로 당기고 있고, 가슴만 풀고 강화를 안 하면 어깨를 제자리에 잡아둘 힘이 없다. ⑥에서 이 원리로 처방을 짠다.</div>
+
+    <div class="box warn"><span class="t">모델의 지위: 진단명이 아니다</span>상교차증후군은 임상 관찰에서 정리된 <b>설명 모델</b>이지 국제질병분류(ICD)에 등재된 진단명이 아니다. 근육별 단축·약화를 하나씩 측정해 확진하는 검사도 없다. 실제로 라운딩 숄더가 뚜렷한데 어깨가 전혀 아프지 않은 사람이 많고, 정렬이 좋은데 아픈 사람도 많다. 이 모델의 값어치는 확진이 아니라 <b>정리</b>에 있다. 무엇을 풀고 무엇을 강화할지를 짝으로 묶어 기억하게 해 주고, 그 짝을 따라 짠 복합 운동이 자세 각도를 실제로 개선한다는 근거는 ⑥에 있다. 모델을 사실로 착각하지만 않으면 쓸모가 크다.</div>
+  </div>
+</section>
+
+<!-- ===================== ③ 영향 ===================== -->
+<section id="impact">
+  <h2><span class="n">03</span>왜 문제인가: 통증, 부상, 수행력</h2>
+  <p class="lead">"좀 구부정해 보이는 것"에서 끝나지 않는다. 비용은 단계적으로 청구된다.</p>
+  <div class="card">
+
+    <h3>1. 팔을 드는 일은 두 관절이 나눠서 한다</h3>
+    <p>이 절의 나머지는 전부 하나의 개념 위에 서 있다. 그것부터 세운다.</p>
+
+    <h4>견갑상완 리듬</h4>
+    <p>팔을 옆으로 들어 머리 위까지 올린다. 각도로는 <code>180°</code>다. 그런데 이 <code>180°</code>는 한 관절에서 나오지 않는다. 상완골 머리와 견갑골 관절와가 만나는 <b>상완와관절(glenohumeral joint, GH)</b>이 일부를 만들고, 견갑골이 흉곽 위에서 도는 <b>견갑흉곽관절(scapulothoracic joint, ST)</b>이 나머지를 만든다. 이 둘의 분담을 <b>견갑상완 리듬(Scapulohumeral Rhythm)</b>이라 한다.</p>
+    <p>교과서가 가르치는 값은 <code>2:1</code>이다. 팔 <code>180°</code> = GH <code>120°</code> + 견갑골 상방 회전 <code>60°</code>. 다르게 말하면 <b>팔 움직임의 약 3분의 1은 어깨뼈가 만든다</b>. 높은 홀드로 손을 뻗을 때, 그 리치의 3분의 1은 팔이 아니라 등이 벌어준 거리다.</p>
+
+    <h4>다만 <code>2:1</code>은 상수가 아니다</h4>
+    <p>이 비율은 측정이 까다롭다. 피부에 마커를 붙여 재면 어깨뼈가 피부 밑에서 미끄러져 오차가 커진다. 그래서 뼈에 직접 핀을 박아 측정한 연구가 있다. 팔을 올릴 때 평균 비는 <code>2.3</code>이었고, 더 중요한 것은 <b>각도 구간마다 값이 달랐다</b>는 점이다. 올릴 때와 내릴 때도 같지 않았다(Braman 외, <i>J Shoulder Elbow Surg</i> 2009;18(6):960-7, <a href="https://pubmed.ncbi.nlm.nih.gov/19395283/">PMID 19395283</a>). 그러니 <code>2:1</code>은 계산에 넣는 상수가 아니라 <b>“팔 움직임의 3분의 1쯤은 어깨뼈 몫”이라는 어림</b>으로 쓴다. 이 글에 필요한 것도 그 어림까지다.</p>
+
+    <h4>어깨뼈가 제 몫을 못 하면</h4>
+    <p>라운딩 숄더는 어깨뼈를 이미 전방 경사·하방 회전 쪽으로 치우쳐 놓은 상태다. 출발점이 틀어져 있으면 팔을 올리는 동안 만들어야 할 상방 회전 <code>60°</code>가 다 나오지 않는다. 그래도 팔은 올라간다. 부족한 만큼을 상완와관절이 더 돌아서 메우기 때문이다. 몸은 그렇게 목표를 달성하고, 대신 대가를 두 장으로 청구한다. <b>통로가 좁아지고, 힘이 준다.</b> 아래 두 절이 각각의 청구서다.</p>
+
+    <h3>2. 통로가 좁아진다</h3>
+    <p>어깨 위쪽에는 견봉(acromion, 어깨 지붕뼈)과 상완골두(팔뼈 머리) 사이에 <b>견봉하 공간(subacromial space)</b>이라는 좁은 통로가 있다. 회전근개 힘줄이 이 사이를 지나간다. 여기서 결정적인 사실은 <b>견봉이 견갑골의 일부</b>라는 점이다. 어깨뼈가 전방 경사되면 통로의 천장이 그대로 따라 내려앉는다. 거꾸로 팔을 올릴 때 어깨뼈가 충분히 상방 회전하는 것은 힘줄이 지나갈 자리에서 천장을 걷어 올리는 일이기도 하다. 앞 절의 <code>60°</code>가 모자라면 천장은 낮은 채로 남는다.</p>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 660 280" role="img" aria-label="정상 어깨와 말린 어깨의 견봉하 공간 비교">
+        <rect width="660" height="280" fill="#fff"/>
+        <!-- 왼쪽: 정상 -->
+        <g transform="translate(35,30)">
+          <!-- 견봉 (지붕) -->
+          <path d="M30,60 Q90,38 168,52 L168,76 Q95,64 38,82 Z" fill="url(#boneG)" stroke="#b9ab8c" stroke-width="2"/>
+          <text x="95" y="32" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a7d66">견봉 (지붕)</text>
+          <!-- 상완골두 (공) -->
+          <circle cx="105" cy="160" r="52" fill="url(#boneG)" stroke="#b9ab8c" stroke-width="2"/>
+          <text x="105" y="166" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a7d66">상완골두</text>
+          <!-- 힘줄: 공 위를 지나 통로 통과 -->
+          <path d="M10,118 Q70,96 130,100 Q170,104 196,122" fill="none" stroke="#2f7d44" stroke-width="11" stroke-linecap="round" opacity="0.85"/>
+          <text x="196" y="148" text-anchor="middle" font-size="11.5" fill="#2f7d44" font-weight="700">회전근개 힘줄</text>
+          <!-- 공간 표시 -->
+          <path d="M105,84 L105,102" stroke="#2f7d44" stroke-width="2.5" marker-start="url(#arG)" marker-end="url(#arG)"/>
+          <text x="124" y="96" font-size="11.5" fill="#2f7d44" font-weight="700">여유 공간</text>
+          <text x="100" y="240" text-anchor="middle" font-size="14.5" font-weight="800" fill="#2f7d44">정렬: 통로가 열려 있다</text>
+        </g>
+        <!-- 오른쪽: 말림 -->
+        <g transform="translate(365,30)">
+          <!-- 견봉: 앞으로 기울어 내려앉음 -->
+          <path d="M30,76 Q90,42 168,40 L168,64 Q95,68 38,98 Z" fill="url(#boneG)" stroke="#b9ab8c" stroke-width="2" transform="rotate(8 100 70)"/>
+          <text x="95" y="30" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8a7d66">견봉이 앞·아래로 기움</text>
+          <!-- 상완골두: 살짝 위·앞으로 -->
+          <circle cx="112" cy="140" r="52" fill="url(#boneG)" stroke="#b9ab8c" stroke-width="2"/>
+          <!-- 힘줄: 끼임 -->
+          <path d="M14,116 Q72,98 132,96 Q172,96 198,114" fill="none" stroke="#c0392b" stroke-width="11" stroke-linecap="round" opacity="0.9"/>
+          <!-- 끼임 표시: 지그재그 -->
+          <path d="M96,80 L106,92 L116,80 L126,92" fill="none" stroke="#c0392b" stroke-width="3"/>
+          <text x="160" y="78" font-size="11.5" fill="#c0392b" font-weight="700">힘줄이 눌린다</text>
+          <text x="100" y="240" text-anchor="middle" font-size="14.5" font-weight="800" fill="#c0392b">말림: 천장이 내려앉는다</text>
+        </g>
+        <line x1="330" y1="30" x2="330" y2="250" stroke="#e7e0d6" stroke-width="1.5"/>
+      </svg>
+      </div>
+      <figcaption><b>견봉하 공간의 운명.</b> 어깨가 말리면 견갑골이 앞으로 기울며 견봉(천장)이 내려앉고, 그 밑을 지나는 회전근개 힘줄이 눌린다. 이 상태로 오버헤드 동작(높은 홀드 리칭)을 반복하는 것이 어깨 충돌 증후군의 공식이다.</figcaption>
+    </figure>
+
+    <h4>얼마나 좁아지는가</h4>
+    <p>이 기하학은 사람에게서 측정되어 있다. 어깨뼈 상방 회전이 적은 사람은 <b>팔을 내리고 가만히 있는 상태에서조차</b> 회전근개 힘줄과 오구견봉궁(coracoacromial arch) 사이의 최소 거리가 <b><code>34.8%</code> 더 좁았다</b>. 게다가 가장 가까워지는 지점이 더 낮은 팔 각도로 내려왔다. 위험 구간이 만세 동작이 아니라 <b>일상 동작 범위 안으로 들어온다</b>는 뜻이다(Lawrence 외, <i>J Orthop Sports Phys Ther</i> 2019;49(3):180-91, <a href="https://pubmed.ncbi.nlm.nih.gov/30658048/">PMID 30658048</a>).</p>
+
+    <h4>다만 좁아짐이 곧 통증은 아니다</h4>
+    <p>같은 연구는 반대 방향의 결과도 함께 보고한다. 회전근개와 견봉의 <b>실제 접촉이 관찰된 참가자는 <code>45%</code></b>에 그쳤고, 저자들은 견봉하 압박이 전통적으로 알려진 것보다 덜 흔할 수 있다고 결론짓는다. 통로가 좁아지는 것은 사실이지만, 좁아진 사람이 다 아픈 것은 아니다. 통증은 조직에 걸리는 부하, 회복 시간, 수면, 전체 훈련량이 함께 정한다. 정렬은 그중 하나의 입력값이다.</p>
+    <p>그래서 이 글이 교정을 권하는 근거는 <b>“안 하면 반드시 다친다”가 아니다</b>. 같은 훈련량을 힘줄 통로가 <code>34.8%</code> 좁은 어깨로 감당할 것인가 아닌가의 문제다. 결과는 확정이 아니라 <b>확률</b>로 온다. 그 확률을 조금 옮기는 데 하루 <code>10</code>분을 쓸 값어치가 있는지가 실제 질문이고, 이미 한쪽 어깨에 찝힘 이력이 있다면 답은 비교적 분명하다.</p>
+
+    <h3>3. 같은 근육인데 힘이 준다</h3>
+    <p>두 번째 청구서는 통증이 없어도 그 자리에서 발생한다. 같은 사람에게 자세만 바꿔 같은 동작을 시킨 연구가 있다. 흉추를 곧게 편 자세와 굽힌 자세로 각각 앉게 하고 팔을 옆으로 들게 했다. 굽힌 자세에서는 <b>능동 어깨 외전 가동범위가 평균 <code>23.6° ± 10.7°</code> 줄었고</b>, 팔이 수평인 위치에서의 <b>등척성 외전 근력이 <code>16.2%</code> 떨어졌다</b>(Kebaetse 외, <i>Arch Phys Med Rehabil</i> 1999;80(8):945-50, <a href="https://pubmed.ncbi.nlm.nih.gov/10453773/">PMID 10453773</a>). 근육량도, 훈련 상태도, 사람도 그대로다. 바뀐 것은 흉추가 놓인 각도뿐이다.</p>
+
+    <h4><code>16.2%</code>를 등반으로 옮기면</h4>
+    <p>세션 중반을 지나면 몸이 지친다. 지치면 흉추가 굽고 어깨가 앞으로 흘러간다. 벽에서 자세가 무너지는 순간을 보통 “힘이 빠졌다”로 읽지만, 위 숫자는 순서가 거꾸로일 수도 있음을 보여준다. <b>자세가 무너진 시점부터는 세션 초반보다 약한 어깨로 오르고 있다.</b> 남아 있는 근력을 다 꺼내 쓰지 못하는 상태에 가깝다. 아래 “같은 체력, 다른 결과”는 비유가 아니라 이 측정값을 서술한 것이다.</p>
+    <p>리치도 같은 방식으로 손해를 본다. 굽은 흉추 위에서 잃는 외전 <code>23.6°</code>는 손끝 거리로 환산하면 홀드 하나만큼이다. 몸이 유연해서 닿던 홀드에 닿지 않게 되는 것이 아니라, <b>그 자세에서는 애초에 그만큼이 나오지 않는다</b>. ⑧에서 등반 전후 <code>10</code>분을 따로 떼어놓는 이유가 여기 있다.</p>
+
+    <h3>4. 비용 청구서: 통증 → 부상 → 수행력</h3>
+    <table>
+      <tr><th>단계</th><th>증상</th><th>비고</th></tr>
+      <tr><td><b>통증</b></td><td>목·어깨·상부 등 만성 통증, 상부 승모근 과긴장 → 긴장성 두통</td><td>가장 먼저 오는 신호. 심하면 흉곽출구증후군까지</td></tr>
+      <tr><td><b>부상</b></td><td>어깨 충돌 증후군 · 회전근개 손상 · 관절순(Labrum) 파열</td><td>오버헤드 동작이 많은 클라이머에게 흔하다. <b>한번 오면 회복에 수개월</b></td></tr>
+      <tr><td><b>수행력</b></td><td>가동 범위 감소 → 리칭 제한, 견갑 불안정 → 힘 전달 손실, 흉곽 압박 → 호흡 용량 감소</td><td>클라이밍 리치·러닝 호흡에 직접 비용</td></tr>
+    </table>
+
+    <div class="box warn"><span class="t">이 경계에 서 있다면</span>어깨 찝힘 이력이 이미 있다면 위 표의 1→2단계 경계에 있다는 뜻이다. 특히 개스통(팔을 바깥으로 미는 홀드)처럼 어깨 앞쪽에 부하가 걸리는 무브, 그리고 견갑골을 이완한 채 매달리는 습관이 가장 위험하다(⑧에서 상세).</div>
+
+    <div class="box note"><span class="t">같은 체력, 다른 결과</span>같은 체력의 클라이머 A(정렬 양호)와 B(라운딩 숄더)가 높은 홀드를 잡는다. A는 견갑골이 안정적으로 활주해 효율적으로 리칭하고, B는 같은 홀드에 닿기 위해 더 많은 에너지를 쓴다. <b>세션 후반에 B가 먼저 지치는 이유다</b>(<a href="overview.md">overview.md §3.3</a>).</div>
+  </div>
+</section>
+
+<!-- ===================== ④ 원인 ===================== -->
+<section id="cause">
+  <h2><span class="n">04</span>원인을 하루 시간표로 본다</h2>
+  <p class="lead">원인을 모르면 운동을 해도 일상에서 다시 무너진다. 먼저 하루 24시간을 따라가며 <b>언제</b> 만들어지는지 보고, 그다음 몸 안에서 <b>무엇이</b> 좁아지는지를 본다.</p>
+  <div class="card">
+
+    <h3>1. 책상 8시간, 가장 긴 범인</h3>
+    <p>사무직은 하루 <code>8–10시간</code>을 앉아서 보낸다. 모니터를 향해 고개를 내밀고 키보드 위로 어깨를 만 자세가 반복되면, 근막과 결합조직이 <b>그 형태로 굳어간다</b>. 가장 오래 머무는 자세가 몸의 기본값이 된다.</p>
+
+    <figure>
+      <img src="/img/Ergonomic_Workstation.png"
+           alt="인체공학적 워크스테이션 — 모니터 눈높이, 팔꿈치 90도, 발바닥 지지" loading="lazy" style="max-width:400px"
+           onerror="this.closest('figure').style.display='none'" width="960" height="1174">
+      <figcaption><b>책상의 기준 자세.</b> ① 시선이 모니터 상단과 수평 ② 손목 중립 ③ 팔꿈치·무릎 약 90° ④ 모니터는 팔 길이 거리 ⑤ 발바닥 전체 지지. 이 기준에서 멀어질수록 고개가 앞으로 나가고 어깨가 만다. <span class="credit">그림: Marcel Kollmar &amp; Partynia / Wikimedia Commons, CC BY-SA 3.0 DE</span></figcaption>
+    </figure>
+
+    <h3>2. 클라이밍 1.5시간, 좋아하는 운동이 기울인다</h3>
+    <p>클라이밍은 당기기(pulling) 일변도의 운동이다. 광배근·대흉근·이두근이 과발달하고, 이들은 모두 어깨를 <b>내회전 + 전인</b> 방향으로 당긴다. 반대편(외회전근·견갑 안정근)은 훈련 기회 자체가 적다. 등속성 측정 연구는 스포츠 클라이머의 어깨 <b>외회전:내회전 근력비를 <code>0.79</code></b>로, 비클라이머(<code>1.03</code>)보다 유의하게 낮게 보고한다(<a href="https://pubmed.ncbi.nlm.nih.gov/19771292/">Wong &amp; Ng, J Athl Train 2009;44(5):527–30</a>). 내회전 기준으로 뒤집으면 클라이머는 약 <code>1.3:1</code>, 비클라이머는 거의 <code>1:1</code>이다. 코칭 현장에서는 <code>3:1</code>까지 벌어진 사례도 보고되지만(Hörst, Training for Climbing) 이는 측정값이 아니라 관찰이다. 확실한 것은 비율의 크기가 아니라 <b>방향</b>이다. 클라이밍은 외회전 쪽을 체계적으로 뒤처지게 한다(<a href="overview.md">overview.md §6.1</a>).</p>
+
+    <h4>그 <code>0.79</code>가 어깨 안에서 뜻하는 것</h4>
+    <p>이 비율이 재는 것은 힘의 크기가 아니라 두 방향 사이의 <b>배분</b>이다. 어깨는 뼈끼리 맞물려 잠기는 관절이 아니라 근육의 균형으로 자세가 유지되는 관절이다. 상완골을 안쪽으로 돌리는 근육(광배근·대흉근·견갑하근)과 바깥으로 돌리는 근육(극하근·소원근)이 늘 서로를 견제하고, 그 힘의 배분이 팔이 쉴 때 놓이는 각도, 곧 어깨의 <b>기본값</b>을 정한다.</p>
+
+    <p>외회전이 내회전의 <code>79%</code>에 그친다는 것은 아무것도 하지 않고 서 있을 때 이미 내회전 쪽이 이기고 있다는 뜻이다. 팔뼈는 조금 안으로 돌아간 채 놓이고, 매주 그 방향으로만 훈련이 쌓이면 그 각도가 원위치로 자리 잡는다. ⑤의 연필 테스트가 읽어내는 것이 정확히 이 각도다.</p>
+
+    <p>대가는 팔을 머리 위로 들 때 청구된다. 상완골이 안쪽으로 돌아 있으면 뼈머리 바깥에 솟은 돌기(대결절, greater tubercle)가 견봉 아래를 지나는 진로 쪽으로 더 들어온다. ③에서 본 좁은 통로에 아래쪽 팔뼈도 부피를 보태는 셈이고, 높은 홀드 리칭은 이 동작을 세션마다 반복시킨다. 다만 인용한 연구가 측정한 것은 근력비까지이며, 충돌로 잇는 마지막 한 걸음은 <b>역학적 유도</b>다.</p>
+
+    <div class="box note"><span class="t">왜 크로스피터는 안 말리는가</span>당기기 볼륨은 크로스핏도 만만치 않은데 어깨는 펴져 있다. 볼륨이 문제가 아니다. 갈리는 지점은 <b>방향과 균형</b>이다. 크로스핏에는 오버헤드 프레스·스내치(흉추 신전 + 외회전 잠금 강제)와 데드리프트·로우(후인근 고중량)가 기본 내장되어 있다. 클라이밍의 당김은 몸 앞에서, 내회전 기미로, 머리 위로 미는 동작 없이 이뤄진다. 결론: <b>클라이밍을 줄일 게 아니라 반대 방향 성분을 보충하면 된다</b>(<a href="kipping-pullup.md">kipping-pullup.md §4</a>).</div>
+
+    <h3>3. 수면 7시간, 무의식의 고정</h3>
+    <p>옆으로 웅크려 자면 위쪽 어깨가 앞으로 떨어진 채 <code>6–8시간</code> 고정된다. 가능하면 바로 눕고, 옆으로 잘 때는 베개를 안아 위쪽 어깨를 지지한다. 그 밖에 한쪽 어깨 가방, 눈높이 아래의 스마트폰도 같은 방향으로 기여한다.</p>
+
+    <h3>4. 그래서 몸 안에서 무엇이 좁아지는가</h3>
+    <p>시간표는 <b>언제</b> 만들어지는지를 설명한다. 그러나 ③에서 본 그림, 곧 견봉이 내려앉아 힘줄이 눌리는 상태에 이르는 길은 하나가 아니다. 서로 다른 세 경로가 같은 결과로 수렴한다. 이 셋을 구분해 두면 ⑥의 처방이 왜 네 축으로 갈라지는지가 저절로 설명된다.</p>
+
+    <h4>① 소흉근이 견갑골을 앞으로 기울인다 (구조 경로)</h4>
+    <p>소흉근(pectoralis minor)은 <code>3~5</code>번 갈비뼈 앞면에서 출발해 견갑골의 <b>부리돌기</b>(오구돌기, coracoid process)에 붙는다. 부리돌기는 견갑골의 <b>앞쪽 위</b> 모서리에서 앞으로 튀어나온 뿔이다. 붙는 자리가 여기라는 사실이 결정적이다. 견갑골의 앞쪽 위를 아래·앞으로 당기면 견갑골은 앞으로 기우는 것 말고 다른 반응을 할 수 없다. 같은 근육이 견갑골 아래쪽에 붙었다면 결과는 정반대였을 것이다. 힘의 크기가 아니라 <b>지렛대의 위치가 결과를 정한다</b>.</p>
+
+    <p>이 유도는 실제로 측정됐다. 통증이 없는 지원자 <code>50</code>명을 소흉근의 안정 길이를 기준으로 짧은 군과 긴 군으로 나눈 뒤, 팔을 들어 올리는 동안 견갑골의 3차원 움직임을 잰 연구가 있다. 짧은 군은 팔을 <b>높은 각도까지 올린 뒤에도 견갑골이 계속 전방 경사된 채로 남았고</b>, 관상면에서는 내회전도 더 컸다. 저자들의 결론은 그 운동학이 <b>어깨 충돌 환자에게서 관찰되던 것과 닮아 있었다</b>는 것이다(<a href="https://pubmed.ncbi.nlm.nih.gov/15901124/">Borstad &amp; Ludewig, J Orthop Sports Phys Ther 2005;35(4):227-38</a>). 통증이 없는 사람에게서 이미 그 패턴이 보였다는 점이 중요하다. 순서가 통증에서 자세로가 아니라 자세에서 통증으로 간다는 뜻이다.</p>
+
+    <h4>② 굽은 등이 견갑골의 바닥을 기울인다 (토대 경로)</h4>
+    <p>견갑골은 다른 뼈와 단단히 맞물려 있지 않다. 흉곽 뒷면 위에 얹혀 미끄러지는 뼈다. 그래서 흉추가 굽으면 견갑골이 놓인 <b>바닥면 자체가 앞으로 기운다</b>. 근육 길이가 전부 정상이어도 바닥이 기울면 그 위의 물건도 같이 기운다.</p>
+
+    <p>책상 앞 <code>8시간</code>이 만드는 것이 정확히 이 경로다. 가슴만 늘려서는 자세가 안 바뀌는 흔한 이유도 여기 있다. 앞에서 붙잡던 손을 놓아 줘도 되돌아갈 바닥이 기울어 있으면 돌아갈 자리가 없다.</p>
+
+    <h4>③ 견갑골이 제때 돌지 못한다 (조절 경로)</h4>
+    <p>①과 ②가 가만히 서 있을 때의 <b>위치</b> 문제라면, 이것은 움직이는 동안의 <b>타이밍</b> 문제다. 팔을 머리 위로 드는 동안 견갑골은 바깥 위쪽으로 회전(상방회전)하면서 견봉을 상완골두의 진로에서 비켜 준다. 이 회전을 만드는 것은 전거근과 하부 승모근이다.</p>
+
+    <p>두 근육이 제 순서에 힘을 내지 못하면 팔은 올라가는데 지붕은 그 자리에 남는다. 정지 자세만 보면 정렬이 멀쩡한 사람이 오버헤드 동작에서만 통증을 호소하는 경우가 여기에 해당한다(<b>임상 통념</b>). 거울 앞 관찰만으로 이 경로를 잡아낼 수 없다는 뜻이기도 하다.</p>
+
+    <h4>세 경로가 ⑥의 네 축과 만나는 지점</h4>
+    <p>경로를 나눈 값어치는 처방과 일대일로 붙을 때 나온다.</p>
+
+    <table>
+      <tr><th>경로</th><th>무엇이 어긋났는가</th><th>⑥의 대응 축</th></tr>
+      <tr><td><b>① 소흉근 견인</b></td><td>앞쪽이 견갑골을 붙잡아 당긴다</td><td><b>① 풀기</b>(도어웨이·소흉근 이완)</td></tr>
+      <tr><td><b>② 흉추 후만</b></td><td>견갑골이 놓인 바닥이 기울어 있다</td><td><b>④ 토대</b>(흉추 신전·회전 가동성)</td></tr>
+      <tr><td><b>③ 상방회전 부족</b></td><td>움직이는 동안 견봉이 비켜 주지 못한다</td><td><b>② 강화 + ③ 재교육</b>(전거근·하부 승모근, 패턴 훈련)</td></tr>
+    </table>
+
+    <p>결론은 단순하지만 실행에서 가장 자주 무시된다. <b>세 경로 중 하나만 손대면 나머지 둘은 그대로 남는다.</b> 가슴만 늘리면 굽은 등과 안 도는 견갑골이 남고, 밴드 운동만 하면 앞쪽 견인과 기운 바닥이 남는다. ⑥이 축을 넷으로 벌려 놓은 이유가 여기 있다. 축은 취향에 따라 고르는 메뉴가 아니라 <b>서로 다른 경로를 각각 막는 장치</b>다.</p>
+
+    <div class="recap">
+      <div class="rt">원인 요약, 악순환의 구조</div>
+      <ul>
+        <li><b>자세 불량</b>(책상·폰·수면)이 앞쪽 근육을 짧게 만들고 →</li>
+        <li><b>근육 불균형</b>(앞 단축 vs 뒤 약화)이 생기고 →</li>
+        <li><b>클라이밍의 당기기 편향</b>이 그 불균형을 매주 심화시킨다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑤ 진단 ===================== -->
+<section id="diagnosis">
+  <h2><span class="n">05</span>자가 진단으로 기준점부터 잡는다</h2>
+  <p class="lead">진단은 두 가지 일을 한다: 심각도 판단, 그리고 변화를 추적할 기준점(baseline) 만들기.</p>
+  <div class="card">
+    <p>아래 검사 중 <b>두 가지 이상에서 비정상</b>이 나오면 교정 운동을 시작한다. 이 "두 가지 이상"이라는 문턱은 임의로 정한 안전장치가 아니다. 검사 하나가 무엇을 말해 줄 수 있는지에서 따라 나온다.</p>
+
+    <h3>왜 한 개가 아니라 두 개 이상인가</h3>
+    <p>벽 테스트에서 뒤통수가 벽에 닿지 않았다고 하자. 이때 원인 후보는 최소한 셋이다. 어깨가 앞으로 말려 있을 수도 있고, 흉추가 굳어 등 상부를 벽에 붙이는 순간 머리가 앞으로 밀려났을 수도 있고, 골반이 앞으로 기울어 허리가 젖혀지며 상체 전체가 앞으로 실렸을 수도 있다. ④에서 나눈 세 경로가 여기서 그대로 세 갈래 답으로 돌아온다.</p>
+
+    <p>그래서 한 검사의 실패는 <b>"어딘가 문제가 있다"까지만</b> 말해 준다. 어디인지는 말해 주지 않는다. 검사 하나하나가 저마다 다른 이유로도 양성이 나오기 때문이다. 이 상태에서 결과를 어깨 말림이라고 단정하면, 실제로는 흉추나 골반 문제인 사람이 엉뚱한 처방을 <code>4주</code>간 하게 된다.</p>
+
+    <p>범위를 좁히는 방법은 <b>관여하는 부위가 서로 다른 검사를 겹치는 것</b>이다. 연필 테스트에는 벽도, 흉추도, 골반도 개입하지 않는다. 서서 팔을 내렸을 때의 상완골 회전만 본다. 벽 테스트가 실패했는데 연필까지 안쪽을 향한다면, 두 결과를 동시에 설명하는 원인은 하나로 좁혀진다. 어깨 자체가 앞·안쪽으로 말려 있다는 것이다. <b>둘 이상이 같은 방향을 가리킬 때 비로소 판정이 선다.</b></p>
+
+    <p>반대 경우도 정보다. 벽 테스트만 실패하고 연필·누운 자세가 모두 정상이면, 문제는 어깨보다 그 밑의 토대일 가능성이 크다(④의 ② 경로). 그때는 흉추 가동성부터 손대는 편이 빠르다. 다섯 검사를 모두 해 보는 이유가 여기 있다. 양성의 <b>개수</b>는 시작 여부를 정하고, 양성의 <b>조합</b>은 어느 축부터 칠지를 정한다.</p>
+
+    <h3>검사 5종, 하나의 판정표</h3>
+    <p>표 하나로 모아 둔다. 각 검사는 <code>1분</code> 안에 끝나고, 다섯을 연달아 해도 <code>10분</code>을 넘기지 않는다.</p>
+
+    <table>
+      <tr><th>검사</th><th>하는 법</th><th>정상</th><th>주의(양성)</th></tr>
+      <tr>
+        <td><b>① 벽 테스트</b></td>
+        <td>벽을 등지고 서서 <b>뒤통수·등 상부·엉덩이</b>를 동시에 벽에 댄다. 턱은 당긴 상태를 유지한다</td>
+        <td>세 점이 모두 닿고, 허리와 벽 사이 틈이 <b>손바닥 하나</b> 두께</td>
+        <td>뒤통수가 안 닿거나, 닿게 하려고 <b>턱이 들리면</b> 양성. 허리 틈이 손바닥보다 크면 골반 전방경사 쪽</td>
+      </tr>
+      <tr>
+        <td><b>② 연필 테스트</b></td>
+        <td>선 자세에서 연필을 주먹으로 쥐고 팔을 자연스럽게 내린 뒤, <b>위에서 내려다본다</b></td>
+        <td>양손의 연필이 <b>정면</b>을 가리킨다</td>
+        <td><b>대각선이면 경미</b>, 두 연필이 <b>서로 안쪽을 향하면 심하다</b>. 상완골 내회전을 읽는 검사다</td>
+      </tr>
+      <tr>
+        <td><b>③ 누운 어깨</b></td>
+        <td>베개 없이 바닥에 바로 눕고 팔은 몸 옆에 둔다. 힘을 뺀다</td>
+        <td>양쪽 어깨 뒤가 바닥에 <b>편하게 닿는다</b></td>
+        <td>어깨 앞쪽이 바닥에서 <b>뜨면</b> 양성. 좌우 차이가 있으면 심한 쪽을 기록한다</td>
+      </tr>
+      <tr>
+        <td><b>④ 골대 포즈</b></td>
+        <td>벽 테스트 자세에서 팔꿈치를 <code>90°</code>로 만들어 팔등과 손등을 벽에 붙인다(월 슬라이드의 시작 자세)</td>
+        <td>손등·팔꿈치가 모두 벽에 닿고, 허리 틈이 커지지 않는다</td>
+        <td>손등이 뜨거나 허리가 젖혀지며 보상하면 <b>가슴·광배 단축</b> 신호</td>
+      </tr>
+      <tr>
+        <td><b>⑤ 거울 측면</b></td>
+        <td>눈을 감고 <code>10초</code> 선 뒤 눈을 뜨는 순간의 옆모습을 거울이나 사진으로 본다</td>
+        <td>귀·어깨 중앙·골반이 하나의 수직선 위에 온다</td>
+        <td><b>귀가 어깨 중앙보다 앞</b>에 있으면 양성. 전방 머리 자세를 함께 본다</td>
+      </tr>
+    </table>
+
+    <p>①②는 아래 도식에서, ⑤는 이어지는 사진에서 자세히 본다. 전체 절차와 배경은 <a href="overview.md">overview.md §4</a>에 정리돼 있다.</p>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 1720 1230" role="img" aria-label="벽 테스트와 연필 테스트 — 벽 테스트는 뒤통수·등 상부·엉덩이가 벽에 닿는지 보고, 연필 테스트는 주먹 쥔 손의 연필이 정면을 가리키는지 서로 안쪽을 향하는지 본다">
+        <rect width="1720" height="1230" fill="var(--plate)"/>
+
+        <g transform="translate(40,0)"><g transform="translate(0,1152) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+<path d="M3900 6495 l0 -5025 -32 0 c-18 0 -896 0 -1950 0 -1915 0 -1918 0
+-1918 -20 l0 -20 3958 0 c2236 0 3963 4 3971 9 46 30 -12 31 -1314 31 l-1314
+0 24 36 c32 47 33 127 4 257 -52 235 -41 548 31 877 117 528 117 599 9 903
+-127 355 -144 435 -120 572 7 38 39 162 71 275 91 315 111 431 140 820 l12
+155 45 60 c104 138 147 261 147 420 0 166 -34 265 -163 483 -70 117 -101 200
+-101 272 0 20 9 85 20 145 11 60 20 140 20 177 0 72 28 203 85 398 35 123 59
+217 101 400 33 144 30 251 -11 380 -35 108 -101 241 -154 308 -23 29 -55 76
+-72 105 -53 90 -101 146 -195 227 -68 58 -97 91 -116 131 -66 136 -71 199 -32
+359 38 155 42 250 14 341 -26 89 -65 152 -129 212 -60 56 -90 72 -169 87 -205
+41 -517 -72 -635 -228 l-42 -55 0 -171 c0 -143 3 -177 18 -205 21 -43 21 -43
+-5 -151 -24 -102 -21 -111 41 -127 28 -7 36 -16 46 -48 7 -22 22 -59 34 -82
+12 -23 21 -49 21 -58 0 -24 19 -57 44 -77 28 -23 74 -22 136 2 28 11 58 20 68
+20 21 -1 92 -164 92 -210 0 -47 -25 -96 -78 -153 -161 -172 -272 -451 -260
+-655 4 -64 10 -89 36 -137 28 -51 32 -68 32 -134 0 -105 32 -249 74 -338 32
+-67 36 -84 36 -155 0 -45 5 -109 11 -143 10 -50 9 -77 -4 -146 -12 -62 -16
+-143 -15 -314 l1 -230 -52 -156 c-68 -206 -67 -263 5 -370 l35 -52 -12 -125
+c-16 -166 -6 -460 20 -627 42 -266 80 -398 155 -540 43 -82 46 -92 46 -165 0
+-97 43 -274 93 -380 39 -83 42 -99 127 -810 51 -435 62 -584 51 -697 -12 -111
+-33 -164 -81 -206 -42 -36 -194 -114 -365 -187 -147 -63 -198 -79 -272 -83
+-69 -4 -93 -18 -93 -52 0 -13 -7 -36 -15 -51 -19 -38 -19 -46 5 -77 25 -32 13
+-37 -66 -30 l-59 5 3 5024 4 5024 -21 0 -21 0 0 -5025z m924 3315 c58 -28 141
+-117 172 -184 51 -112 53 -181 8 -378 -13 -59 -24 -125 -24 -147 0 -30 -4 -41
+-15 -41 -21 0 -108 45 -124 64 -18 21 -51 135 -51 176 0 44 -17 77 -52 103
+-23 17 -31 18 -57 8 -43 -19 -62 -44 -76 -103 -6 -28 -16 -53 -22 -55 -5 -2
+-18 18 -28 44 -21 58 -37 77 -75 93 -24 10 -30 20 -35 54 -8 50 -13 59 -42 75
+-34 18 -76 13 -176 -19 -52 -16 -100 -30 -107 -30 -15 0 -5 81 15 120 42 80
+207 183 352 219 43 11 87 22 98 25 47 12 196 -3 239 -24z m-420 -316 c9 -9 16
+-32 16 -54 0 -42 7 -52 59 -78 26 -13 39 -30 57 -76 13 -33 26 -61 28 -63 2
+-2 15 -1 30 3 21 5 27 14 32 46 8 49 43 102 71 106 64 9 71 -168 9 -237 -20
+-22 -20 -31 -2 -31 16 0 57 51 71 85 7 17 9 15 17 -15 19 -68 73 -114 170
+-144 9 -3 23 -28 33 -61 29 -101 64 -161 128 -222 144 -136 205 -201 232 -248
+15 -27 45 -72 66 -100 139 -186 220 -458 179 -606 -11 -40 -49 -100 -66 -106
+-14 -5 -39 160 -39 260 0 42 -2 77 -5 77 -3 0 -14 -21 -24 -47 -18 -42 -18
+-53 -7 -117 30 -172 24 -375 -14 -491 -18 -53 -35 -206 -44 -390 -7 -135 -10
+-156 -35 -209 -39 -82 -57 -136 -46 -136 5 0 17 14 25 31 32 60 27 18 -14
+-123 -47 -161 -116 -309 -261 -563 -157 -275 -143 -235 -151 -435 -5 -131 -12
+-197 -29 -265 -39 -156 -53 -198 -77 -224 -21 -22 -23 -23 -19 -6 11 40 26
+128 26 152 0 45 -18 14 -39 -69 -38 -142 -77 -225 -98 -204 -4 3 3 59 15 124
+25 132 28 172 11 155 -12 -12 -32 -95 -49 -205 -13 -82 -29 -116 -48 -104 -8
+5 -12 58 -12 172 0 90 -4 164 -9 164 -10 0 -21 -108 -21 -213 0 -96 -17 -100
+-42 -11 -19 68 -24 264 -8 357 9 60 0 118 -14 82 -3 -10 -12 -60 -18 -111 -8
+-65 -16 -95 -27 -99 -26 -10 -30 9 -11 70 10 33 28 97 40 142 20 72 30 90 92
+165 86 102 101 135 171 373 67 233 63 211 82 380 24 209 51 321 109 460 13 33
+41 98 60 145 20 47 36 90 36 97 0 22 -26 3 -42 -30 l-15 -32 -43 87 c-32 66
+-46 113 -60 195 -17 98 -43 463 -34 472 2 2 18 -7 36 -21 80 -60 76 -44 -9 44
+-50 53 -106 121 -123 152 -35 61 -57 83 -45 45 4 -13 14 -36 21 -51 22 -43 17
+-45 -21 -8 -24 24 -35 29 -35 18 0 -18 37 -59 94 -103 47 -37 46 -51 -12 -141
+-74 -114 -199 -191 -324 -202 -61 -5 -75 -17 -32 -28 94 -24 233 34 336 138
+37 37 69 68 71 68 2 0 7 -55 11 -122 4 -68 9 -150 13 -182 l6 -59 -52 5 c-28
+3 -51 1 -51 -3 0 -12 45 -22 79 -17 28 4 30 2 36 -39 8 -58 35 -134 74 -210
+17 -34 31 -69 31 -78 0 -8 -18 -58 -41 -111 -23 -53 -53 -143 -67 -200 l-25
+-103 -63 -31 c-74 -36 -130 -97 -147 -157 -11 -43 -15 -46 -149 -111 -13 -6
+-9 292 4 368 12 70 12 70 44 70 35 0 64 8 64 19 0 3 -21 6 -47 6 -47 0 -48 0
+-55 40 -4 22 -9 86 -11 142 l-4 102 34 -1 c18 -1 36 2 40 5 6 7 -33 12 -68 9
+-21 -2 -77 120 -89 192 -5 28 -12 67 -16 86 l-7 35 33 -28 c43 -36 54 -52 125
+-167 32 -52 61 -97 66 -100 16 -11 42 -138 42 -205 0 -38 -12 -122 -26 -185
+-24 -106 -57 -282 -57 -304 0 -27 18 15 28 64 6 30 26 118 44 195 52 225 42
+340 -43 480 -20 33 -48 83 -62 110 -29 58 -100 133 -134 141 -22 6 -23 11 -23
+85 0 67 -4 87 -27 132 -26 48 -28 61 -27 157 1 169 62 338 192 537 l67 103 75
+29 c41 16 100 37 130 47 43 15 50 19 30 22 -14 1 -58 -9 -99 -23 -41 -14 -76
+-24 -77 -22 -2 1 6 23 18 47 19 43 148 422 148 437 0 19 -21 -18 -40 -72 -32
+-89 -76 -224 -89 -272 -7 -24 -15 -43 -19 -43 -4 0 -13 17 -19 38 -20 68 -65
+167 -81 180 -18 14 -52 10 -118 -15 -48 -17 -104 -14 -115 7 -4 8 -14 35 -22
+60 -32 96 -69 185 -80 192 -7 4 -24 8 -39 8 -33 0 -33 -3 -7 106 l21 87 -21
+55 c-15 39 -21 77 -21 140 l0 87 63 20 c121 38 142 43 174 44 17 1 39 -6 47
+-15z m1132 -1984 c-36 -140 -74 -256 -75 -230 -1 8 13 62 29 119 22 76 30 125
+30 183 0 72 2 79 23 87 33 13 32 -7 -7 -159z m-726 -1027 c0 -73 -6 -79 -91
+-107 -43 -14 -81 -26 -84 -26 -11 0 7 43 29 73 19 26 120 97 138 97 4 0 8 -17
+8 -37z m570 2 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10
+-7 10 -15z m28 -76 c9 -16 45 -78 79 -137 91 -155 124 -252 131 -381 8 -160
+-29 -282 -128 -425 -60 -87 -63 -103 -85 -390 -8 -109 -20 -230 -27 -267 l-11
+-68 -66 -8 c-171 -21 -816 -2 -843 25 -13 13 -27 140 -34 300 l-7 152 31 0
+c29 0 31 -2 26 -29 -15 -72 35 -254 73 -268 10 -3 26 -14 36 -25 21 -22 46
+-23 73 -3 10 8 26 15 36 15 18 0 63 49 73 80 3 11 14 20 24 20 18 0 46 27 74
+72 10 16 36 101 58 190 40 157 41 168 36 283 -3 90 -1 131 10 163 8 24 60 121
+115 215 110 189 200 358 240 455 31 73 57 83 86 31z m-614 -106 c-8 -83 -102
+-419 -147 -525 -9 -21 -46 -74 -82 -120 -75 -92 -88 -114 -105 -178 -7 -25
+-15 -39 -17 -32 -5 12 31 327 43 382 4 16 2 22 -4 15 -11 -11 -48 -155 -58
+-227 -3 -27 -10 -48 -14 -48 -14 0 -60 110 -60 145 0 19 18 90 40 156 43 131
+60 213 60 300 l0 55 53 24 c105 48 262 109 280 110 15 0 16 -7 11 -57z m71
+-1618 c138 -5 270 -3 354 4 74 6 135 10 137 8 1 -2 -32 -126 -122 -457 -35
+-127 -42 -263 -20 -363 9 -41 46 -154 81 -251 67 -186 100 -304 111 -397 8
+-72 -7 -181 -61 -444 -81 -391 -89 -453 -88 -695 0 -161 3 -201 26 -312 44
+-211 37 -251 -53 -281 -50 -17 -63 -18 -140 -6 -114 17 -208 15 -310 -6 -74
+-15 -117 -17 -340 -11 -316 9 -373 21 -355 76 5 16 15 20 51 20 60 0 188 44
+380 131 183 83 211 99 279 152 99 77 124 146 132 362 6 154 -1 224 -88 920
+-50 407 -62 470 -105 558 -41 85 -82 262 -86 368 -4 92 -6 99 -45 165 -23 38
+-55 112 -72 165 -27 88 -71 278 -71 311 0 11 15 12 93 2 50 -7 191 -16 312
+-19z m-285 -2911 c0 -3 -24 -16 -52 -28 -29 -13 -87 -39 -128 -58 -150 -70
+-295 -103 -295 -68 0 11 17 17 70 22 74 6 151 32 300 97 92 41 105 45 105 35z"/>
+<path d="M4687 9083 c-10 -10 -8 -153 2 -153 14 0 21 28 21 83 0 52 -10 83
+-23 70z"/>
+<path d="M4635 8878 c-38 -21 -136 -100 -131 -105 6 -6 115 68 140 96 21 24
+20 25 -9 9z"/>
+<path d="M4945 8560 c-30 -13 -81 -57 -74 -64 7 -7 108 55 108 67 1 9 -8 8
+-34 -3z"/>
+<path d="M4763 8378 c-37 -38 -73 -112 -72 -148 0 -18 8 -8 29 38 16 35 43 81
+61 103 37 47 25 52 -18 7z"/>
+<path d="M5281 8341 c11 -30 22 -58 25 -62 2 -4 9 -42 15 -84 19 -136 -13
+-257 -101 -386 -46 -68 -26 -69 24 0 46 63 72 116 90 188 34 132 9 293 -58
+378 -12 15 -11 7 5 -34z"/>
+<path d="M4380 7625 c-31 -37 21 -71 70 -45 24 13 25 23 4 44 -19 20 -58 21
+-74 1z m65 -20 c0 -5 -15 -11 -32 -13 -31 -3 -42 6 -26 22 10 10 58 3 58 -9z"/>
+<path d="M5322 7583 c-31 -15 -78 -66 -99 -108 -26 -51 -35 -123 -24 -196 18
+-110 29 -113 23 -7 -6 121 12 181 74 245 39 42 46 45 79 40 43 -7 50 18 9 33
+-30 12 -22 13 -62 -7z"/>
+<path d="M4760 7444 c-15 -9 -42 -13 -67 -11 -49 5 -58 -8 -13 -18 39 -8 78 1
+110 25 30 23 8 26 -30 4z"/>
+<path d="M4635 7333 c-10 -21 -30 -50 -44 -65 -13 -15 -22 -30 -19 -34 10 -9
+88 95 88 117 0 26 -3 24 -25 -18z"/>
+<path d="M4730 7202 c0 -4 -19 -27 -42 -50 -47 -48 -44 -71 3 -26 35 33 65 84
+49 84 -5 0 -10 -4 -10 -8z"/>
+<path d="M4785 7040 c-4 -7 -31 -23 -59 -36 -47 -22 -49 -24 -21 -24 32 0 106
+52 94 65 -4 3 -10 1 -14 -5z"/>
+<path d="M5235 6977 c7 -96 -3 -129 -65 -222 -55 -81 -81 -132 -121 -230 -46
+-111 -34 -100 36 34 35 68 90 158 122 199 l58 76 -2 70 c-1 39 -9 89 -18 111
+l-15 40 5 -78z"/>
+<path d="M5240 5500 c43 -31 184 -109 188 -105 8 7 -38 41 -98 73 -57 31 -119
+52 -90 32z"/>
+<path d="M5251 5396 c9 -9 140 -46 159 -45 28 1 -64 37 -115 44 -27 4 -47 4
+-44 1z"/>
+<path d="M5086 4553 c-14 -121 -33 -218 -60 -305 -17 -54 -14 -62 8 -19 27 52
+54 175 61 279 8 110 2 139 -9 45z"/>
+<path d="M4631 4259 c52 -97 178 -194 211 -161 7 7 1 12 -19 16 -41 9 -110 68
+-166 141 -26 36 -50 65 -53 65 -3 0 9 -27 27 -61z"/>
+<path d="M5117 4110 c-6 -18 -27 -186 -27 -221 0 -14 7 -34 16 -45 15 -18 15
+-18 9 9 -3 15 0 77 6 137 11 102 9 156 -4 120z"/>
+<path d="M4846 3813 c-7 -47 -8 -118 -1 -111 9 9 22 148 14 148 -3 0 -9 -17
+-13 -37z"/>
+<path d="M5126 3425 c17 -317 43 -567 68 -665 11 -44 14 -49 15 -24 1 17 -3
+55 -9 85 -5 30 -17 140 -25 244 -17 203 -30 319 -45 400 -8 42 -9 35 -4 -40z"/>
+<path d="M5177 1940 c-4 -30 -7 -77 -7 -104 0 -32 -7 -60 -21 -83 -25 -41 -18
+-56 11 -22 35 42 44 90 34 181 l-9 83 -8 -55z"/>
+<path d="M5484 6674 c-21 -49 -21 -92 1 -133 22 -44 29 -34 14 23 -9 36 -9 56
+1 91 16 58 5 70 -16 19z"/>
+</g></g>
+        <g stroke="#1f6b41" stroke-width="4.5" fill="var(--plate)">
+          <circle cx="448" cy="214" r="14"/><circle cx="470" cy="300" r="14"/><circle cx="479" cy="611" r="14"/>
+        </g>
+        <g font-size="26" font-weight="700" fill="#1f6b41" text-anchor="end">
+          <text x="414" y="222">뒤통수</text><text x="436" y="308">등 상부</text><text x="445" y="619">엉덩이</text>
+        </g>
+        <g stroke="#8f4226" stroke-width="4" fill="none">
+          <line x1="432" y1="470" x2="474" y2="470"/>
+          <line x1="432" y1="461" x2="432" y2="479"/><line x1="474" y1="461" x2="474" y2="479"/>
+        </g>
+        <text x="410" y="440" font-size="24" fill="#8f4226" text-anchor="end">허리 틈</text>
+        <text x="410" y="470" font-size="22" fill="#5c554b" text-anchor="end">손바닥 하나</text>
+        <text x="120" y="1090" font-size="34" font-weight="700" fill="#1f6b41">벽 테스트</text>
+        <text x="120" y="1134" font-size="25" fill="#5c554b">세 점이 동시에 닿는가 — 턱은 들지 않는다</text>
+
+        <line x1="880" y1="120" x2="880" y2="1000" stroke="var(--line)" stroke-width="3"/>
+        <text x="1300" y="176" text-anchor="middle" font-size="26" fill="#5c554b">위에서 내려다본 두 손 — 주먹을 쥐고 팔을 자연스럽게 내린다</text>
+
+        <g transform="translate(1010,300)">
+          <path d="M25.0,420.0 L19.0,270.0 L-19.0,270.0 L-25.0,420.0 Z" fill="url(#bodyG)"/>
+          <circle cx="0" cy="270" r="27" fill="url(#bodyG)"/>
+          <circle cx="-13.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="-4.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="4.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="13.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <line x1="0" y1="270" x2="0.0" y2="152.0" stroke="#1f6b41" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="0.0" cy="152.0" r="9" fill="#1f6b41"/>
+          <path d="M215.0,420.0 L209.0,270.0 L171.0,270.0 L165.0,420.0 Z" fill="url(#bodyG)"/>
+          <circle cx="190" cy="270" r="27" fill="url(#bodyG)"/>
+          <circle cx="177.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="185.6" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="194.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="203.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <line x1="190" y1="270" x2="190.0" y2="152.0" stroke="#1f6b41" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="190.0" cy="152.0" r="9" fill="#1f6b41"/>
+          <text x="95" y="520" text-anchor="middle" font-size="30" font-weight="700" fill="#1f6b41">정상</text>
+          <text x="95" y="558" text-anchor="middle" font-size="24" fill="#5c554b">연필이 정면을 가리킨다</text>
+        </g>
+        <g transform="translate(1400,300)">
+          <path d="M25.0,420.0 L19.0,270.0 L-19.0,270.0 L-25.0,420.0 Z" fill="url(#bodyG)"/>
+          <circle cx="0" cy="270" r="27" fill="url(#bodyG)"/>
+          <circle cx="-13.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="-4.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="4.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="13.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <line x1="0" y1="270" x2="69.4" y2="174.5" stroke="#b23124" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="69.4" cy="174.5" r="9" fill="#b23124"/>
+          <path d="M215.0,420.0 L209.0,270.0 L171.0,270.0 L165.0,420.0 Z" fill="url(#bodyG)"/>
+          <circle cx="190" cy="270" r="27" fill="url(#bodyG)"/>
+          <circle cx="177.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="185.6" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="194.4" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <circle cx="203.0" cy="257" r="6.5" fill="#fff" opacity=".2"/>
+          <line x1="190" y1="270" x2="120.6" y2="174.5" stroke="#b23124" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="120.6" cy="174.5" r="9" fill="#b23124"/>
+          <text x="95" y="520" text-anchor="middle" font-size="30" font-weight="700" fill="#b23124">내회전</text>
+          <text x="95" y="558" text-anchor="middle" font-size="24" fill="#5c554b">서로 마주 본다 = 말림</text>
+        </g>
+        <text x="1300" y="1090" font-size="34" font-weight="700" fill="#8f4226">연필 테스트</text>
+        <text x="1300" y="1134" font-size="25" fill="#5c554b">대각선이면 경미 · 안쪽을 향하면 심하다</text>
+      </svg>
+      </div>
+      <figcaption><b>두 가지 자가 진단.</b> 벽 테스트는 뒤통수·등 상부·엉덩이가 <b>동시에</b> 닿는지를 본다. 턱을 들어 억지로 맞추면 의미가 없다. 연필 테스트는 주먹 쥔 손의 연필 방향으로 상완골 내회전을 읽는다.
+      <span class="credit">도해: 직접 제작 · 인체는 라인아트 작화 후 벡터화</span></figcaption>
+    </figure>
+
+    <h3>거울 측면 관찰, 100년 전부터 쓰던 방법</h3>
+    <p>거울(또는 측면 사진) 앞에 자연스럽게 서서 <b>귀가 어깨 중앙보다 앞에 있는지</b> 본다. 수직 기준선과 몸을 비교하는 이 방법은 자세 평가의 고전이다.</p>
+
+    <figure>
+      <img src="/img/The_posture_of_school_children_with_its_home_hygiene_and_new_efficiency_methods_for_school_training_1913_14592"
+           alt="1913년 자세 교본 — 다림줄 앞 측면 자세 비교" loading="lazy" style="max-width:380px"
+           onerror="this.closest('figure').style.display='none'" width="960" height="1558">
+      <figcaption><b>1913년 자세 교본의 다림줄(plumb line) 검사.</b> 왼쪽은 고개와 어깨가 줄 앞으로 흘러나온 자세, 오른쪽은 귀·어깨·골반이 줄에 정렬된 자세다. 110년 전 사진이지만 검사 원리는 오늘의 물리치료와 동일하다. 스마트폰 측면 사진 + 세로선 하나면 그대로 재현된다. <span class="credit">사진: "The Posture of School Children" (1913) / Internet Archive, 저작권 제한 없음</span></figcaption>
+    </figure>
+
+    <div class="box tip"><span class="t">자연스러운 자세를 찍는 법</span>거울이나 카메라를 의식하면 무의식적으로 자세를 바로잡는다. 제자리에서 눈을 감고 <code>10초</code> 서 있다가, 눈을 뜨자마자의 자세를 본다. 같은 조건으로 <code>4주</code>마다 찍으면 교정 경과 추적 자료가 된다.</div>
+
+    <h3>예/아니오를 숫자로 바꾼다</h3>
+    <p>여기까지의 판정은 전부 예·아니오다. 심각도를 가리는 데는 충분하지만, ⑩에서 이 검사를 월 <code>1회</code> 추적 지표로 다시 쓰는 순간 문제가 드러난다. 뒤통수가 안 닿던 사람은 <code>4주</code> 뒤에도 대개 안 닿는다. 벽에서 <code>4cm</code> 뜨던 뒤통수가 <code>1.5cm</code>로 줄었어도 기록에는 "아직 안 닿음"으로 똑같이 적힌다. <b>개선이 기록될 자리가 없다.</b></p>
+
+    <p>해결은 간단하다. 닿는가를 묻지 말고 <b>얼마나 떨어져 있는가</b>를 재면 된다. 예·아니오를 연속값으로 바꾸는 방법은 검사마다 이미 정해져 있다.</p>
+
+    <table>
+      <tr><th>검사</th><th>예/아니오 대신 잴 값</th><th>재는 법</th></tr>
+      <tr><td><b>① 벽 테스트</b></td><td>뒤통수와 벽 사이 <b>거리</b></td><td>턱을 당긴 중립 상태로 기댄 뒤, 그 틈에 손가락이 몇 개 들어가는지 센다. 자가 있으면 <code>cm</code></td></tr>
+      <tr><td><b>② 연필 테스트</b></td><td>연필 끝의 <b>시계 방향</b></td><td>정면을 <code>12시</code>로 두고 몇 시를 가리키는지 읽는다. 위에서 찍은 사진을 남기면 더 정확하다</td></tr>
+      <tr><td><b>③ 누운 어깨</b></td><td>어깨 앞쪽이 바닥에서 <b>뜬 높이</b></td><td>어깨 앞과 바닥 사이에 손가락을 밀어 넣어 몇 개까지 들어가는지 센다</td></tr>
+      <tr><td><b>④ 골대 포즈</b></td><td>손등이 벽에서 <b>뜬 거리</b></td><td>손가락 개수. 허리 틈이 커지면 보상이므로 그 회차는 무효로 본다</td></tr>
+      <tr><td><b>⑤ 거울 측면</b></td><td>귀 중심과 어깨 중심의 <b>수평 거리</b></td><td>같은 조건으로 찍은 사진에 세로선을 하나 긋고, 두 점의 어긋난 폭을 본인 손가락 폭 기준으로 읽는다</td></tr>
+    </table>
+
+    <p>손가락 개수는 절대 단위가 아니다. 사람마다 두께가 다르다. 그러나 <b>자기 몸 안에서는 상수</b>이므로 같은 사람의 <code>4주</code> 전후를 비교하는 데는 아무 문제가 없다. 추적에 필요한 것은 정확한 값이 아니라 <b>같은 자로 잰 값</b>이다.</p>
+
+    <div class="box tip"><span class="t">측정 조건을 고정한다</span>값보다 조건이 중요하다. <b>같은 시간대</b>(아침저녁으로 자세가 다르다), <b>맨발</b>, <b>같은 옷</b>, 그리고 재기 직전에 스트레칭을 하지 않는다. 스트레칭 직후에 재면 감각 적응 때문에 값이 좋아지는데(⑥ 참고), 그것은 그날의 컨디션이지 <code>4주</code>의 성과가 아니다. 기록은 다섯 줄이면 충분하다. 날짜와 다섯 검사의 숫자를 한 줄로 적어 둔다.</div>
+  </div>
+</section>
+
+<!-- ===================== ⑥ 교정 원리 ===================== -->
+<section id="principle">
+  <h2><span class="n">06</span>교정 원리: 풀고, 강화하고, 재교육한다</h2>
+  <p class="lead">운동 목록을 외우는 대신, 처방의 구조를 이해한다. 구조를 알면 운동은 갈아 끼울 수 있다.</p>
+  <div class="card">
+    <div class="bigpic">교정은 줄다리기의 양쪽을 동시에 조작하는 일이다. ① 짧아진 앞을 <b>풀고</b>(스트레칭·이완) ② 약해진 뒤를 <b>강화하고</b> ③ 견갑골 움직임과 일상 자세를 <b>재교육한다</b>. 여기에 ④ <b>흉추 가동성</b>이 토대로 깔린다. 흉추가 굳어 있으면 견갑골이 정렬될 공간 자체가 없다.</div>
+
+    <table>
+      <tr><th>축</th><th>대상</th><th>대표 운동</th><th>왜</th></tr>
+      <tr><td><b>① 풀기</b></td><td>대흉근·소흉근·광배근</td><td>도어웨이 스트레칭, 폼롤러, 라크로스볼</td><td>앞줄을 놓아야 뒤가 이긴다. 강화가 아니라 이쪽이 먼저다</td></tr>
+      <tr><td><b>② 강화</b></td><td>중·하부 승모근·능형근·외회전근</td><td>YTW, 페이스풀, 밴드 풀어파트, 외회전</td><td>어깨를 제자리로 "되돌릴 힘"을 만든다. 무게보다 정확도</td></tr>
+      <tr><td><b>③ 재교육</b></td><td>견갑 움직임 패턴 + 일상 자세</td><td>월 슬라이드, 견갑 푸쉬업, 1시간 자세 리셋</td><td>근력이 있어도 패턴이 틀리면 일상에서 무너진다</td></tr>
+      <tr><td><b>④ 토대</b></td><td>흉추 신전·회전 가동성</td><td>폼롤러 흉추 신전, 고양이-소, 아치 홀드</td><td>굳은 흉추 위에서는 견갑골이 활주할 수 없다</td></tr>
+    </table>
+
+    <h3>“푼다”는 말의 정체: 근육은 늘어나지 않는다</h3>
+    <p><code>4</code>주쯤 매일 도어웨이 스트레칭을 하면 가슴이 더 열린다. 이때 몸에서 실제로 무슨 일이 일어난 걸까? 직관적인 답, 곧 “대흉근이 길어졌다”는 아마 틀렸다.</p>
+    <h4>두 편의 연구가 보여준 것</h4>
+    <p><code>2</code>주 이상, 주 <code>2</code>회 이상 스트레칭 개입을 한 연구 <code>26</code>편을 모은 메타분석이 있다. 프로그램 기간은 <code>3~8</code>주, 주당 총 스트레칭 시간은 평균 <code>1,165</code>초(약 <code>19</code>분)였다. 결과는 <b>최대로 견딜 수 있는 수동 토크만 소폭 늘었고</b>, 관절의 스트레치 저항·근육 구조·근육 강성·힘줄 강성은 <b>모두 변화가 없었다</b>. 저자들의 결론은 명확하다. <b><code>8</code>주 미만의 스트레칭은 근육도 힘줄도 바꾸지 못하며, 그 적응은 대체로 감각 수준에서 일어난다</b>(<a href="https://pubmed.ncbi.nlm.nih.gov/28801950/">Freitas 외, Scand J Med Sci Sports 2018</a>).</p>
+    <p>어깨에서 직접 검증된 사례도 있다. 소흉근이 짧은 사람 <code>50</code>명에게 <code>6</code>주 동안 매일 소흉근 스트레칭을 시킨 연구도 결과가 같았다. <b>소흉근 길이는 변하지 않았고</b>, <b>견갑골 운동학도 변하지 않았으며</b>, 그런데 <b>통증과 기능은 유의하게 개선됐다</b>(<a href="https://pubmed.ncbi.nlm.nih.gov/27769843/">Rosa 외, J Hand Ther 2017</a>).</p>
+    <h4>그래서 처방이 어떻게 달라지는가</h4>
+    <div class="box tip"><span class="t">그래서 도어웨이를 빼야 하는가? 아니다</span>
+      이 근거를 오독하면 “스트레칭은 소용없다”가 된다. 데이터가 말하는 것은 정반대에 가깝다. <b>효과는 있다. 효과가 오는 경로가 우리가 믿던 것과 다를 뿐이다.</b> 실무적으로 달라지는 것은 셋이다.<br>
+      <b>① 기대치를 옮긴다.</b> 도어웨이의 목표는 “가슴 근육을 늘리는 것”이 아니라 <b>그 자세에서 몸이 편안해지는 것</b>이다. 자세 사진이 <code>4</code>주 만에 안 바뀌었다고 실패가 아니다.<br>
+      <b>② 스트레칭 단독으로는 정렬이 안 바뀐다.</b> 길이도 운동학도 안 변한다면, 정렬을 바꾸는 일은 <b>강화(②)와 재교육(③)의 몫</b>이다. 위 표의 “앞줄을 놓아야 뒤가 이길 수 있다”는 여전히 맞지만, 방향을 하나 더 붙여야 한다. <b>풀기만 해서는 이기지 못한다.</b><br>
+      <b>③ 중단하면 되돌아가는 이유</b>도 여기서 설명된다. 길이가 원상복귀해서가 아니라 <b>감각 적응이 사라져서</b>다. ⑩의 “유지기, 완전 중단 금지”가 그래서 필요하다.</div>
+    <div class="box note"><span class="t">자가 점검, 성공의 모양이 다르다</span>도어웨이를 하며 <b>“어디까지 갔는가”(각도)</b>와 <b>“얼마나 당기는가”(0–10 주관 점수)</b>를 <b>둘 다</b> 기록한다. <code>4</code>주 뒤 각도는 그대로인데 같은 각도에서의 당김 점수가 내려갔다면 그것이 감각 적응이고, <b>정상적인 성공</b>이다.</div>
+
+    <h3>증거: 이 처방이 실제로 작동하는가</h3>
+    <ul class="clean">
+      <li><b>메타분석.</b> 상교차증후군을 다룬 22개 연구에서 강화 + 스트레칭 + 견갑 안정화 복합 운동이 전방 머리·라운딩 숄더·흉추 후만 각도를 유의하게 개선 (<a href="https://pubmed.ncbi.nlm.nih.gov/38302926/">BMC Musculoskeletal Disorders, 2024</a>).</li>
+      <li><b>좌식 근로자 RCT.</b> <code>4주</code>, 주 <code>5회</code> 교정 운동으로 라운딩 숄더 각도 유의 감소. 일상 자세 교정을 병행한 그룹이 운동만 한 그룹보다 개선폭이 컸다 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10065112/">PMC10065112</a>).</li>
+      <li><b>클라이머 프리햅, 효과 크기는 미확인.</b> 재활 현장에서는 <code>15분</code> 폐쇄사슬+편심성 루틴의 부상 감소 효과가 널리 인용된다(<a href="https://theprehabguys.com/rock-climbing-prehab-exercises/">The Prehab Guys</a>). 다만 <b>이 가이드는 그 효과 크기의 1차 출처를 확인하지 못했다.</b> 근거가 확실한 것은 위 두 항목, 곧 메타분석과 좌식 근로자 RCT다. 처방의 정당성은 그것으로 충분하다.</li>
+    </ul>
+
+    <div class="box warn"><span class="t">왜 키핑 풀업이 아닌가</span>키핑의 아치 자세가 "몸을 여는 방향"이라 교정에 좋아 보이지만, 조사 결과는 반대다. <b>① 교정 효과의 근거 없음</b>(교정 근거는 후인근 강화 + 흉근 스트레칭 조합) <b>② 가동성은 키핑의 결과가 아니라 선행 조건</b>(부족하면 어깨·요추가 보상) <b>③ 스윙 하단의 외전+외회전이 임핀지먼트 자세</b>(CrossFit 어깨 부상의 ~<code>10%</code>). 아치 자세의 유효 성분은 아치 홀드·패시브 행으로 분리해 가져온다. 전체 근거: <a href="kipping-pullup.md">kipping-pullup.md</a>.</div>
+  </div>
+</section>
+
+<!-- ===================== ⑦ 운동 A–Z ===================== -->
+<section id="exercises">
+  <h2><span class="n">07</span>운동 카탈로그, 축별로 갈아 끼운다</h2>
+  <p class="lead">루틴 카탈로그 10종 + 흉추·이완 보조 동작. 전부 집(맨몸·밴드·폼롤러·철봉)에서 가능하다.</p>
+  <div class="card">
+
+    <p>⑥에서 처방의 구조를 네 축으로 나눴다. 이제 그 축에 실제 동작을 채운다. 다만 동작 설명으로 들어가기 전에 먼저 짚을 것이 하나 있다. 이 운동군 전체를 무력화할 수 있는데도 정작 운동 목록에는 거의 적히지 않는 실패 모드다.</p>
+
+    <div class="bigpic">등 강화 운동을 처음 하는 사람의 다수는 <b>상부 승모근으로 동작을 대신한다</b>. 팔을 들어야 하는데 어깨가 먼저 귀 쪽으로 솟는 것이다. 문제는 상부 승모근이 ②에서 이미 <b>과긴장·단축</b> 쪽으로 지목된 근육이라는 데 있다. 그러면 교정 운동이 균형을 되돌리는 대신 이미 기울어진 쪽을 더 누른다. <b>이 절의 모든 동작에 같은 자가 점검이 붙는 이유다: 목과 어깨 사이가 벌어진 채로 유지되는가.</b></div>
+
+    <p>왜 하필 이 근육이 끼어드는가. 팔을 들어 올릴 때 견갑골을 위쪽으로 회전시키는 일은 상부 승모근·하부 승모근·전거근이 나눠 맡는다(견갑상완 리듬, scapulohumeral rhythm). 뒤쪽 둘이 약하면 남은 하나가 그 몫을 전부 가져간다. 상부 승모근이 유난히 강해서가 아니라 <b>대신 일할 근육이 없어서</b> 벌어지는 일이다.</p>
+
+    <p>여기서 처방의 방향이 정해진다. 목표는 "더 힘껏"이 아니라 <b>"덜 세게, 대신 정확히"</b>다. 부하가 능력을 넘는 순간 몸은 가장 쓰기 쉬운 근육을 먼저 부르고, 그 근육이 하필 우리가 줄이려는 쪽이다. 이 절의 무게 권고가 대체로 <code>0.5–1kg</code>에 머무는 이유다.</p>
+
+    <p>그래서 아래 동작은 전부 같은 다섯 칸으로 정리했다. <b>왜</b>(어느 축의 무엇을 겨냥하는가), <b>방법</b>, <b>흔한 실수</b>(무엇이 대신 일하는가), <b>제대로 하고 있다는 신호</b>(눈이나 감각으로 확인 가능한 것), <b>안 될 때</b>(강도를 낮춘 선행 동작)다. 먼저 축과 동작과 시점을 한 장에 묶는다. ⑥의 축 표와 이 절 끝의 주간 배치 표를 잇는 다리다.</p>
+
+    <table>
+      <tr><th>축</th><th>동작</th><th>수행 시점</th><th>비중</th></tr>
+      <tr><td><b>① 풀기</b></td><td>도어웨이 스트레칭</td><td>매일 + 등반 전</td><td><b>[핵심]</b></td></tr>
+      <tr><td><b>① + ④</b></td><td>폼롤러 흉추 신전</td><td>월요일 + 등반 후</td><td>[보조]</td></tr>
+      <tr><td><b>② 강화</b></td><td>YTW 레이즈</td><td>등반 후</td><td><b>[핵심]</b></td></tr>
+      <tr><td><b>② 강화</b></td><td>페이스풀</td><td>월요일</td><td><b>[핵심]</b></td></tr>
+      <tr><td><b>② 강화</b></td><td>밴드 풀어파트</td><td>등반 전·후</td><td>[보조]</td></tr>
+      <tr><td><b>② 강화</b></td><td>밴드 외회전</td><td>월요일</td><td>[보조]</td></tr>
+      <tr><td><b>③ 재교육</b></td><td>월 슬라이드</td><td>모든 운동 전 워밍업</td><td><b>[필수]</b></td></tr>
+      <tr><td><b>③ 재교육</b></td><td>견갑골 푸쉬업</td><td>월요일</td><td>[보조]</td></tr>
+      <tr><td><b>③ 재교육</b></td><td>푸쉬업(+플러스)</td><td>등반 후</td><td><b>[핵심]</b></td></tr>
+      <tr><td><b>④ 토대</b></td><td>패시브 행 + 스캡 풀</td><td>등반 후</td><td><b>[핵심]</b></td></tr>
+      <tr><td><b>④ 토대</b></td><td>아치 홀드</td><td>월요일</td><td>[보조]</td></tr>
+      <tr><td><b>④ 토대</b></td><td>고양이-소</td><td>아무 때나</td><td>[보조]</td></tr>
+    </table>
+
+    <p>비중 칸이 균일하지 않은 것은 의도한 것이다. 열두 개를 매일 다 하려는 계획은 <code>2</code>주를 못 넘긴다. 시간이 없는 날 무엇을 남길지가 이미 표에 적혀 있다.</p>
+
+    <h3>① 풀기: 짧아진 앞쪽</h3>
+
+    <h4>도어웨이 스트레칭</h4>
+    <p><b>왜.</b> ① 축의 대표 동작이다. 대흉근과 소흉근, 곧 어깨를 앞으로 당기는 앞줄을 겨냥한다. 다만 ⑥에서 확인했듯 <b>이 동작의 성과는 근육 길이가 아니라 그 자세에서의 편안함</b>이다. 목표를 그렇게 잡아야 <code>4</code>주 뒤 사진이 그대로여도 중단하지 않는다.</p>
+    <p><b>방법.</b> 문틀에 팔꿈치와 손을 대고 팔꿈치 높이를 어깨 높이에 맞춘다. 한 발을 문 밖으로 내딛으며 가슴을 밀어 넣는다. <code>15–30초 × 3회</code>, 매일 한다. 팔 높이를 아래·수평·위 <code>3</code>단계로 바꾸면 가슴의 다른 섬유가 걸린다. 팔을 올릴수록 소흉근 쪽이다.</p>
+    <p><b>⚠️ 흔한 실수.</b> 가슴을 미는 대신 <b>허리를 젖혀 몸통 전체를 앞으로 보낸다</b>. 이러면 늘어나는 것은 대흉근이 아니라 복부와 요추다. 스트레칭 감각은 비슷하게 오지만 겨냥한 조직에는 부하가 안 걸린다. 턱이 따라 나오는 것도 같은 계열의 보상이다.</p>
+    <p><b>✅ 제대로 하고 있다는 신호.</b> 당김이 <b>겨드랑이 앞쪽 접히는 선과 쇄골 아래</b>에 잡힌다. 아래쪽 갈비뼈가 앞으로 튀어나오지 않고 골반 위에 얹힌 채로 있다. 손끝 저림이 없다. 저리면 신경 쪽에 부하가 간 것이므로 각도를 낮춘다.</p>
+    <p><b>안 될 때.</b> 문틀 대신 벽 모서리에 한 팔씩 댄다. 양팔 동시보다 부하가 절반이다. 그래도 당김이 과하면 팔꿈치를 어깨 아래 높이로 내린다.</p>
+
+    <figure>
+      <div class="photo-anno" style="max-width:460px">
+      <img src="/img/Foam_rolling_on_back.jpg"
+           alt="폼롤러 흉추 신전 — 등 상부에 폼롤러를 대고 뒤로 젖히기" loading="lazy" onerror="this.closest('.photo-anno').style.display='none'" width="960" height="640">
+      <svg class="lab" viewBox="0 0 1000 667" role="img" aria-label="폼롤러 위치 주석" preserveAspectRatio="xMidYMid meet">
+        <circle cx="330" cy="430" r="26" fill="none" stroke="#c0512e" stroke-width="7"/>
+        <line x1="356" y1="430" x2="500" y2="470" stroke="#c0512e" stroke-width="4"/>
+        <rect x="500" y="442" width="430" height="56" rx="28" fill="#fff" opacity="0.94" stroke="#cdbfa6"/>
+        <text x="715" y="479" text-anchor="middle" font-size="30" font-weight="800" fill="#8f3920">롤러는 등 상부(흉추)에</text>
+        <rect x="60" y="60" width="500" height="56" rx="28" fill="#fff" opacity="0.94" stroke="#cdbfa6"/>
+        <text x="310" y="97" text-anchor="middle" font-size="30" font-weight="800" fill="#2f7d44">엉덩이 들고 천천히 뒤로 젖힌다</text>
+      </svg>
+      </div>
+      <figcaption><b>폼롤러 흉추 신전.</b> 등 상부에 롤러를 가로로 두고 손은 머리 뒤, 각 위치에서 <code>5–10초</code>씩 젖히며 상부 등 전체를 이동한다. 키핑 아치의 "가슴 쭉 열리는 시원함"을 반동 없이 그대로 주는 동작이다. ⚠️ 허리가 꺾이지 않게 복근 긴장 유지. <span class="credit">사진: PTPioneer / Wikimedia Commons, CC BY 2.0 · 주석 추가</span></figcaption>
+    </figure>
+
+    <h4>폼롤러 흉추 신전</h4>
+    <p><b>왜.</b> ① 축과 ④ 축에 걸친다. 앞을 여는 동시에 흉추가 뒤로 젖혀지는 범위를 확보한다. 굳은 흉추 위에서는 견갑골이 제자리로 갈 공간 자체가 없으므로, 강화 운동이 잘 안 걸릴 때 먼저 의심할 항목이다.</p>
+    <p><b>방법과 신호.</b> 위 사진의 자세로 각 위치에서 <code>5–10초</code>씩 젖히며 롤러를 등 상부 안에서 <code>3–4</code>번 옮긴다. 젖힘이 <b>허리가 아니라 날개뼈 사이에서 일어나는 것</b>이 신호다. 아래 갈비뼈가 위로 벌어지면 이미 요추로 넘어간 것이니 복근에 힘을 준 채 범위를 줄인다. 롤러가 없으면 돌돌 만 수건 두 장을 겹쳐 쓴다.</p>
+
+    <h3>② 강화: 약해진 뒤쪽</h3>
+
+    <p>앞을 풀어도 뒤가 당겨 주지 않으면 어깨는 원래 자리로 돌아온다. ② 축은 그 "당겨 주는 힘"을 만드는 쪽이다. 동시에 이 축이 서두에 말한 상부 승모근 보상이 가장 잘 일어나는 구간이기도 하다. 아래 두 동작의 점검 항목이 유독 까다로운 이유다.</p>
+
+    <h4>YTW 레이즈</h4>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 1080 380" role="img" aria-label="YTW 레이즈 — 엎드린 자세를 위에서 본 세 가지 팔 모양. Y는 팔을 머리 위 좁은 V로 뻗고, T는 어깨선과 나란히 옆으로 벌리며, W는 팔꿈치를 접어 옆구리 쪽으로 당긴다">
+        <rect width="1080" height="380" fill="var(--plate)"/>
+        <path d="M126,128 C122,166 146,194 149,228 C150,252 147,264 145,272 L215,272 C213,264 210,252 211,228 C214,194 238,166 234,128 Z" fill="url(#bodyG)"/>
+        <path d="M167,148 L142,156 L158,188 Z" fill="#fff" opacity=".18"/>
+        <path d="M193,148 L218,156 L202,188 Z" fill="#fff" opacity=".18"/>
+        <ellipse cx="180" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
+        <path d="M144.4,132.9 L119.3,85.0 L102.8,92.3 L121.6,143.1 Z" fill="url(#bodyG)"/>
+        <path d="M119.3,85.0 L97.0,42.4 L86.0,47.3 L102.8,92.3 Z" fill="url(#bodyG)"/>
+        <circle cx="111.0" cy="88.7" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="91.5" cy="44.8" r="9.5" fill="url(#bodyG)"/>
+        <path d="M238.4,143.1 L257.2,92.3 L240.7,85.0 L215.6,132.9 Z" fill="url(#bodyG)"/>
+        <path d="M257.2,92.3 L274.0,47.3 L263.0,42.4 L240.7,85.0 Z" fill="url(#bodyG)"/>
+        <circle cx="249.0" cy="88.7" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="268.5" cy="44.8" r="9.5" fill="url(#bodyG)"/>
+        <text x="180" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">Y</text>
+        <path d="M486,128 C482,166 506,194 509,228 C510,252 507,264 505,272 L575,272 C573,264 570,252 571,228 C574,194 598,166 594,128 Z" fill="url(#bodyG)"/>
+        <path d="M527,148 L502,156 L518,188 Z" fill="#fff" opacity=".18"/>
+        <path d="M553,148 L578,156 L562,188 Z" fill="#fff" opacity=".18"/>
+        <ellipse cx="540" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
+        <path d="M493.0,125.5 L439.0,129.0 L439.0,147.0 L493.0,150.5 Z" fill="url(#bodyG)"/>
+        <path d="M439.0,129.0 L391.0,132.0 L391.0,144.0 L439.0,147.0 Z" fill="url(#bodyG)"/>
+        <circle cx="439.0" cy="138.0" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="391.0" cy="138.0" r="9.5" fill="url(#bodyG)"/>
+        <path d="M587.0,150.5 L641.0,147.0 L641.0,129.0 L587.0,125.5 Z" fill="url(#bodyG)"/>
+        <path d="M641.0,147.0 L689.0,144.0 L689.0,132.0 L641.0,129.0 Z" fill="url(#bodyG)"/>
+        <circle cx="641.0" cy="138.0" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="689.0" cy="138.0" r="9.5" fill="url(#bodyG)"/>
+        <text x="540" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">T</text>
+        <path d="M846,128 C842,166 866,194 869,228 C870,252 867,264 865,272 L935,272 C933,264 930,252 931,228 C934,194 958,166 954,128 Z" fill="url(#bodyG)"/>
+        <path d="M887,148 L862,156 L878,188 Z" fill="#fff" opacity=".18"/>
+        <path d="M913,148 L938,156 L922,188 Z" fill="#fff" opacity=".18"/>
+        <ellipse cx="900" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
+        <path d="M848.3,126.4 L799.6,149.9 L806.3,166.6 L857.7,149.6 Z" fill="url(#bodyG)"/>
+        <path d="M809.6,152.2 L775.3,118.5 L766.4,126.6 L796.2,164.3 Z" fill="url(#bodyG)"/>
+        <circle cx="802.9" cy="158.2" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="770.8" cy="122.6" r="9.5" fill="url(#bodyG)"/>
+        <path d="M942.3,149.6 L993.7,166.6 L1000.4,149.9 L951.7,126.4 Z" fill="url(#bodyG)"/>
+        <path d="M1003.8,164.3 L1033.6,126.6 L1024.7,118.5 L990.4,152.2 Z" fill="url(#bodyG)"/>
+        <circle cx="997.1" cy="158.2" r="9" fill="#fff" opacity=".26"/>
+        <circle cx="1029.2" cy="122.6" r="9.5" fill="url(#bodyG)"/>
+        <text x="900" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">W</text>
+        <text x="540" y="366" text-anchor="middle" font-size="19" fill="#5c554b">엎드려 팔을 Y → T → W 순서로 들어올린다 · 글자 하나가 근육 하나에 대응한다</text>
+      </svg>
+      </div>
+      <figcaption><b>YTW 레이즈.</b> 엎드려 팔을 Y → T → W 순서로 들어올린다. 글자 하나가 근육 하나에 대응한다. 어깨를 제자리로 되돌리는 세 근육을 한 시리즈로 깨운다. 맨몸으로 시작, 익숙해지면 <code>0.5–1kg</code>.
+      <span class="credit">도해: 직접 제작 · 위에서 내려다본 상체</span></figcaption>
+    </figure>
+
+    <p><b>왜.</b> 글자 세 개가 근육 세 개에 대응한다. Y는 하부 승모근, T는 중부 승모근과 능형근, W는 외회전근이다. ② 축이 겨냥하는 근육을 한 시리즈로 훑는 구성이라, 시간이 하나뿐일 때 강화 축의 대표로 남길 동작이 이것이다.</p>
+    <p><b>방법.</b> 바닥에 엎드려 이마를 가볍게 받치고 팔을 Y → T → W 순서로 들어 올린다. 각 글자 <code>8–12회</code>, 한 동작을 <code>2</code>초에 걸쳐 올리고 <code>2</code>초에 걸쳐 내린다. 맨몸으로 시작해 형태가 안정되면 <code>0.5–1kg</code>을 든다. 세트 사이에 팔을 완전히 내려놓고 <code>10</code>초 쉬는 편이 낫다.</p>
+    <p><b>⚠️ 흔한 실수.</b> 팔을 <b>높이</b> 올리려다 어깨가 귀 쪽으로 딸려 올라간다. 이 동작에서 상부 승모근 보상은 눈에 잘 안 띈다. 엎드려 있어 본인이 볼 수 없기 때문이다. 두 번째 실수는 허리로 반동을 주는 것이다. 가슴이 바닥에서 크게 뜨면 팔이 아니라 척추기립근이 일한 것이다.</p>
+    <p><b>✅ 제대로 하고 있다는 신호.</b> 팔이 손가락 몇 개 높이밖에 안 올라간다. 이 동작의 정상 가동 범위는 <code>5–10cm</code> 수준이고, 더 올라간다면 대개 보상이 섞인 것이다. 뻐근함이 <b>날개뼈 사이와 그 아래</b>에 잡히고 목 옆이나 어깨 위쪽에는 잡히지 않는다. 다음 날 근육통이 등 가운데에 온다.</p>
+    <p><b>안 될 때.</b> 엎드린 자세에서 목이 불편하면 상체를 벤치나 소파 모서리에 걸치고 한다. 세 글자를 다 하기 어려우면 <b>T 하나만</b> 남긴다. 셋 중 자세가 가장 덜 무너지는 글자다.</p>
+
+    <h4>페이스풀과 밴드 풀어파트</h4>
+
+    <figure>
+      <div class="dual">
+        <div class="ph">
+          <div class="photo-anno">
+            <img src="/img/ex-face-pull-1.jpg" alt="페이스풀 — 밧줄을 얼굴 쪽으로 당기며 외회전" width="760" height="724" loading="lazy">
+            <svg viewBox="0 0 760 724" role="img" aria-label="페이스풀 주석 — 팔꿈치가 어깨보다 높고, 손이 팔꿈치보다 뒤로 간다">
+              <g class="lab" font-size="19" font-weight="700">
+                <rect x="352" y="120" width="196" height="30" rx="7" fill="#fff" opacity=".93"/>
+                <text x="362" y="142" fill="#8f3920">팔꿈치 ≥ 어깨 높이</text>
+                <rect x="300" y="316" width="232" height="30" rx="7" fill="#fff" opacity=".93"/>
+                <text x="310" y="338" fill="#1f6b41">손이 팔꿈치보다 뒤로</text>
+              </g>
+            </svg>
+          </div>
+          <div class="cap"><b>페이스풀.</b> 얼굴 옆으로 당기며 외회전 · <code>12–15회 × 2–3</code></div>
+        </div>
+        <div class="ph">
+          <div class="photo-anno">
+            <img src="/img/ex-back-flyes-with-bands-1.jpg" alt="밴드 풀어파트 — 밴드를 양옆으로 벌리며 견갑골을 모은다" width="760" height="792" loading="lazy">
+            <svg viewBox="0 0 760 792" role="img" aria-label="밴드 풀어파트 주석 — 견갑골을 가운데로 모은다">
+              <g class="lab" font-size="19" font-weight="700">
+                <rect x="252" y="150" width="250" height="30" rx="7" fill="#fff" opacity=".93"/>
+                <text x="262" y="172" fill="#1f6b41">견갑골을 가운데로 모은다</text>
+              </g>
+            </svg>
+          </div>
+          <div class="cap"><b>밴드 풀어파트.</b> 팔을 편 채 양옆으로 · <code>12–15회 × 2–3</code></div>
+        </div>
+      </div>
+      <figcaption><b>강화 축(②)의 두 기둥.</b> 페이스풀은 후면 삼각근·외회전근·중하부 승모근을 한 번에 자극하는 <b>단일 운동 중 최고 효율</b>로 꼽힌다. 둘 다 팔이 아니라 <b>견갑골 사이가 조이는 느낌</b>에 집중한다. 풀기 축(①)의 도어웨이는 본문 설명을 따른다.
+      <span class="credit">사진: gengyueworks/gym-exercise-guide · 퍼블릭 도메인 · 톤 보정 및 주석 추가</span></figcaption>
+    </figure>
+
+    <p><b>왜.</b> 페이스풀은 후면 삼각근·외회전근·중하부 승모근을 한 동작에서 함께 쓴다. 어깨를 말리게 하는 세 요소, 곧 앞으로 밀린 견갑골·내회전된 상완골·처진 어깨선을 동시에 반대 방향으로 끌어당기는 구성이라 단일 운동 효율이 높다. 밴드 풀어파트는 그중 수평 후인만 떼어 낸 간이 버전이다.</p>
+    <p><b>방법.</b> 페이스풀은 밴드나 케이블을 얼굴 높이에 걸고 손을 얼굴 양옆으로 당기며 마지막에 손등이 뒤로 가도록 외회전한다. <code>12–15회 × 2–3세트</code>. 밴드 풀어파트는 팔을 편 채 밴드를 양옆으로 벌린다. <code>12–15회 × 2–3세트</code>. 둘 다 저항이 가벼울수록 형태가 산다.</p>
+    <p><b>⚠️ 흔한 실수.</b> 팔로 당긴다. 손이 몸에 가까워지는 데만 집중하면 팔꿈치가 아래로 처지고 <b>광배근이 동작을 가져간다</b>. 클라이머는 광배근이 이미 강한 쪽이라 이 보상이 특히 잘 나온다. 밴드가 무거우면 어깨가 솟는 보상이 함께 온다.</p>
+    <p><b>✅ 제대로 하고 있다는 신호.</b> 사진의 주석 두 줄이 그대로 점검 항목이다. <b>팔꿈치가 어깨 높이 이상</b>에 있고, 끝 지점에서 <b>손이 팔꿈치보다 뒤</b>에 있다. 가슴이 열리면서 날개뼈 사이가 좁아지는 것이 느껴지고, 그 감각의 위치가 목이 아니라 등 한가운데다. 거울 정면에서 봤을 때 어깨선 높이가 시작과 끝에서 같다.</p>
+    <p><b>안 될 때.</b> 밴드를 더 얇은 것으로 바꾼다. 그래도 어깨가 솟으면 <b>엎드려 하는 프론 T</b>로 내려간다. 누운 자세라 어깨를 들어 올릴 여지 자체가 줄어든다.</p>
+
+    <h4>밴드 외회전</h4>
+    <p><b>왜.</b> 외회전근만 따로 떼어 훈련한다. 페이스풀에 이미 포함된 성분이지만, 어깨 찝힘 이력이 있으면 이 근육군이 유독 약한 경우가 많아 별도 자극이 필요하다.</p>
+    <p><b>방법과 신호.</b> 팔꿈치를 옆구리에 붙이고 <code>90°</code>로 접은 채 밴드를 바깥으로 벌린다. <code>15회 × 2세트</code>. <b>겨드랑이에 수건을 끼워 떨어뜨리지 않는 것</b>이 형태 점검이다. 수건이 떨어지면 팔꿈치가 몸에서 떨어졌다는 뜻이고, 그 순간 삼각근이 대신 일한다. 가동 범위는 통증 없는 만큼만 쓴다.</p>
+
+    <h3>③ 재교육 + ④ 토대</h3>
+
+    <p>여기까지가 힘의 문제라면, 남은 둘은 <b>순서와 공간의 문제</b>다. ③은 이미 가진 근력을 올바른 순서로 동원하는 훈련이고, ④는 그 동원이 일어날 물리적 공간을 만드는 작업이다. 이 두 축은 무게를 올려서 얻는 것이 아니라 반복 노출로 얻는다. 그래서 배치가 워밍업이다.</p>
+
+    <h4>월 슬라이드</h4>
+    <p><b>왜.</b> 이 절에서 유일하게 <b>[필수]</b>로 표시한 동작이다. 벽이 등을 대신 감시해 준다는 점이 결정적이다. 견갑골이 앞으로 미끄러지거나 어깨가 솟으면 팔이 벽에서 즉시 떨어지므로, <b>보상이 일어나는 순간을 본인이 알 수 있는 몇 안 되는 동작</b>이다. 앞서 말한 상부 승모근 보상 문제에 대한 가장 값싼 해답이 이것이다.</p>
+    <p><b>방법.</b> 벽에 등을 대고 발을 벽에서 <code>10–15cm</code> 앞에 둔다. 뒤통수·등 상부·엉덩이를 벽에 붙이고 팔은 W 모양으로 팔꿈치와 손등을 벽에 붙인다. 이 접촉을 유지한 채 팔을 머리 위 Y 모양까지 밀어 올렸다 내린다. <code>10회 × 1–3세트</code>. 속도는 올라가는 데 <code>3</code>초, 내려오는 데 <code>3</code>초다.</p>
+    <p><b>⚠️ 흔한 실수.</b> 팔을 끝까지 올리려고 <b>허리를 벽에서 띄운다</b>. 그러면 흉추가 아니라 요추가 젖혀져서 정렬 훈련이 아니라 요추 신전 연습이 된다. 손목만 벽에 붙이고 팔꿈치는 뜨는 것도 흔하다. 이 상태로는 외회전근이 전혀 개입하지 않는다.</p>
+    <p><b>✅ 제대로 하고 있다는 신호.</b> 올라가는 도중 <b>어느 지점에서 팔이 벽에서 떨어지는지</b>를 매번 같은 위치로 말할 수 있다. 그 지점이 주 단위로 위로 올라간다면 그것이 진행이다. 허리와 벽 사이 틈이 손바닥 하나가 겨우 들어갈 정도로 유지된다. 등 위쪽이 뻐근하고 목 옆은 조용하다.</p>
+    <p><b>안 될 때.</b> 팔이 W 모양에서부터 이미 벽에 안 닿으면 <b>벽에서 등만 떼고 누워서</b> 한다. 바닥이 벽 역할을 대신하는데 중력 방향이 달라 부하가 낮다. 그것도 어려우면 가동 범위를 절반으로 줄여 W에서 T 높이까지만 오간다.</p>
+
+    <h4>견갑골 푸쉬업</h4>
+    <p><b>왜.</b> 전거근 재교육 전용 동작이다. 전거근은 견갑골을 갈비뼈에 붙여 두는 근육이고, 이것이 약하면 팔을 밀 때 견갑골이 등에서 들뜬다. 팔꿈치 관절을 아예 쓰지 않기 때문에 <b>견갑골 움직임만 따로 떼어 인지</b>할 수 있다.</p>
+    <p><b>방법과 신호.</b> 플랭크 자세에서 팔꿈치를 편 채로 고정하고 견갑골만 모았다 벌린다. <code>10–12회 × 2세트</code>. 가슴이 바닥 쪽으로 <code>3–5cm</code> 내려갔다 올라오는 정도의 작은 움직임이다. 팔꿈치가 조금이라도 굽으면 일반 푸쉬업으로 변한 것이다. 등 위쪽이 넓게 퍼지는 느낌이 나면 전거근이 일하고 있다. 무릎을 대면 부하가 크게 준다.</p>
+
+    <h4>철봉과 바닥에서 하는 길항 동작</h4>
+
+    <div class="dual">
+      <div class="ph">
+        <img src="/img/Klimmzug_in_Ausgangsposition.jpg"
+             alt="철봉 패시브 행 — 매달리기" loading="lazy" onerror="this.closest('.ph').style.display='none'" width="960" height="1707">
+        <div class="cap"><b>패시브 행 + 스캡 풀.</b> 힘 빼고 <code>20–30초</code> 매달리면 체중이 어깨·광배를 길게 연다. 이어 팔꿈치 편 채 <b>견갑골만 아래로</b> 당기는 스캡 풀 <code>5–8회</code>. 끝범위를 여는 것과 통제하는 것을 한 세트로.</div>
+      </div>
+      <div class="ph">
+        <img src="/img/Girl_doing_push-ups_from_the_side.jpg"
+             alt="푸쉬업 측면 — 몸통 일직선" loading="lazy" onerror="this.closest('.ph').style.display='none'" width="960" height="640">
+        <div class="cap"><b>푸쉬업(+플러스)</b>은 당기기의 길항이다. 최상단에서 견갑골을 한 번 더 밀어내는 <b>푸쉬업 플러스</b>를 하면 전거근까지 잡는다. 몸통은 사진처럼 일직선. <b>바닥에서, 팔꿈치를 완전히 펴고, 손 간격은 어깨너비로</b> 한다. 조건이 어긋나면 목표가 뒤집힌다(아래 주의).</div>
+      </div>
+    </div>
+    <figcaption style="text-align:center"><span class="credit">사진: MoserB (CC0) · PTPioneer (CC BY 2.0) / Wikimedia Commons</span></figcaption>
+
+    <h4>패시브 행 + 스캡 풀</h4>
+    <p><b>왜.</b> 하나의 매달림 안에 ④와 ③이 연달아 들어간다. 힘을 뺀 매달림은 체중이 어깨와 광배근을 끝범위까지 늘려 <b>공간을 열고</b>, 이어지는 스캡 풀은 그 끝범위를 <b>스스로 통제하는 법</b>을 가르친다. 여는 것과 잡는 것을 한 세트로 묶는 구성이다.</p>
+    <p><b>방법.</b> 어깨너비로 철봉을 잡고 힘을 빼고 <code>20–30초</code> 매달린다. 이어 팔꿈치를 편 채로 <b>견갑골만 아래로</b> 당겨 몸을 <code>3–5cm</code> 올렸다 내린다. <code>5–8회</code>. 등반 후에 넣는다.</p>
+    <p><b>⚠️ 흔한 실수.</b> 스캡 풀에서 팔꿈치를 굽혀 풀업으로 넘어간다. 그러면 목표인 하부 승모근 대신 이두근과 광배근이 일한다. 반대로 패시브 행에서 어깨를 잔뜩 조인 채 매달리는 것도 실수다.</p>
+    <p><b>✅ 제대로 하고 있다는 신호.</b> 패시브 행에서 <b>귀와 어깨 사이가 좁아지고</b>, 스캡 풀에서 다시 <b>벌어진다</b>. 이 동작에서만은 어깨가 귀 쪽으로 올라가는 것이 정상인데, 근육이 아니라 체중이 만든 것이기 때문이다. 두 지점의 차이가 눈에 보일 만큼 나면 견갑골이 실제로 움직인 것이다.</p>
+    <p><b>안 될 때.</b> 어깨 찝힘 이력이 있으면 매달린 시간을 <code>10초</code>부터 시작한다. 그립이 먼저 지치면 발을 낮은 박스에 얹어 체중을 덜어 낸다.</p>
+
+    <h4>푸쉬업(+플러스)</h4>
+    <p><b>왜.</b> ③ 축의 길항 담당이다. 클라이밍은 거의 전부 당기기이고, 미는 동작이 없으면 앞뒤가 아니라 <b>당김과 밂</b>의 균형이 무너진다. 최상단에서 견갑골을 한 번 더 밀어내는 플러스 국면을 붙이면 견갑골 푸쉬업과 같은 전거근 자극이 따라온다.</p>
+    <p><b>방법과 실수.</b> 몸통은 사진처럼 일직선을 유지하고 <code>10–15회 × 2세트</code>. 다만 이 동작은 <b>어떤 조건에서 하느냐가 목표를 뒤집는</b> 드문 경우다. 바닥·팔꿈치 완전 신전·어깨너비라는 세 조건과 벽 버전의 위험은 아래 박스에서 따로 다룬다.</p>
+
+    <div class="box warn"><span class="t">푸쉬업 플러스, 어떤 버전이냐가 목표를 뒤집는다</span>
+      전거근을 강하게 쓰는 것은 맞다. 다만 조건이 붙는다. <code>19</code>개 연구 <code>356</code>명을 모은 메타분석은
+      <b>안정된 바닥에서 · 팔꿈치를 완전히 펴고 · 손 간격은 어깨너비로</b> 할 때 전거근 대비 상부 승모근 비율이 가장 유리하다고 보고했다.
+      <b>불안정한 표면(밸런스볼 등)에서 하면 상부 승모근 활동이 오히려 올라간다</b>. 이미 과긴장인 근육을 더 조이는 셈이라 목적에 어긋난다
+      (<a href="https://pubmed.ncbi.nlm.nih.gov/31584855/">Kang 외, J Athl Train 2019</a>).<br>
+      <b>벽에 대고 하는 버전은 더 조심한다.</b> 어깨뼈에 핀을 박아 실제 뼈 움직임을 측정한 연구에서, 벽 푸쉬업 플러스의 “플러스” 국면은
+      견갑골의 <b>하방회전과 내회전을 유의하게 증가</b>시켰고 상완골이 견갑면보다 앞으로 이동했다. 저자들은 이를
+      <b>어깨 충돌과 연관된 위치</b>로 결론지었다(<a href="https://pubmed.ncbi.nlm.nih.gov/19733487/">Lunden 외, JSES 2010</a>).
+      재활 문헌에서 초심자용으로 흔히 권해지는 것이 하필 벽 버전이라 특히 함정이다.
+      <b>어깨 이력이 있다면 벽 버전은 피하고 바닥에서 표준 버전으로 한다.</b><br>
+      <b>자가 점검.</b> 최상단에서 <b>어깨가 귀 쪽으로 솟는지</b> 거울로 본다. 솟으면 전거근이 아니라 상부 승모근이 일하고 있다.</div>
+
+    <h4>아치 홀드와 고양이-소</h4>
+    <p><b>왜.</b> 둘 다 ④ 축의 토대 작업이다. 아치 홀드는 흉추 신전을 <b>정적으로 버티고</b>, 고양이-소는 척추를 굽힘과 폄 사이로 <b>움직여</b> 분절 가동성을 되찾는다. 키핑 풀업의 아치 자세에서 반동만 뺀 성분이 아치 홀드다.</p>
+    <p><b>방법과 신호.</b> 아치 홀드는 엎드려 가슴과 다리를 함께 띄우고 <code>15–20초 × 2–3세트</code>, 고양이-소는 네발 자세에서 <code>10회</code>를 천천히 오간다. 아치 홀드는 <b>등 전체가 고르게 뻐근한지</b>를 본다. 허리 한 지점에 통증이 몰리면 요추로 꺾은 것이니 다리를 낮춘다. 고양이-소는 움직임이 <b>목과 허리를 넘어 등 가운데까지 이어지는지</b>를 본다. 굳은 흉추는 대개 그 구간만 통째로 멈춰 있다.</p>
+
+    <h3>주간 배치, 기존 루틴에 이미 들어 있다</h3>
+    <p>동작을 다 읽었으니 이제 언제 하느냐가 남는다. 다행히 이 운동들은 별도 프로그램이 아니라 <b>앞서 정리한 보충 카탈로그 10종</b> 그대로다. 앞의 매핑 표를 시점 기준으로 다시 접으면 아래가 된다:</p>
+    <table>
+      <tr><th>시점</th><th>구성</th><th>시간</th></tr>
+      <tr><td><b>매 운동 전 워밍업</b></td><td>도어웨이 + 프론 T + 월 슬라이드 (+등반일 비트 스윙)</td><td><code>5–10분</code></td></tr>
+      <tr><td><b>클라이밍 직후</b></td><td>푸쉬업 + 밴드 풀어파트 + YTW + 패시브 행 (+폼롤러)</td><td><code>5–10분</code></td></tr>
+      <tr><td><b>월요일 (코어의 날)</b></td><td>페이스풀 + 딥(Phase 2~) + 아치 홀드 + 폼롤러 흉추</td><td>코어와 합쳐 <code>25–30분</code></td></tr>
+    </table>
+    <div class="box note"><span class="t">워밍업에 녹인 이유</span>교정 운동을 별도 시간으로 빼면 "오늘은 피곤하니 건너뛰자"가 된다. 워밍업·쿨다운에 녹이면 <b>운동을 하는 한 반드시 수행된다</b>. 교정은 강도가 아니라 빈도 싸움이다. 이 가이드가 쓰는 주 <code>3–5회</code> × <code>4–8주</code>는 최적값이 아니라 개별 연구들의 프로토콜이 겹치는 범위에서 뽑은 실무적 출발점이다. 그 숫자를 어떻게 다뤄야 하는지는 ⑩에서 따로 다룬다.</div>
+  </div>
+</section>
+
+<!-- ===================== ⑧ 클라이머 특화 ===================== -->
+<section id="climber">
+  <h2><span class="n">08</span>클라이머 특화: 등반일의 운영</h2>
+  <p class="lead">일반 가이드는 "앉아서 일하는 사람"까지만 다룬다. 운동 자체가 어깨를 마는 사람의 전략은 따로 있다.</p>
+  <div class="card">
+
+    <p>⑦의 열두 동작은 어깨를 앞으로 마는 힘이 <b>책상에서</b> 온다고 전제한다. 클라이머에게는 전제가 하나 더 붙는다. 어깨를 마는 힘이 <b>취미에서도</b> 온다는 것이다. 등반은 거의 전부 당기기이고, 당기기는 광배근·대흉근을 키우는 방향으로 작동한다. 하루 <code>2</code>시간을 벽에서 보내면 그날의 근육 균형은 그쪽으로 기운 채 끝난다.</p>
+
+    <p>그래서 이 절은 두 가지를 다룬다. 등반 중에 <b>불필요하게 부하를 키우는 습관</b>을 줄이는 것, 그리고 <b>그날 만들어진 편향을 그날 안에 되돌리는</b> 운영이다. 앞의 것이 먼저다. 잘못된 습관 하나가 교정 <code>10</code>분보다 크다.</p>
+
+    <h3>1. 등반 중 피해야 할 습관</h3>
+    <ul class="clean">
+      <li>⚠️ <b>견갑 풀린 채로 당기기.</b> 쉐이크아웃 자체는 문제가 아니다. ⑦의 패시브 행이 권장 동작인 것과 같은 이유로, 힘을 뺀 매달림은 오히려 어깨를 연다. 위험한 것은 <b>그 상태에서 다음 홀드로 당겨 나가는 것</b>이다. 견갑이 고정되지 않은 채 부하가 걸리면 회전근개·관절순이 그 힘을 받는다. <b>쉴 때는 풀고, 당기기 직전에 견갑을 내린다.</b> Lesson 01의 "어깨 텐션"이 바로 이것이다. 어깨 찝힘 이력이 있다면 매달린 시간을 짧게 가져간다.</li>
+      <li>⚠️ <b>가동 범위 밖 오버헤드 리칭.</b> 안 닿는 홀드를 억지로 뻗으면 견봉하 충돌 위험. 발 위치를 바꿔 리치를 만드는 게 먼저다(클라이밍 가이드의 풋워크 원칙과 일치).</li>
+    </ul>
+
+    <h4>개스통과 맨틀, 같은 목록에 있지만 부담의 성격이 다르다</h4>
+    <p>어깨 이력이 있는 사람이 벽에서 특히 조심할 무브는 둘이다. 둘 다 "어깨에 안 좋다"로 뭉뚱그려지지만, 실제로 어깨에 걸리는 방향은 서로 반대다. 대응이 달라야 하는 이유다.</p>
+    <p><b>개스통(Gaston)</b>은 홀드를 몸 안쪽에서 바깥으로 미는 무브다. 어깨는 <b>벌어지고(외전) 바깥으로 돌아간(외회전)</b> 자세에서 힘을 쓴다. 이 조합은 관절와상완관절의 앞쪽 구조가 부하를 받는 자세이고, ⑥의 키핑 풀업 논의에서 임핀지먼트 자세로 지목된 것과 같은 계열이다. 대응은 <b>견갑을 먼저 내려 고정한 뒤 밀기</b>다. 견갑이 뜬 채로 미는 순간 힘이 관절로 직행한다.</p>
+    <p><b>맨틀(Mantle)</b>의 마무리는 반대 방향이다. 홀드 위에 손을 짚고 몸을 눌러 올릴 때 어깨는 <b>뒤로 젖혀지면서 안으로 말리는(신전 + 내회전)</b> 자세를 지난다. 어깨가 등 뒤로 넘어간 상태에서 체중 전부를 미는 셈이라, 앞쪽 관절낭과 이두근 장두가 늘어난 채 부하를 받는다. 대응은 <b>손 위치를 몸 쪽으로 당겨 짚고 체중을 발로 나누는 것</b>이다. 팔로만 눌러 올리면 그 자세에 오래 머문다.</p>
+    <p>정리하면, 개스통은 <b>미는 순간의 정렬</b>이 문제이고 맨틀은 <b>버티는 시간의 길이</b>가 문제다. 어깨 찝힘 이력이 있다면 개스통은 주의 1순위이고, 맨틀은 그날 컨디션이 떨어졌을 때 가장 먼저 우회할 대상이다. 통증 신호가 오면 둘 다 우회한다.</p>
+
+    <h3>2. 등반일 샌드위치, 전·후 10분씩</h3>
+
+    <p>등반일에는 교정 운동을 앞뒤로 나눠 붙인다. 두 시점이 하는 일이 완전히 다르기 때문이다. <b>등반 전은 깨우는 시간</b>이다. 약한 근육은 게을러서가 아니라 동원 순서에서 밀려 안 쓰인다. 벽에 붙기 전에 한 번 쓰이고 나면 등반 중에도 순서에 낄 확률이 올라간다. <b>등반 후는 되돌리는 시간</b>이다. 그날 두 시간 동안 당기기만 했으니 그 편향을 같은 날 안에 상쇄한다. 다음 날로 미루면 다음 날은 다음 날의 편향이 생긴다.</p>
+
+    <table>
+      <tr><th>시점</th><th>동작</th><th>그 자리에 있는 이유</th></tr>
+      <tr><td rowspan="4"><b>등반 전<br>깨운다</b></td><td>월 슬라이드 <code>10회</code></td><td>견갑골 위치를 벽으로 한 번 맞춰 놓고 시작한다. 정렬된 감각이 남은 채 벽에 붙는다</td></tr>
+      <tr><td>도어웨이 <code>3단계</code></td><td>앞줄을 미리 놓는다. 가슴이 조인 채로는 첫 무브부터 어깨가 앞으로 말린다</td></tr>
+      <tr><td>밴드 풀어파트 <code>12회</code></td><td>후인근에 가벼운 부하를 먼저 준다. 동원 순서에 끼워 넣는 것이 목적이라 무게는 필요 없다</td></tr>
+      <tr><td>비트 스윙 <code>10회</code></td><td>어깨를 매달린 상태의 가동 범위에 미리 노출시킨다. 짐 철봉 한정</td></tr>
+      <tr><td rowspan="4"><b>등반 후<br>되돌린다</b></td><td>푸쉬업 <code>10–15 × 2</code></td><td>그날의 당기기 총량에 미는 동작을 붙인다. 균형 회복의 핵심 한 종</td></tr>
+      <tr><td>YTW <code>8 × 1</code></td><td>등반 내내 밀려 있던 중하부 승모근에 마지막으로 일감을 준다</td></tr>
+      <tr><td>패시브 행 <code>20–30초</code></td><td>수축한 채로 끝난 어깨를 끝범위까지 되돌려 편다</td></tr>
+      <tr><td>광배·전완 스트레칭</td><td>그날 가장 많이 쓰인 두 곳이다. 광배 긴장은 어깨를 앞으로 당기는 힘으로 직결된다</td></tr>
+    </table>
+
+    <p>순서에도 이유가 있다. 등반 전에는 <b>정렬을 맞춘 뒤 부하를 준다</b>. 월 슬라이드가 밴드 풀어파트보다 앞에 오는 이유다. 등반 후에는 반대로 <b>일감을 준 뒤 편다</b>. 패시브 행이 마지막인 이유다.</p>
+
+    <figure>
+      <div class="svgwrap wide">
+      <svg class="diagram" viewBox="0 0 660 330" role="img" aria-label="비트 스윙 — 아치와 할로우">
+        <rect width="660" height="330" fill="#fff"/>
+        <!-- 철봉 -->
+        <rect x="60" y="34" width="540" height="10" rx="5" fill="#5d6f7d"/>
+        <rect x="60" y="24" width="14" height="30" fill="#8a7d66"/>
+        <rect x="586" y="24" width="14" height="30" fill="#8a7d66"/>
+        <!-- 아치 자세 (왼쪽, 주황) -->
+        <g transform="translate(110,0)" opacity="0.95">
+          <circle cx="96" cy="44" r="8" fill="#7d3a1f"/>
+          <path d="M96,44 L92,86" stroke="#9a4a2c" stroke-width="12" stroke-linecap="round"/>
+          <circle cx="78" cy="100" r="19" fill="url(#bodyR)"/>
+          <!-- 몸: 활처럼 뒤로 휨 -->
+          <path d="M88,116 C66,150 64,194 84,232" stroke="url(#bodyR)" stroke-width="32" stroke-linecap="round" fill="none"/>
+          <path d="M84,232 C96,262 116,282 138,292" stroke="url(#bodyR)" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <text x="48" y="180" text-anchor="end" font-size="13.5" font-weight="800" fill="#c0512e">아치</text>
+          <text x="48" y="198" text-anchor="end" font-size="11" fill="#6b6258">가슴 열림</text>
+        </g>
+        <!-- 할로우 자세 (오른쪽, 청회) -->
+        <g transform="translate(330,0)" opacity="0.95">
+          <circle cx="96" cy="44" r="8" fill="#2e3b46"/>
+          <path d="M96,44 L100,86" stroke="#3b4a57" stroke-width="12" stroke-linecap="round"/>
+          <circle cx="108" cy="102" r="19" fill="url(#bodyG)"/>
+          <!-- 몸: 접시처럼 오목 -->
+          <path d="M102,118 C122,152 124,196 106,234" stroke="url(#bodyG)" stroke-width="32" stroke-linecap="round" fill="none"/>
+          <path d="M106,234 C96,264 80,284 60,294" stroke="url(#bodyG)" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <text x="150" y="180" font-size="13.5" font-weight="800" fill="#3a6ea5">할로우</text>
+          <text x="150" y="198" font-size="11" fill="#6b6258">복근 텐션</text>
+        </g>
+        <!-- 진폭 화살 -->
+        <path d="M250,300 Q330,318 408,298" fill="none" stroke="#8a7d66" stroke-width="3" marker-start="url(#arA)" marker-end="url(#arA)"/>
+        <text x="330" y="290" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8f3920">발끝이 살짝 오가는 정도만</text>
+        <text x="330" y="324" text-anchor="middle" font-size="11.5" fill="#6b6258">아치 ↔ 할로우 10회 × 1–2세트 · 등반 전 워밍업 · 짐 철봉 한정</text>
+      </svg>
+      </div>
+      <figcaption><b>비트 스윙(Beat Swing).</b> 매달려 아치와 할로우를 작게 오간다. 동적 스트레칭의 "풀리는 느낌"을 주는 체조식 워밍업이다. ⚠️ 진폭이 커지는 순간 워밍업이 아니라 끝범위를 관성으로 때리는 동작이 된다. 키핑 풀업으로의 진행은 보류 조건(엄격한 풀업 <code>3–5개</code> + 무증상) 충족 후에. 가정용 문틀 철봉은 스윙 하중 설계가 아니므로 <b>짐 철봉에서만</b>.</figcaption>
+    </figure>
+
+    <div class="box tip"><span class="t">Lesson 10의 보너스</span>강사가 오버행 훈련용으로 준 <b>철봉 로우(발 벽에 대고 몸 누인 채 당기기)</b>는 근육 입장에서 크로스핏의 링 로우와 같은 동작이다. 견갑 후인근을 수평으로 당기는 <b>어깨 말림의 직접 반대 운동</b>이다. 오버행 숙제와 어깨 교정이 한 동작에서 만난다. 주 <code>2회</code>, <code>8–12회 × 2–3세트</code>.</div>
+
+    <h3>3. 스트레칭 우선순위, 시간이 없으면 셋만</h3>
+    <ul class="clean">
+      <li><b>광배근.</b> 벽에 손 대고 엉덩이를 뒤로 밀기. 클라이밍 최대 과사용 근육.</li>
+      <li><b>대흉근·소흉근.</b> 도어웨이. 어깨를 앞으로 당기는 주범.</li>
+      <li><b>전완근.</b> 손목 신전·굴곡. 전완 긴장은 어깨까지 연쇄된다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== ⑨ 생활 교정 ===================== -->
+<section id="daily">
+  <h2><span class="n">09</span>생활 교정, 23시간 40분의 싸움</h2>
+  <p class="lead">운동 20분보다 나머지 시간의 자세가 크다. 연구도 운동+일상 병행 그룹의 손을 들어준다.</p>
+  <div class="card">
+    <div class="bigpic">교정 운동에 하루 <code>15–20분</code>을 써도 나머지 시간을 만 자세로 보내면 상쇄된다. <code>4주</code> RCT에서 <b>운동 + 일상 자세 교정 병행 그룹이 운동만 한 그룹보다 개선폭이 컸다</b>(<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10065112/">PMC10065112</a>). 목표는 완벽한 자세 유지가 아니라 <b>나쁜 자세를 오래 유지하지 않는 것</b>이다.</div>
+
+    <p>이 숫자를 한 번 짚고 간다. 하루 <code>24</code>시간 중 교정 운동에 쓰는 시간은 길어야 <code>20</code>분이다. 나머지 <code>23</code>시간 <code>40</code>분은 그 <code>20</code>분이 만든 것을 유지하거나 되돌린다. 어느 쪽이 되는지는 그 시간 동안의 자세가 정한다. 그래서 이 절은 운동 절보다 짧지만 효과 크기는 그 반대일 수 있다.</p>
+
+    <table>
+      <tr><th>장면</th><th>교정 포인트</th></tr>
+      <tr><td><b>책상</b></td><td>모니터 상단 = 눈높이(§4 그림 기준). 노트북이면 스탠드 + 외장 키보드가 가장 효과적. <code>1시간</code>마다 일어나 리셋</td></tr>
+      <tr><td><b>서 있을 때</b></td><td>"귀–어깨–골반–발목 일직선"을 의식. 가슴을 살짝 들고 견갑골을 가볍게 뒤로</td></tr>
+      <tr><td><b>수면</b></td><td>가능하면 바로 눕기. 옆으로 잘 때는 베개를 안아 위쪽 어깨 지지</td></tr>
+      <tr><td><b>이동</b></td><td>스마트폰은 눈높이로. 가방은 백팩 또는 양쪽 번갈아</td></tr>
+    </table>
+
+    <h3>앉은 자리 30초 리셋, 하루 여러 번</h3>
+    <ul class="clean">
+      <li><b>견갑골 조이기.</b> 모아서 <code>5초</code> × <code>10회</code></li>
+      <li><b>턱 당기기(Chin Tuck).</b> 이중턱 만들 듯 뒤로 <code>5초</code> × <code>10회</code> (전방 머리 자세 교정)</li>
+      <li><b>가슴 열기.</b> 등 뒤 깍지 끼고 가슴 내밀어 <code>5초</code> (소흉근 스트레칭)</li>
+    </ul>
+    <div class="box tip"><span class="t">트리거를 정한다</span>"1시간마다"는 잊는다. <b>이미 있는 행동에 붙인다.</b> 회의 끝날 때마다, 커피 가지러 갈 때마다, 화장실 다녀올 때마다 30초 리셋. 습관은 시계가 아니라 트리거에 붙을 때 산다.</div>
+
+    <p>왜 그런가. 시계 기반 계획은 <b>실행하기 전에 기억해 내는 단계</b>를 하나 더 요구한다. 일에 몰입해 있는 동안 정각을 기억할 여유는 없고, 알림을 걸면 하필 집중이 깊을 때 울려서 꺼 버리게 된다. 반면 회의 종료나 화장실 같은 행동은 <b>이미 매일 여러 번 일어나고, 일어난 것을 본인이 안다</b>. 그 자리에 동작을 얹으면 기억할 일이 없다. 지켜지지 않는 좋은 계획보다 지켜지는 평범한 계획이 낫다는 판단이며, 이 원칙은 ⑩의 추적 지표로 다시 이어진다.</p>
+
+    <h3>하루가 어떻게 붙는가</h3>
+    <p>여기까지가 원칙이고, 실제로는 ⑦의 동작과 ⑧의 샌드위치와 이 절의 리셋이 한 사람의 하루 안에서 만난다. 클라이밍이 있는 평일 하루를 예로 접어 보면 이렇게 된다.</p>
+
+    <table>
+      <tr><th>트리거</th><th>하는 것</th><th>어디서 왔는가</th></tr>
+      <tr><td>자리에 앉으며</td><td>모니터 높이 확인, 등받이에 등 상부 닿게 앉기</td><td>⑨ 책상</td></tr>
+      <tr><td>회의가 끝나며</td><td><code>30초</code> 리셋 3종(견갑 조이기·턱 당기기·가슴 열기)</td><td>⑨ 리셋</td></tr>
+      <tr><td>점심 후 커피</td><td>돌아오는 길에 도어웨이 <code>15초 × 2</code></td><td>⑦ ① 풀기</td></tr>
+      <tr><td>일과 마지막 회의 뒤</td><td><code>30초</code> 리셋 한 번 더</td><td>⑨ 리셋</td></tr>
+      <tr><td>암장 도착, 신발 신기 전</td><td>월 슬라이드 <code>10회</code> + 도어웨이 + 밴드 풀어파트</td><td>⑧ 등반 전</td></tr>
+      <tr><td>마지막 문제를 끝내고</td><td>푸쉬업 + YTW + 패시브 행 + 광배 스트레칭</td><td>⑧ 등반 후</td></tr>
+      <tr><td>눕기 직전</td><td>바로 눕기. 옆으로 잘 땐 베개 안기</td><td>⑨ 수면</td></tr>
+    </table>
+
+    <p>이 표에서 눈여겨볼 것은 <b>새로 만든 시간이 하나도 없다는 점</b>이다. 회의는 원래 끝나고, 커피는 원래 마시고, 암장에는 원래 간다. 교정에 배정된 총 시간은 <code>20</code>분 남짓인데 그중 독립적으로 확보해야 하는 시간은 <code>0</code>분이다. ⑦에서 교정 운동을 워밍업과 쿨다운에 녹인 것과 같은 설계이며, 이 절은 그 설계를 근무 시간까지 연장한 것이다.</p>
+  </div>
+</section>
+
+<!-- ===================== ⑩ 진행 추적 ===================== -->
+<section id="tracking">
+  <h2><span class="n">10</span>진행 추적, 4–8주의 게임</h2>
+  <p class="lead">무엇이 바뀌는지를 알아야 무엇을 기다릴지 안다. 추적이 꾸준함을 만든다.</p>
+  <div class="card">
+
+    <p>아래 일정표를 보기 전에 그 숫자들의 지위를 밝혀 둔다. 이 가이드는 여러 곳에서 주 <code>3–5회</code>, <code>4–8주</code> 같은 수치를 쓴다. 이 값들은 문헌이 검증한 최적값이 아니다.</p>
+
+    <p>⑥에서 인용한 상교차증후군 메타분석은 <code>22</code>편을 모아 전방 머리·라운딩 숄더·흉추 후만 세 각도의 유의한 개선을 보고했다. 그러나 <b>빈도·기간·강도에 따른 하위집단 분석은 없다</b>. 즉 "주 <code>3</code>회가 나은가 <code>5</code>회가 나은가", "<code>4</code>주면 되는가 <code>8</code>주가 필요한가"에 문헌은 답을 갖고 있지 않다. 이 가이드의 숫자는 <b>개별 연구들이 실제로 쓴 프로토콜의 공통 범위에서 뽑은 실무적 출발점</b>이다.</p>
+
+    <p>이 사실을 부정적으로 읽을 필요는 없다. <b>최적값이 없다는 것은 반드시 지켜야 할 마법의 숫자도 없다는 뜻</b>이고, 그쪽이 실은 더 유용하다. 이번 주에 <code>3</code>회를 못 채웠다고 프로그램이 무효가 되지 않는다. 그러면 무엇을 기준으로 삼는가. 아래 일정표를 먼저 보고, 그다음에 그 질문으로 돌아온다.</p>
+
+    <table>
+      <tr><th>기간</th><th>할 일</th><th>기대치</th></tr>
+      <tr><td><b>1–2주</b></td><td>스트레칭 위주 + 가벼운 활성화. 무리하면 근육통으로 꾸준함이 깨진다</td><td>동작 익숙해짐, 견갑 움직임 인지 시작</td></tr>
+      <tr><td><b>3–4주</b></td><td>강화 세트·횟수 점진 증가</td><td>연구 기준 RSP 각도 유의 감소 구간(<code>4주</code>, 주 <code>5회</code> 기준)</td></tr>
+      <tr><td><b>5–8주</b></td><td>소폭 중량 추가, 고급 변형</td><td>거울·사진에서 체감 변화</td></tr>
+      <tr><td><b>유지기</b></td><td>주 <code>2–3회</code>로 감축, <b>완전 중단 금지</b></td><td>중단하면 수주 내 재악화</td></tr>
+    </table>
+
+    <h3>무엇을 추적하는가: 각도가 아니라 수행률</h3>
+    <p>앞의 질문으로 돌아온다. 문헌이 최적 빈도를 정해 주지 않는다면, 기준을 <b>실제로 지켜지는 빈도</b>로 대신하는 편이 낫다. 지켜지지 않는 주 <code>5</code>회 계획보다 지켜지는 주 <code>3</code>회가 문헌 범위 안에서 더 나은 선택이기 때문이다.</p>
+    <p>그래서 <code>4</code>주마다 각도가 아니라 <b>계획 대비 실제 수행 비율</b>을 센다. 계획이 <code>4</code>주 동안 <code>20</code>회였고 실제로 <code>13</code>회 했다면 <code>65%</code>다. 기록은 달력에 동그라미 하나면 충분하다.</p>
+    <p>읽는 법이 중요하다. 수행률이 <code>70%</code> 미만이면 <b>운동을 바꿀 신호가 아니라 배치를 바꿀 신호</b>다. 대개 원인은 동작이 어려워서가 아니라 그 동작이 붙을 트리거가 없어서다. ⑨의 원칙을 여기서 다시 쓴다. 빠진 항목이 무엇이었는지 보고, 그것을 이미 매일 일어나는 행동 뒤로 옮긴다. 반대로 <code>90%</code>를 넘기면 그때 강도를 올린다.</p>
+
+    <h3>월 1회 셀프 체크, 숫자로 남긴다</h3>
+    <p>⑤의 검사를 그대로 재사용하되 기록 방식을 바꾼다. ⑤는 "정상인가 아닌가"를 가리는 것이 목적이라 판정이 이진이었다. 추적에는 그 형태가 쓸모없다. <b>두 달 내내 "비정상"이면 좋아지고 있는지 알 수 없기</b> 때문이다. 같은 검사를 연속값으로 바꿔 적는다.</p>
+    <ul class="clean">
+      <li><b>벽 테스트.</b> 닿는가가 아니라 <b>뒤통수와 벽 사이 거리를 <code>cm</code></b>로 적는다. 턱을 들지 않은 자연스러운 상태에서 잰다.</li>
+      <li><b>골대 포즈.</b> 되는가가 아니라 <b>손등과 벽 사이에 들어가는 손가락 개수</b>로 적는다. 양쪽을 따로 적으면 좌우 차이도 같이 잡힌다.</li>
+      <li><b>연필 테스트.</b> 연필 끝이 정면에서 얼마나 안쪽을 향하는지를 <b><code>0–5</code>단계</b>로 정하고 매번 같은 기준으로 적는다.</li>
+      <li><b>측면 사진.</b> 같은 조건(눈 감고 <code>10</code>초 후)으로 찍어 첫 사진과 겹쳐 본다. 사진은 유일하게 기억에 오염되지 않는 기록이다.</li>
+      <li><b>클라이밍 체감.</b> 높은 홀드 리칭과 세션 후 어깨 피로를 각각 <code>0–10</code>으로 적는다.</li>
+    </ul>
+    <p>숫자가 <code>3</code>개월째 제자리인데 수행률은 <code>90%</code>라면, 그때가 자가 교정의 범위를 다시 볼 시점이다. ⑥에서 본 대로 스트레칭만으로는 정렬이 바뀌지 않으므로 강화와 재교육 쪽 비중을 먼저 점검하고, 그래도 변화가 없으면 전문가 평가를 받는다.</p>
+
+    <p>유지기에 완전 중단을 막는 이유도 같은 맥락이다. 되돌아가는 것은 근육 길이가 원상복귀해서가 아니라 감각과 패턴의 적응이 유지되지 않아서다(⑥). 그래서 유지기의 목표는 강도가 아니라 <b>접촉 빈도</b>다. 주 <code>2–3회</code>로 줄이더라도 <code>0</code>으로 내리지 않는다.</p>
+
+    <div class="box warn"><span class="t">즉시 중단 신호</span>운동 중 어깨 앞쪽의 날카로운 통증, 팔 저림·방사통, 야간통(자다 깨는 어깨 통증)은 자가 교정의 범위를 벗어난 신호다. 운동을 멈추고 진료를 받는다. 특히 <b>기존 찝힘 증상이 운동 중 재현되면</b> 해당 동작을 빼고 통증 없는 범위에서 재개한다.</div>
+
+    <div class="recap">
+      <div class="rt">이 가이드의 한 줄 요약</div>
+      <ul>
+        <li>어깨 말림은 <b>앞(단축) vs 뒤(약화)의 줄다리기</b>다. 풀고, 강화하고, 재교육한다.</li>
+        <li>처방은 이미 루틴 안에 있다. <b>워밍업·쿨다운에 녹인 카탈로그 10종</b>을 주 3–5회.</li>
+        <li>등반일은 <b>샌드위치</b>(전 10분 정렬 + 후 10분 길항근), 책상은 <b>트리거 리셋</b>.</li>
+        <li>키핑 풀업은 보류한다. 그 시원함은 <b>아치 홀드·패시브 행·폼롤러</b>로 가져온다.</li>
+        <li>승부는 강도가 아니라 <b>4–8주의 꾸준함</b>에서 난다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+</main>
+
+<footer>
+  <p><b>숄더 교정 가이드</b> · 말린 어깨를 펴는 A–Z · 사무직 + 클라이머 맞춤</p>
+  <p>개념 도식(SVG) 6종 직접 제작 · 사진·해부도 8건 <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> (자유 이용 라이선스)</p>
+  <p>본문 근거: <a href="overview.md">overview.md</a> · <a href="kipping-pullup.md">kipping-pullup.md</a> · BMC 2024 메타분석 · PMC10065112 · The Prehab Guys</p>
+  <p>개인 학습용</p>
+</footer>
+
+<script>
+(function(){
+  /* 이 문서에는 JS가 한 줄도 없었다 — 다크 토글도, 현재 절 표시도, 진행 바도 없어
+     66KB를 스크롤하는 내내 "지금 몇 번째 절인지" 알 방법이 없었다. */
+  var root = document.documentElement;
+  var btn  = document.getElementById('theme');
+
+  function applyTheme(t){
+    root.setAttribute('data-theme', t);
+    btn.setAttribute('aria-pressed', t === 'dark');
+    btn.setAttribute('aria-label', t === 'dark' ? '라이트 모드로 전환' : '다크 모드로 전환');
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#181714' : '#f7f4ee');
+  }
+  applyTheme(root.getAttribute('data-theme') || 'light');
+  btn.addEventListener('click', function(){
+    var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(t);
+    try { localStorage.setItem('cg-theme', t); } catch(e){}   // 클라이밍 가이드와 공유
+  });
+
+  /* 스크롤스파이 — 상단 네비에서 현재 절을 표시한다 */
+  var links = {}, secs = [];
+  Array.prototype.forEach.call(document.querySelectorAll('nav a[href^="#"]'), function(a){
+    var sec = document.getElementById(a.getAttribute('href').slice(1));
+    if (sec){ links[sec.id] = a; secs.push(sec); }
+  });
+  if ('IntersectionObserver' in window && secs.length){
+    var seen = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ seen[e.target.id] = e.isIntersecting; });
+      var cur = secs.filter(function(x){ return seen[x.id]; })[0];
+      for (var id in links) links[id].classList.toggle('here', !!cur && id === cur.id);
+    }, { rootMargin: '-72px 0px -70% 0px' });
+    secs.forEach(function(x){ io.observe(x); });
+  }
+
+  /* 읽기 진행 바 */
+  var bar = document.getElementById('progress'), ticking = false;
+  function progress(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    ticking = false;
+  }
+  addEventListener('scroll', function(){
+    if (!ticking){ ticking = true; requestAnimationFrame(progress); }
+  }, { passive: true });
+  addEventListener('resize', progress);
+  progress();
+})();
+</script>
+
+</body>
+</html>

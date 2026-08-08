@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>운동 기록 — 클라이밍 강습 복기 · 숄더 교정</title>
+<meta name="description" content="실내 볼더링 강습 17회차를 동작이 아니라 원리 단위로 다시 정리한 기록. 말린 어깨 교정 루틴 포함.">
+<meta name="theme-color" content="#f7f4ee">
+<meta property="og:title" content="운동 기록 — 클라이밍 강습 복기 · 숄더 교정">
+<meta property="og:description" content="강습 17회차를 동작이 아니라 원리 단위로 다시 정리했다.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap">
+<style>
+  /* 팔레트는 클라이밍 가이드와 공유한다 — 랜딩과 본문이 한 사이트로 읽혀야 한다 */
+  :root{
+    --bg:#fcf3e8; --card:#fffdf6; --ink:#29211a; --soft:#635346; --muted:#776657;
+    --accent:#b0553a; --accent-d:#8f4226; --line:#e5dfd2; --line-2:#efeadf;
+    --chip:#efe9dd; --barbg:#e7e1d4;
+    --navbg:rgba(252,243,232,.86);
+    --sa:#8f4226; --sb:#1f5fa0; --sm:#2f7d44;
+    --shadow:0 1px 2px rgba(38,28,18,.04), 0 10px 30px rgba(38,28,18,.07);
+  }
+  [data-theme="dark"]{
+    --bg:#141311; --card:#241e18; --ink:#f2e7de; --soft:#a9a39a; --muted:#928376;
+    --accent:#ef9468; --accent-d:#f6b18f; --line:#2f2d29; --line-2:#262421;
+    --chip:#2a2724; --barbg:#2c2926;
+    --navbg:rgba(27,22,16,.86);
+    --sa:#d2764f; --sb:#6ba3dd; --sm:#6dbb8a;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 34px rgba(0,0,0,.42);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+    font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
+    word-break:keep-all; overflow-wrap:break-word;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 28px;}
+  .serif{font-family:'Noto Serif KR',serif;}
+  ::selection{background:var(--accent); color:#fff;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  /* ───────── 상단바 ───────── */
+  .top{
+    position:sticky; top:0; z-index:50; background:var(--navbg);
+    backdrop-filter:saturate(180%) blur(14px); -webkit-backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .top .wrap{display:flex; align-items:center; gap:28px; height:58px;}
+  .brand{display:flex; align-items:baseline; gap:9px; text-decoration:none; margin-right:auto;}
+  .brand .bk{font-weight:700; font-size:15.5px; letter-spacing:-.01em;}
+  .brand .bs{font-size:11.5px; color:var(--muted); letter-spacing:.06em;}
+  .top nav{display:flex; gap:22px;}
+  .top nav a{
+    text-decoration:none; font-size:14px; color:var(--soft); font-weight:500;
+    padding:4px 0; border-bottom:1.5px solid transparent; transition:color .15s, border-color .15s;
+  }
+  .top nav a:hover{color:var(--ink); border-bottom-color:var(--accent);}
+  .tgl{
+    width:34px; height:34px; border:1px solid var(--line); background:transparent; color:var(--soft);
+    border-radius:9px; cursor:pointer; display:grid; place-items:center; transition:.15s;
+  }
+  .tgl:hover{color:var(--ink); border-color:var(--muted);}
+
+  /* ───────── 히어로 ───────── */
+  .hero{padding:78px 0 62px;}
+  .hero .wrap{display:grid; grid-template-columns:1.12fr .88fr; gap:56px; align-items:center;}
+  /* 그리드 자식의 기본값 min-width:auto는 안 줄어드는 자식(통계 줄) 때문에
+     컬럼을 밀어내 가로 스크롤을 만든다. 명시적으로 0으로 눌러둔다. */
+  .hero .wrap>*, .band .wrap>*{min-width:0;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:9px; font-size:12.5px; letter-spacing:.02em;
+    color:var(--accent-d); font-weight:600; margin-bottom:20px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1.5px; background:var(--accent); display:block;}
+  h1{
+    font-family:'Noto Serif KR',serif; font-weight:700; margin:0 0 20px;
+    font-size:clamp(32px,4.4vw,50px); line-height:1.26; letter-spacing:-.025em;
+  }
+  h1 em{font-style:normal; color:var(--accent); }
+  .lead{margin:0 0 30px; color:var(--soft); font-size:16.5px; max-width:31em;}
+
+  .stats{display:flex; flex-wrap:wrap; gap:0; margin:0 0 32px; border-top:1px solid var(--line); padding-top:18px;}
+  .stat{padding-right:26px; margin-right:26px; border-right:1px solid var(--line-2);}
+  .stat:last-child{border-right:0; margin-right:0; padding-right:0;}
+  .stat b{
+    display:block; font-size:23px; font-weight:700; line-height:1.2; letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .stat span{font-size:12.5px; color:var(--muted);}
+
+  .btns{display:flex; gap:11px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    padding:12px 20px; border-radius:11px; font-size:14.5px; font-weight:600;
+    border:1px solid transparent; transition:.16s;
+  }
+  .btn.pri{background:var(--accent); color:#fff;}
+  .btn.pri:hover{background:var(--accent-d);}
+  /* 다크에서는 액센트가 밝아진다 — 흰 글자면 2.77:1. 잉크를 뒤집어 6.70:1로. */
+  [data-theme="dark"] .btn.pri{color:#141311;}
+  .btn.gho{border-color:var(--line); color:var(--ink);}
+  .btn.gho:hover{border-color:var(--muted); background:var(--card);}
+  .btn svg{transition:transform .16s;}
+  .btn:hover svg{transform:translateX(3px);}
+
+  .shot{margin:0;}
+  .shot .frame{
+    aspect-ratio:4/5; border-radius:18px; overflow:hidden; background:var(--chip);
+    box-shadow:var(--shadow); position:relative;
+  }
+  .shot img{width:100%; height:100%; object-fit:cover; display:block;}
+  .shot figcaption{margin-top:9px; font-size:11.5px; color:var(--muted); line-height:1.55;}
+  .shot figcaption a{color:var(--muted);}
+
+  /* ───────── 진행 스트립 ───────── */
+  .prog{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card);}
+  .prog .wrap{display:flex; align-items:center; gap:34px; padding-top:20px; padding-bottom:20px; flex-wrap:wrap;}
+  .prog .pl{font-size:12.5px; color:var(--muted); font-weight:600; letter-spacing:.02em;}
+  .bar{flex:1; min-width:220px; display:flex; height:7px; border-radius:99px; overflow:hidden; background:var(--barbg);}
+  .bar i{display:block;}
+  .legend{display:flex; gap:20px; flex-wrap:wrap;}
+  .legend span{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--soft);}
+  .legend i{width:9px; height:9px; border-radius:3px; display:block;}
+  .legend b{color:var(--ink); font-variant-numeric:tabular-nums;}
+
+  /* ───────── 회차 인덱스 ───────── */
+  .sec{padding:74px 0;}
+  .shead{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:10px 24px; flex-wrap:wrap;
+    margin-bottom:34px; padding-bottom:18px; border-bottom:1.5px solid var(--ink);
+  }
+  .shead h2{font-family:'Noto Serif KR',serif; font-size:27px; margin:0; letter-spacing:-.02em;}
+  .shead p{margin:7px 0 0; color:var(--soft); font-size:14.5px; max-width:44em;}
+  .shead .sright{font-size:12.5px; color:var(--muted); white-space:nowrap; padding-bottom:3px;}
+
+  .grp{margin-bottom:30px;}
+  .gtitle{
+    display:flex; align-items:center; gap:11px; margin:0 0 6px;
+    font-size:13px; font-weight:700; letter-spacing:.02em;
+  }
+  .gtitle .dot{width:9px; height:9px; border-radius:3px; display:block;}
+  .gtitle .gn{color:var(--muted); font-weight:500; font-variant-numeric:tabular-nums;}
+  .gdesc{margin:0 0 10px; font-size:13.5px; color:var(--muted); max-width:52em;}
+
+  .row{
+    display:grid; grid-template-columns:46px 92px minmax(150px,1fr) minmax(0,1.4fr) 20px;
+    gap:18px; align-items:baseline; text-decoration:none;
+    padding:15px 12px 15px 8px; margin:0 -12px 0 -8px; border-radius:10px;
+    border-bottom:1px solid var(--line-2); transition:background .14s;
+  }
+  .row:last-child{border-bottom:0;}
+  .row:hover{background:var(--card);}
+  .row .n{
+    font-size:13px; font-weight:700; color:var(--muted); font-variant-numeric:tabular-nums;
+    letter-spacing:.02em;
+  }
+  .row:hover .n{color:var(--accent);}
+  .row .d{font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums;}
+  .row .t{font-size:15.5px; font-weight:600; letter-spacing:-.01em;}
+  .row .t .self{
+    font-size:11px; font-weight:600; color:var(--muted); background:var(--chip);
+    padding:2px 7px; border-radius:5px; margin-left:7px; vertical-align:2px; white-space:nowrap;
+  }
+  .row .x{font-size:14px; color:var(--soft); line-height:1.6;}
+  .row .c{color:var(--line); transition:.16s; justify-self:end;}
+  .row:hover .c{color:var(--accent); transform:translateX(3px);}
+
+  /* ───────── 숄더 밴드 ───────── */
+  .band{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .band .wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; padding-top:70px; padding-bottom:70px; align-items:center;}
+  .band h2{font-family:'Noto Serif KR',serif; font-size:27px; margin:0 0 16px; letter-spacing:-.02em;}
+  .band p{margin:0 0 26px; color:var(--soft); font-size:15.5px;}
+  .toc{display:grid; grid-template-columns:1fr 1fr; gap:0 34px;}
+  .toc a{
+    display:flex; gap:12px; align-items:baseline; text-decoration:none;
+    padding:11px 0; border-bottom:1px solid var(--line-2); font-size:14.5px; transition:.14s;
+  }
+  .toc a:hover{color:var(--accent);}
+  .toc .tn{color:var(--muted); font-size:12.5px; font-variant-numeric:tabular-nums; min-width:16px;}
+
+  /* ───────── 푸터 ───────── */
+  footer{padding:52px 0 68px; color:var(--muted); font-size:13px; line-height:1.8;}
+  footer .fgrid{display:flex; gap:40px; justify-content:space-between; flex-wrap:wrap;}
+  footer b{color:var(--soft); font-weight:600; display:block; margin-bottom:5px; font-size:12.5px;}
+  footer a{color:var(--muted);}
+
+  /* ───────── 반응형 ───────── */
+  @media (max-width:900px){
+    .hero .wrap, .band .wrap{grid-template-columns:1fr; gap:38px;}
+    .hero{padding:52px 0 44px;}
+    .shot{order:-1;} .shot .frame{aspect-ratio:16/10;}
+    .toc{grid-template-columns:1fr;}
+    .row{grid-template-columns:42px 1fr 20px; gap:6px 14px; align-items:center;}
+    .row .d{grid-column:2; grid-row:2; font-size:12px;}
+    .row .x{grid-column:2; grid-row:3; font-size:13.5px; color:var(--muted);}
+    .row .t{grid-column:2; grid-row:1;}
+    .row .n{grid-row:1/4; align-self:start; padding-top:2px;}
+    .row .c{grid-row:1/4; align-self:center;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px;}
+    .top nav{display:none;}
+    /* 두 개씩 두 줄로 접는다. 줄바꿈 뒤 남는 세로 구분선은 지운다. */
+    .stats{gap:16px 0;}
+    .stat{flex:0 0 50%; padding-right:20px; margin-right:0; box-sizing:border-box;}
+    .stat:nth-child(2n){border-right:0; padding-right:0;}
+    .sec{padding:52px 0;}
+    /* 좁은 폭에서는 바가 min-width 때문에 삐져나온다 — 한 줄을 통째로 준다 */
+    .prog .wrap{flex-direction:column; align-items:stretch; gap:12px;}
+    .bar{min-width:0; width:100%;}
+    .legend{gap:8px 18px;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important; scroll-behavior:auto !important;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="bk">운동 기록</span>
+      <span class="bs">CLIMBING &amp; MOBILITY</span>
+    </a>
+    <nav>
+      <a href="#index">강습 회차</a>
+      <a href="#shoulder">숄더 교정</a>
+      <a href="/climbing/">전체 가이드</a>
+    </nav>
+    <button class="tgl" id="tgl" aria-label="다크 모드 전환">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">실내 볼더링 강습 · 스타터에서 중급까지</span>
+      <h1>동작을 외우지 않는다.<br><em>원리</em>를 남긴다.</h1>
+      <p class="lead">
+        강습에서 들은 큐를 그대로 옮겨 적으면 다음 주에 휘발된다.
+        그래서 매 회차를 “무엇을 했는가”가 아니라 <b>“왜 그렇게 해야 하는가”</b>로 다시 썼다.
+        공백 후 재시작한 17회차의 기록이다.
+      </p>
+
+      <div class="stats">
+        <div class="stat"><b>17</b><span>강습 회차</span></div>
+        <div class="stat"><b>3</b><span>단계 커리큘럼</span></div>
+        <div class="stat"><b>12</b><span>직접 그린 도식</span></div>
+        <div class="stat"><b>20+</b><span>주석 실사진</span></div>
+      </div>
+
+      <div class="btns">
+        <a class="btn pri" href="/climbing/">
+          강습 기록 읽기
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn gho" href="#shoulder">숄더 교정 가이드</a>
+      </div>
+    </div>
+
+    <figure class="shot">
+      <div class="frame">
+        <img src="/img/2022-08-12_European_Championships_2022_Sport_Climbing_Women_s_Boulder_by_Sandro_Halank_088.jpg"
+             alt="볼더링 경기에서 한 선수가 오버행 홀드를 잡고 몸을 벽에 붙이고 있다" loading="eager" decoding="async" width="960" height="1335">
+      </div>
+      <figcaption>사진: Sandro Halank / <a href="https://commons.wikimedia.org/wiki/File:2022-08-12_European_Championships_2022_%E2%80%93_Sport_Climbing_Women%27s_Boulder_by_Sandro_Halank%E2%80%93088.jpg">Wikimedia Commons</a>, CC BY-SA 4.0</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="prog">
+  <div class="wrap">
+    <span class="pl">커리큘럼 진행</span>
+    <span class="bar" role="img" aria-label="스타터 A 7회, 스타터 B 6회, 중급 A 4회">
+      <i style="background:var(--sa); flex:7"></i>
+      <i style="background:var(--sb); flex:6"></i>
+      <i style="background:var(--sm); flex:4"></i>
+    </span>
+    <span class="legend">
+      <span><i style="background:var(--sa)"></i>스타터 A <b>7</b></span>
+      <span><i style="background:var(--sb)"></i>스타터 B <b>6</b></span>
+      <span><i style="background:var(--sm)"></i>중급 A <b>4</b> · 진행 중</span>
+    </span>
+  </div>
+</div>
+
+<section class="sec" id="index">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <h2>강습 회차</h2>
+        <p>각 회차는 그날 배운 기술 하나를 원리로 환원해 정리했다. 제목 옆 문장이 그 회차의 결론이다.</p>
+      </div>
+      <span class="sright">전 17회차</span>
+    </div>
+
+    <div class="grp">
+      <p class="gtitle"><i class="dot" style="background:var(--sa)"></i>스타터 A — 기초 7주제 <span class="gn">L01–L07</span></p>
+      <p class="gdesc">무게중심·삼지점에서 시작해 풋워크와 홀드·그립까지. 클라이밍의 문법을 세우는 단계다.</p>
+
+      <a class="row" href="/climbing/#l01"><span class="n">01</span><span class="d">회차</span><span class="t">오리엔테이션</span><span class="x">클라이밍이라는 운동을 먼저 잡다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l02"><span class="n">02</span><span class="d">회차</span><span class="t">인사이드 스텝</span><span class="x">무게중심을 실현하는 도구 — 발</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l03"><span class="n">03</span><span class="d">회차</span><span class="t">손·발 바꾸기</span><span class="x">이미 디딘 자리를 어떻게 바꿀 것인가</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l04"><span class="n">04</span><span class="d">회차</span><span class="t">벽 사용하기<span class="self">자기학습</span></span><span class="x">홀드 없이 벽으로 균형 잡기 — 플래깅</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l05"><span class="n">05</span><span class="d">회차</span><span class="t">홀드 종류 · 그립</span><span class="x">무엇을 잡는가, 어떻게 잡는가</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l06"><span class="n">06</span><span class="d">회차</span><span class="t">아웃사이드 스텝</span><span class="x">발 모양이 아니라, 그 다음 몸이다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l07"><span class="n">07</span><span class="d">회차</span><span class="t">문제풀이<span class="self">자기학습</span></span><span class="x">배운 기술을 실제 루트에 통합하기</span><span class="c">›</span></a>
+    </div>
+
+    <div class="grp">
+      <p class="gtitle"><i class="dot" style="background:var(--sb)"></i>스타터 B — 응용 6주제 <span class="gn">L08–L13</span></p>
+      <p class="gdesc">벽의 형태를 읽고, 정적인 힘으로 닿지 않는 곳을 다루기 시작한다.</p>
+
+      <a class="row" href="/climbing/#l08"><span class="n">08</span><span class="d">회차</span><span class="t">벽 형태별 명칭 · 등반법</span><span class="x">벽을 읽고, 형태에 맞는 기술을 고른다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l09"><span class="n">09</span><span class="d">회차</span><span class="t">데드 포인트</span><span class="x">힘으로 당기지 않고, 반동으로 던진다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l10"><span class="n">10</span><span class="d">회차</span><span class="t">오버행 인·아웃사이드 스텝</span><span class="x">몸을 돌려 옆구리를 붙이고, 같은 쪽 손으로 늘어난다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l11"><span class="n">11</span><span class="d">회차</span><span class="t">하이스텝</span><span class="x">발이 아니라 무게중심을 높은 발 위로 옮긴다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l12"><span class="n">12</span><span class="d">회차</span><span class="t">푸쉬</span><span class="x">홀드를 밀어, 그 반작용으로 몸을 옮긴다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l13"><span class="n">13</span><span class="d">회차</span><span class="t">힐훅 &amp; 토훅 맛보기</span><span class="x">발을 거는 도구로 — 몸을 고정한다</span><span class="c">›</span></a>
+    </div>
+
+    <div class="grp">
+      <p class="gtitle"><i class="dot" style="background:var(--sm)"></i>중급 A — 심화 <span class="gn">L14–L17 · 진행 중</span></p>
+      <p class="gdesc">스타터에서 생긴 구멍을 정확히 메우는 구성이다 — 맛보기였던 훅을 심화하고, 자기학습에 머물렀던 플래깅을 회수한다.</p>
+
+      <a class="row" href="/climbing/#l14"><span class="n">14</span><span class="d">회차</span><span class="t">중급 진입 · 레벨 테스트</span><span class="x">스타터를 마치고, 다시 현재 위치를 잰다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l15"><span class="n">15</span><span class="d">회차</span><span class="t">그립 &amp; 바디포지션</span><span class="x">쥐는 게 아니라 컨트롤하는 것</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l16"><span class="n">16</span><span class="d">회차</span><span class="t">힐훅 심화</span><span class="x">힐훅은 고정 장치가 아니라 무게중심을 옮기는 장치다</span><span class="c">›</span></a>
+      <a class="row" href="/climbing/#l17"><span class="n">17</span><span class="d">회차</span><span class="t">플래깅 인 아웃</span><span class="x">없는 홀드를 발로 대신한다 — 카운터밸런스의 실전</span><span class="c">›</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="band" id="shoulder">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">보조 루틴</span>
+      <h2>말린 어깨를 펴는 A–Z</h2>
+      <p>
+        클라이밍은 당기기 일변도의 운동이다. 광배근·대흉근이 과발달하고
+        반대편은 훈련 기회조차 적다. 등속성 측정에서 클라이머의 어깨
+        <b>외회전:내회전 근력비는 0.79</b>로 비클라이머(1.03)보다 낮다
+        (<a href="https://pubmed.ncbi.nlm.nih.gov/19771292/">Wong &amp; Ng, 2009</a>). 이 문서를 따로 쓴 이유다.
+      </p>
+      <a class="btn pri" href="/shoulder/">
+        교정 가이드 열기
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="toc">
+      <a href="/shoulder/#problem"><span class="tn">01</span>당기고, 앉아 있고, 또 당긴다</a>
+      <a href="/shoulder/#anatomy"><span class="tn">02</span>해부학 — 줄다리기 모델</a>
+      <a href="/shoulder/#impact"><span class="tn">03</span>왜 문제인가 — 통증·부상·수행력</a>
+      <a href="/shoulder/#cause"><span class="tn">04</span>원인 — 하루의 시간표로 보기</a>
+      <a href="/shoulder/#diagnosis"><span class="tn">05</span>자가 진단 — 기준점부터</a>
+      <a href="/shoulder/#principle"><span class="tn">06</span>교정 원리 — 풀고, 강화하고, 재교육</a>
+      <a href="/shoulder/#exercises"><span class="tn">07</span>운동 카탈로그 — 축별로 갈아 끼운다</a>
+      <a href="/shoulder/#climber"><span class="tn">08</span>클라이머 특화 — 등반일의 운영</a>
+      <a href="/shoulder/#daily"><span class="tn">09</span>생활 교정 — 23시간 40분의 싸움</a>
+      <a href="/shoulder/#tracking"><span class="tn">10</span>진행 추적 — 4–8주의 게임</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <b>기록</b>
+      개인 학습용 기록이다. 강습 커리큘럼은 수강한 짐의 안내를 따른다.
+    </div>
+    <div>
+      <b>이미지</b>
+      본문 사진은 Wikimedia Commons의 CC 라이선스 이미지를 사용하며,<br>
+      저자와 라이선스는 각 문서의 캡션에 표기했다. 도식은 직접 제작했다.
+    </div>
+    <div>
+      <b>문서</b>
+      <a href="/climbing/">클라이밍 강습 가이드</a><br>
+      <a href="/shoulder/">숄더 교정 가이드</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 저장된 선택이 있으면 그것을, 없으면 시스템 설정을 따른다
+  (function(){
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch(e){}
+    var dark = saved ? saved === 'dark'
+                     : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var apply = function(d){
+      root.setAttribute('data-theme', d ? 'dark' : 'light');
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', d ? '#141311' : '#f7f4ee');
+    };
+    apply(dark);
+    document.getElementById('tgl').addEventListener('click', function(){
+      dark = !dark; apply(dark);
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch(e){}
+    });
+  })();
+</script>
+
+</body>
+</html>
