@@ -1,4 +1,18 @@
-# 회차 URL을 해시(#l17)에서 경로(/climbing/l17)로 바꾸기 위한 폴백.
-# 대상을 /climbing/index.html 로 쓰면 Cloudflare가 /index 를 자동으로 떼면서
-# 같은 규칙에 다시 걸려 무한 루프로 판정한다. 디렉터리 인덱스를 대상으로 준다.
-/climbing/:lesson   /climbing/   200
+# 회차 URL 폴백. :param 을 쓰면 확장자 있는 파일명까지 삼키므로 열거한다.
+/climbing/l01   /climbing/   200
+/climbing/l02   /climbing/   200
+/climbing/l03   /climbing/   200
+/climbing/l04   /climbing/   200
+/climbing/l05   /climbing/   200
+/climbing/l06   /climbing/   200
+/climbing/l07   /climbing/   200
+/climbing/l08   /climbing/   200
+/climbing/l09   /climbing/   200
+/climbing/l10   /climbing/   200
+/climbing/l11   /climbing/   200
+/climbing/l12   /climbing/   200
+/climbing/l13   /climbing/   200
+/climbing/l14   /climbing/   200
+/climbing/l15   /climbing/   200
+/climbing/l16   /climbing/   200
+/climbing/l17   /climbing/   200
