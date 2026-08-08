@@ -526,6 +526,13 @@
     .card .cright{grid-column:2;}
   }
   @media (max-width:640px){
+    /* 좁은 화면에서 탭이 도구 버튼과 폭을 다투다 "중급"이 잘려 나갔다.
+       탭에 한 줄을 통째로 주고, 오른쪽에 페이드를 둬 더 있다는 걸 알린다. */
+    nav .bar{flex-wrap:wrap; row-gap:6px;}
+    nav .tabs{order:2; flex:1 0 100%; padding-bottom:2px;
+      -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);
+      mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);}
+    nav .tools{order:1; margin-left:auto;}
     body{font-size:15px;}
     .wrap{padding:0 16px;}
     header.hero{min-height:260px;}
@@ -583,7 +590,8 @@
   .photo-anno.wide{max-width:var(--figure);}
   .photo-anno.wide.full{max-width:100%;}
   .photo-anno.wide.tall{max-width:var(--reading);}
-  .genfig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .genfig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative;}
+  @media (max-width:760px){.genfig-scroll{background:linear-gradient(to left,var(--bg),transparent 34px);}.genfig-scroll::after{content:"옆으로 밀어 보세요";position:absolute;right:8px;bottom:8px;font-size:12px;font-weight:700;color:var(--card);background:var(--accent);padding:3px 9px;border-radius:999px;pointer-events:none;opacity:.92;}}
   @media (max-width:760px){.genfig-scroll .photo-anno.wide:not(.tall){min-width:700px;}}
 </style>
   <noscript><style>
@@ -1252,7 +1260,7 @@
 
     <div class="box note"><span class="t">자기학습 회차</span>이 회차는 강습 노트가 없다. 아래는 커리큘럼 위치로 추정한 <b>자기학습 자료</b>다. 강습 외 자율 등반 때 연습 권장.</div>
 
-    <div class="bigpic"><a class="xref" href="#l01">L1</a>~L3이 “<b>홀드</b>를 어떻게 쓰느냐”였다면, “벽 사용하기”는 “<b>홀드가 없을 때 벽 자체</b>를 어떻게 쓰느냐”다. 핵심 기술은 <b>플래깅(Flagging)</b>이다. 홀드를 딛지 않는 발로 벽을 밀어 균형을 잡는다.</div>
+    <div class="bigpic"><a class="xref" href="#l01">L1</a>~L3이 “<b>홀드</b>를 어떻게 쓰느냐”였다면, “벽 사용하기”는 “<b>홀드가 없을 때 벽 자체</b>를 어떻게 쓰느냐”다. 핵심 기술은 <b>플래깅(Flagging)</b>이다. 홀드를 딛지 않는 발을 반대쪽으로 뻗어 <b>무게추</b>로 쓰고, 그 무게로 몸이 도는 것을 죽인다. 벽을 미는 힘이 아니라 뻗은 다리의 무게와 거리가 일을 한다.</div>
 
     <figure>
       <img data-src="/img/Boulder_World_cup_Prague_2025-cropped.jpg"
@@ -2979,7 +2987,7 @@
           <text x="464" y="220" fill="#1f6b41">잡는 손 하나</text></g>
         </svg>
       </div>
-      <figcaption><b>플래깅.</b> 벽에 걸린 접점은 <b>손 하나와 발 하나뿐</b>이다. 옆으로 뻗은 다리는 벽을 미는 것이 아니라 <b>무게추</b>로서 중력선을 지지선 위로 끌어온다. 그래서 다리를 <b>곧게</b> 편다. 무게중심에서 멀수록 상쇄가 커지기 때문이고, 무릎을 접으면 효과가 절반이 된다. <span class="credit">사진: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0 · 주석 추가</span></figcaption>
+      <figcaption><b>플래깅.</b> 벽에 걸린 접점은 <b>손 하나와 발 하나뿐</b>이다. 옆으로 뻗은 다리는 벽을 미는 것이 아니라 <b>무게추</b>다. 몸을 아래로 끄는 선(중력선)을 <b>잡은 손과 딛는 발을 잇는 선(지지선)</b> 위로 끌어온다. 그래서 다리를 <b>곧게</b> 편다. 무게중심에서 멀수록 상쇄가 커지기 때문이고, 무릎을 접으면 효과가 절반이 된다. <span class="credit">사진: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0 · 주석 추가</span></figcaption>
     </figure>
 
     <h3>2. 인사이드 vs 아웃사이드: 발홀드 거리가 가른다</h3>
@@ -3043,7 +3051,7 @@
         <li>판단 도구는 <b>손·발홀드 거리</b>다. 멀면 인사이드, 가까우면 아웃사이드.</li>
         <li>딛는 발은 <b>인사이드 엣지</b>, <b>배에 힘</b>. 몸을 벽에 붙이는 두 장치다.</li>
         <li>완료 신호 = <b>손 하나 떼도 안 흔들림.</b> 뻗기 전 자가 테스트.</li>
-        <li>(질문) 강사가 <b>백플래그</b>(지지발 뒤로 꼬기)를 인/아웃에 포함하는지 확인.</li>
+        <li>(확인 예정) <b>백플래그</b>(지지발 뒤로 꼬기)를 인/아웃에 포함하는지 확인.</li>
       </ul>
     </div>
 
