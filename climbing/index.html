@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>클라이밍 강습 가이드 · 스타터 A·B / 중급 A (<a class="xref" href="#l01">Lesson 01</a>–17)</title>
+<title>클라이밍 강습 가이드 · 스타터 A·B / 중급 A (Lesson 01–17)</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +70,9 @@
 
   /* 2폭 시스템: 프레임(카드·도판·표)은 넓게, 산문은 좁게.
      한글 16px에서 760px ≈ 한 줄 44자로 떨어진다(권장 40~45자). */
-  :root{--reading:40rem; --figure:48rem;  /* 18px × 45자 ≈ 704px. 폭만 넓히면 줄당 글자수가 늘어 읽기가 나빠지므로 글자와 함께 키운다 */
+  :root{--reading:40rem; --figure:48rem;}
+  /* 다크에서 흰 글씨가 액센트 위에 얹혀 대비 2.3:1이 된다 */
+  [data-theme="dark"] .skip{color:#181714;}  /* 18px × 45자 ≈ 704px. 폭만 넓히면 줄당 글자수가 늘어 읽기가 나빠지므로 글자와 함께 키운다 */
   section>p, section>ul,
   .lesson>p, .lesson>ul, .lesson>ol, .lesson>.box, .lesson>.bigpic,
   .foldbody>p, .foldbody>ul, .foldbody>ol, .foldbody>.box{max-width:var(--reading);}
@@ -585,7 +587,7 @@
   /* JS가 죽으면 네비 아래가 백지가 된다. .panel>section이 전부 display:none이고
      목록도 JS가 만들기 때문이다. 크롤러·공유 미리보기·JS 에러 내성을 한 줄로 얻는다. */
   
-  .genfig{display:block;width:100%;max-width:100%;height:auto;border-radius:10px;background:var(--plate);}
+  .genfig{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:attr(width)/attr(height);border-radius:10px;background:var(--plate);}
   .genfig.tall{max-width:var(--reading);margin-left:auto;margin-right:auto;}
   .photo-anno.wide{max-width:var(--figure);}
   .photo-anno.wide.full{max-width:100%;}
@@ -681,9 +683,9 @@
   <div class="wrap bar">
     <div class="tabs" role="tablist" aria-label="강습 단계">
       <button class="tab" role="tab" data-stage="intro" aria-selected="false">개요</button>
-      <button class="tab" role="tab" data-stage="sa" aria-selected="false"><span class="stg a">A</span> 스타터<span class="n"><a class="xref" href="#l01">L1</a>–7</span></button>
-      <button class="tab" role="tab" data-stage="sb" aria-selected="false"><span class="stg b">B</span> 스타터<span class="n"><a class="xref" href="#l08">L8</a>–13</span></button>
-      <button class="tab" role="tab" data-stage="ma" aria-selected="false">중급 <span class="stg a">A</span><span class="n"><a class="xref" href="#l14">L14</a>–17</span></button>
+      <button class="tab" role="tab" data-stage="sa" aria-selected="false"><span class="stg a">A</span> 스타터<span class="n">L1–7</span></button>
+      <button class="tab" role="tab" data-stage="sb" aria-selected="false"><span class="stg b">B</span> 스타터<span class="n">L8–13</span></button>
+      <button class="tab" role="tab" data-stage="ma" aria-selected="false">중급 <span class="stg a">A</span><span class="n">L14–17</span></button>
       <button class="tab" role="tab" data-stage="mb" aria-selected="false">중급 <span class="stg b">B</span><span class="n">8월</span></button>
       <button class="tab" role="tab" data-stage="all" aria-selected="false">전체</button>
     </div>
@@ -980,7 +982,7 @@
 
     <figure>
       <div class="svgwrap">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-shoulder.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 575" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-shoulder.jpg" alt="" width="1200" height="575" loading="lazy"><svg class="lab" viewBox="0 0 1200 575" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <rect x="190" y="6" width="208" height="40" rx="20" fill="#b23124"/>
     <text x="294" y="33" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">✗ 어깨 솟음</text>
     <rect x="808" y="6" width="208" height="40" rx="20" fill="#1f6b41"/>
@@ -1060,7 +1062,7 @@
 
     <figure>
       <div class="svgwrap">
-      <div class="genfig-scroll"><div class="photo-anno wide tall"><img class="genfig" data-src="/genfig/fig-foot.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 720 1151" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide tall"><img class="genfig" data-src="/genfig/fig-foot.jpg" alt="" width="720" height="1151" loading="lazy"><svg class="lab" viewBox="0 0 720 1151" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <ellipse cx="243" cy="330" rx="62" ry="86" fill="#c0512e" opacity=".38"
              stroke="#c0512e" stroke-width="3"/>
     <line x1="392" y1="250" x2="298" y2="306" stroke="#c0512e" stroke-width="3.5"/>
@@ -1290,7 +1292,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-barndoor.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-barndoor.jpg" alt="" width="1200" height="592" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <line x1="190" y1="150" x2="190" y2="500" stroke="#b23124" stroke-width="3"
           stroke-dasharray="10 8" opacity=".85"/>
     <rect x="230" y="16" width="250" height="40" rx="20" fill="#b23124"/>
@@ -1374,7 +1376,7 @@
     <p>생김새 자체가 잡는 법을 결정한다.</p>
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide full"><img class="genfig" data-src="/genfig/fig-holds.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1400 318" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide full"><img class="genfig" data-src="/genfig/fig-holds.jpg" alt="" width="1400" height="318" loading="lazy"><svg class="lab" viewBox="0 0 1400 318" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <text x="114" y="232" text-anchor="middle" fill="#29211a" font-size="26" font-weight="800">저그</text>
     <text x="114" y="266" text-anchor="middle" fill="#776657" font-size="20">감아쥠</text>
     <text x="348" y="232" text-anchor="middle" fill="#29211a" font-size="26" font-weight="800">크림프</text>
@@ -1648,7 +1650,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide full"><img class="genfig" data-src="/genfig/fig-wallangle.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1400 446" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide full"><img class="genfig" data-src="/genfig/fig-wallangle.jpg" alt="" width="1400" height="446" loading="lazy"><svg class="lab" viewBox="0 0 1400 446" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <line x1="60" y1="26" x2="60" y2="336" stroke="#9c8f7e" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
     <line x1="410" y1="26" x2="410" y2="336" stroke="#9c8f7e" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
     <line x1="760" y1="26" x2="760" y2="336" stroke="#9c8f7e" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
@@ -1743,7 +1745,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-corner.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 554" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-corner.jpg" alt="" width="1200" height="554" loading="lazy"><svg class="lab" viewBox="0 0 1200 554" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <line x1="600" y1="24" x2="600" y2="530" stroke="#ede0cf" stroke-width="2"/>
     <rect x="86" y="8" width="352" height="40" rx="20" fill="#8f3920"/>
     <text x="262" y="35" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">디에드르(오목) → 스테밍</text>
@@ -2055,7 +2057,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <img class="genfig tall" data-src="/genfig/fig-highstep.jpg" alt="" loading="lazy">
+      <img class="genfig tall" data-src="/genfig/fig-highstep.jpg" alt="" width="920" height="1110" loading="lazy">
       </div>
       <figcaption><b>하이스텝의 정체 = 무게중심 이동.</b> 무게중심(주황 점)에서 수직으로 <b>다림줄</b>을 떨어뜨려 보면 안다. 엉덩이가 뒤에 남으면 무게가 높은 발(주황 홀드)을 못 지나 팔로 당기게 되고, <b>무릎을 발끝 앞으로 넘겨 골반을 높은 발 위로 스택</b>하면 비로소 그 다리로 일어설 수 있다. <span class="credit">삽화: Gemini 생성 · 자세 참조: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
     </figure>
@@ -2135,7 +2137,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-xtension.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-xtension.jpg" alt="" width="1200" height="592" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <line x1="600" y1="20" x2="600" y2="572" stroke="#ede0cf" stroke-width="2"/>
     <rect x="40" y="14" width="230" height="40" rx="20" fill="#b23124"/>
     <text x="155" y="41" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">✗ 같은 쪽</text>
@@ -2749,7 +2751,7 @@
 
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-stepvshook.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 644" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-stepvshook.jpg" alt="" width="1200" height="644" loading="lazy"><svg class="lab" viewBox="0 0 1200 644" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <rect x="26" y="14" width="376" height="40" rx="20" fill="#8f3920"/>
     <text x="214" y="41" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">하이스텝 — 민다(push)</text>
     <rect x="630" y="14" width="348" height="40" rx="20" fill="#1f6b41"/>
@@ -2998,7 +3000,7 @@
     </ul>
     <figure>
       <div class="svgwrap wide">
-      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-flag.jpg" alt="" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" data-src="/genfig/fig-flag.jpg" alt="" width="1200" height="592" loading="lazy"><svg class="lab" viewBox="0 0 1200 592" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <line x1="600" y1="24" x2="600" y2="568" stroke="#ede0cf" stroke-width="2"/>
     <rect x="18" y="10" width="404" height="40" rx="20" fill="#8f3920"/>
     <text x="220" y="37" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">인사이드 · 발홀드가 멀다</text>
@@ -3286,7 +3288,7 @@
       clearHash();
       showIndex();
       setStage(t.dataset.stage);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: RM.matches ? 'auto' : 'smooth' });
     });
   });
 
@@ -3435,6 +3437,16 @@
     buildSublinks();          // 목록으로 돌아왔으니 다시 단계 필터를 적용한다
     markHere();
     progress();
+    moveFocus(document.getElementById('index'));
+  }
+  // 뷰가 바뀌면 포커스를 새 뷰로 옮긴다. 안 그러면 body로 떨어져
+  // 키보드 문서 처음부터 Tab을 다시 시작하게 된다.
+  function moveFocus(el){
+    if (!el) return;
+    try {
+      el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
+    } catch (e) {}
   }
 
   function navHtml(m, dir){
@@ -3444,6 +3456,9 @@
       + '<span class="ttl">' + esc(m.title) + '</span></a>';
   }
 
+  // CSS의 prefers-reduced-motion은 scroll-behavior만 덮고
+  // scrollTo({behavior:'smooth'})에는 효력이 없다.
+  var RM = matchMedia('(prefers-reduced-motion: reduce)');
   function showArticle(id){
     var m = byId[id];
     if (!m) { showIndex(); return; }
@@ -3456,6 +3471,7 @@
       decorate(m.sec);
       hydrate(m.sec);
     }
+    moveFocus(m.sec);
 
     var i = META.indexOf(m);
     var nav = document.createElement('nav');
@@ -3488,7 +3504,7 @@
     markIdx = (i + ms.length) % ms.length;
     Array.prototype.forEach.call(ms, function(x){ x.classList.remove('cur'); });
     ms[markIdx].classList.add('cur');
-    ms[markIdx].scrollIntoView({ block: 'center', behavior: 'smooth' });
+    ms[markIdx].scrollIntoView({ block: 'center', behavior: RM.matches ? 'auto' : 'smooth' });
     if (hitbar) hitbar.querySelector('b').textContent = (markIdx + 1) + '/' + ms.length;
   }
   function syncHitbar(){
@@ -3516,7 +3532,7 @@
     clearHash();
     showIndex();
     renderIndex(query ? 'all' : stage);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: RM.matches ? 'auto' : 'smooth' });
   });
 
   if (hitbar){
