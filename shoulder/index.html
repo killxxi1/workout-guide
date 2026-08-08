@@ -224,6 +224,17 @@ document.documentElement.setAttribute('data-theme',
     .dual{gap:12px;}
   }
 
+  .genfig{display:block;width:100%;max-width:100%;height:auto;border-radius:10px;}
+  .genfig-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative;}
+  .photo-anno{position:relative;display:block;width:100%;margin:0 auto;line-height:0;}
+  .photo-anno svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+  @media (max-width:760px){
+    .genfig-scroll{background:linear-gradient(to left,var(--bg),transparent 34px);}
+    .genfig-scroll .photo-anno.wide{min-width:700px;}
+    .genfig-scroll::after{content:"옆으로 밀어 보세요";position:absolute;right:8px;bottom:8px;
+      font-size:12px;font-weight:700;color:var(--card);background:var(--accent);
+      padding:3px 9px;border-radius:999px;pointer-events:none;opacity:.92;}
+  }
   /* 맨 앞 요약 카드 — 전문을 읽지 않고도 오늘 할 것을 정하고 나가는 자리다 */
   .today .card{border-color:var(--accent);}
   .today h2 .n{background:var(--accent); color:var(--card);}
@@ -1498,52 +1509,18 @@ l-15 40 5 -78z"/>
 
     <figure>
       <div class="svgwrap wide">
-      <svg class="diagram" viewBox="0 0 1080 380" role="img" aria-label="YTW 레이즈 — 엎드린 자세를 위에서 본 세 가지 팔 모양. Y는 팔을 머리 위 좁은 V로 뻗고, T는 어깨선과 나란히 옆으로 벌리며, W는 팔꿈치를 접어 옆구리 쪽으로 당긴다">
-        <rect width="1080" height="380" fill="var(--plate)"/>
-        <path d="M126,128 C122,166 146,194 149,228 C150,252 147,264 145,272 L215,272 C213,264 210,252 211,228 C214,194 238,166 234,128 Z" fill="url(#bodyG)"/>
-        <path d="M167,148 L142,156 L158,188 Z" fill="#fff" opacity=".18"/>
-        <path d="M193,148 L218,156 L202,188 Z" fill="#fff" opacity=".18"/>
-        <ellipse cx="180" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
-        <path d="M144.4,132.9 L119.3,85.0 L102.8,92.3 L121.6,143.1 Z" fill="url(#bodyG)"/>
-        <path d="M119.3,85.0 L97.0,42.4 L86.0,47.3 L102.8,92.3 Z" fill="url(#bodyG)"/>
-        <circle cx="111.0" cy="88.7" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="91.5" cy="44.8" r="9.5" fill="url(#bodyG)"/>
-        <path d="M238.4,143.1 L257.2,92.3 L240.7,85.0 L215.6,132.9 Z" fill="url(#bodyG)"/>
-        <path d="M257.2,92.3 L274.0,47.3 L263.0,42.4 L240.7,85.0 Z" fill="url(#bodyG)"/>
-        <circle cx="249.0" cy="88.7" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="268.5" cy="44.8" r="9.5" fill="url(#bodyG)"/>
-        <text x="180" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">Y</text>
-        <path d="M486,128 C482,166 506,194 509,228 C510,252 507,264 505,272 L575,272 C573,264 570,252 571,228 C574,194 598,166 594,128 Z" fill="url(#bodyG)"/>
-        <path d="M527,148 L502,156 L518,188 Z" fill="#fff" opacity=".18"/>
-        <path d="M553,148 L578,156 L562,188 Z" fill="#fff" opacity=".18"/>
-        <ellipse cx="540" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
-        <path d="M493.0,125.5 L439.0,129.0 L439.0,147.0 L493.0,150.5 Z" fill="url(#bodyG)"/>
-        <path d="M439.0,129.0 L391.0,132.0 L391.0,144.0 L439.0,147.0 Z" fill="url(#bodyG)"/>
-        <circle cx="439.0" cy="138.0" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="391.0" cy="138.0" r="9.5" fill="url(#bodyG)"/>
-        <path d="M587.0,150.5 L641.0,147.0 L641.0,129.0 L587.0,125.5 Z" fill="url(#bodyG)"/>
-        <path d="M641.0,147.0 L689.0,144.0 L689.0,132.0 L641.0,129.0 Z" fill="url(#bodyG)"/>
-        <circle cx="641.0" cy="138.0" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="689.0" cy="138.0" r="9.5" fill="url(#bodyG)"/>
-        <text x="540" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">T</text>
-        <path d="M846,128 C842,166 866,194 869,228 C870,252 867,264 865,272 L935,272 C933,264 930,252 931,228 C934,194 958,166 954,128 Z" fill="url(#bodyG)"/>
-        <path d="M887,148 L862,156 L878,188 Z" fill="#fff" opacity=".18"/>
-        <path d="M913,148 L938,156 L922,188 Z" fill="#fff" opacity=".18"/>
-        <ellipse cx="900" cy="90" rx="24" ry="28" fill="url(#bodyG)"/>
-        <path d="M848.3,126.4 L799.6,149.9 L806.3,166.6 L857.7,149.6 Z" fill="url(#bodyG)"/>
-        <path d="M809.6,152.2 L775.3,118.5 L766.4,126.6 L796.2,164.3 Z" fill="url(#bodyG)"/>
-        <circle cx="802.9" cy="158.2" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="770.8" cy="122.6" r="9.5" fill="url(#bodyG)"/>
-        <path d="M942.3,149.6 L993.7,166.6 L1000.4,149.9 L951.7,126.4 Z" fill="url(#bodyG)"/>
-        <path d="M1003.8,164.3 L1033.6,126.6 L1024.7,118.5 L990.4,152.2 Z" fill="url(#bodyG)"/>
-        <circle cx="997.1" cy="158.2" r="9" fill="#fff" opacity=".26"/>
-        <circle cx="1029.2" cy="122.6" r="9.5" fill="url(#bodyG)"/>
-        <text x="900" y="328" text-anchor="middle" font-size="30" font-weight="800" fill="#8f4226">W</text>
-        <text x="540" y="366" text-anchor="middle" font-size="19" fill="#5c554b">엎드려 팔을 Y → T → W 순서로 들어올린다 · 글자 하나가 근육 하나에 대응한다</text>
-      </svg>
+      <div class="genfig-scroll"><div class="photo-anno wide"><img class="genfig" src="/genfig/fig-ytw.jpg" alt="" width="1200" height="546" loading="lazy"><svg class="lab" viewBox="0 0 1200 546" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+    <text x="200" y="452" text-anchor="middle" fill="#29211a" font-size="44" font-weight="800">Y</text>
+    <text x="200" y="492" text-anchor="middle" fill="#776657" font-size="21">하부 승모근</text>
+    <text x="600" y="452" text-anchor="middle" fill="#29211a" font-size="44" font-weight="800">T</text>
+    <text x="600" y="492" text-anchor="middle" fill="#776657" font-size="21">중부 승모근 · 능형근</text>
+    <text x="1000" y="452" text-anchor="middle" fill="#29211a" font-size="44" font-weight="800">W</text>
+    <text x="1000" y="492" text-anchor="middle" fill="#776657" font-size="21">외회전근</text>
+    <path d="M384,440 h32 m-9,-8 l9,8 -9,8" fill="none" stroke="#b0553a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M784,440 h32 m-9,-8 l9,8 -9,8" fill="none" stroke="#b0553a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
       </div>
       <figcaption><b>YTW 레이즈.</b> 엎드려 팔을 Y → T → W 순서로 들어올린다. 글자 하나가 근육 하나에 대응한다. 어깨를 제자리로 되돌리는 세 근육을 한 시리즈로 깨운다. 맨몸으로 시작, 익숙해지면 <code>0.5–1kg</code>.
-      <span class="credit">도해: 직접 제작 · 위에서 내려다본 상체</span></figcaption>
+      <span class="credit">삽화: Gemini 생성 · 라벨 직접 추가</span></figcaption>
     </figure>
 
     <p><b>왜.</b> 글자 세 개가 근육 세 개에 대응한다. Y는 하부 승모근, T는 중부 승모근과 능형근, W는 외회전근이다. <a class="xref" href="#ax2">② 축</a>이 겨냥하는 근육을 한 시리즈로 훑는 구성이라, 시간이 하나뿐일 때 강화 축의 대표로 남길 동작이 이것이다.</p>
