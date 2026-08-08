@@ -1,10 +1,11 @@
+# 자체 완결형 HTML이라 외부 출처가 아예 없다. CSP로 전부 막아도 잃을 것이 없다.
+# 인라인 style·script만 허용한다(회차 하이드레이션·검색·다크모드가 쓴다).
+# 주석은 반드시 블록 밖에 둔다. 들여쓴 주석은 헤더로 파싱돼 이후 줄이 무시된다.
 # 보안 헤더는 전 경로 공통. Cache-Control은 여기 두지 않는다 —
 # /* 에 두면 아래의 구체적 규칙을 덮어버린다(실측 확인).
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  # 자체 완결형 HTML이라 외부 출처가 아예 없다. 전부 막아도 잃을 것이 없다.
-  # 인라인 style·script는 회차 하이드레이션·검색·다크모드가 쓰므로 허용한다.
   Content-Security-Policy: default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Permissions-Policy: geolocation=(), camera=(), microphone=()
